@@ -118,6 +118,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#contributing-guidelines" id="toc-contributing-guidelines" class="nav-link active" data-scroll-target="#contributing-guidelines">Contributing guidelines</a>
   <ul class="collapse">
+  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
   <li><a href="#commit-messages" id="toc-commit-messages" class="nav-link" data-scroll-target="#commit-messages">Commit messages</a>
   <ul class="collapse">
   <li><a href="#format" id="toc-format" class="nav-link" data-scroll-target="#format">Format</a></li>
@@ -136,6 +137,10 @@ ul.task-list li input[type="checkbox"] {
 <section id="contributing-guidelines" class="level1">
 <h1>Contributing guidelines</h1>
 <p>This document defines the conventions to follow when contributing (changing, updating) the website.</p>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>The website is created using Quarto and hosted on GitHub Pages. Useful references to check are: - <a href="https://quarto.org/docs/websites/">Quarto documentation: how to build websites</a> - <a href="https://quarto.org/docs/publishing/github-pages.html">Quarto documentation: how to publish websites using GitHub Pages</a> - <a href="https://docs.github.com/en/pages">GitHub Pages documentation for details</a></p>
+</section>
 <section id="commit-messages" class="level2">
 <h2 class="anchored" data-anchor-id="commit-messages">Commit messages</h2>
 <p>We follow <a href="https://www.conventionalcommits.org/">Conventional Commits</a> notation.</p>
@@ -186,11 +191,12 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td><code>chore</code></td>
-<td>Maintenance tasks (dependencies, config, build tools)</td>
+<td>Other tasks (init, dependencies, config, build tools)</td>
 <td><code>chore: update dependencies</code><br><code>chore(ci): fix GitHub Actions workflow</code></td>
 </tr>
 </tbody>
 </table>
+<p>A complete cheatsheet with more types and examples is available <a href="https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13">here</a>.</p>
 
 
 </section>
