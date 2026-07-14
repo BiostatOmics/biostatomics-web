@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "biostatomics-web",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "CONTRIBUTING.html",
+    "href": "CONTRIBUTING.html",
+    "title": "Contributing guidelines",
+    "section": "",
+    "text": "This document defines the conventions to follow when contributing (changing, updating) the website.\n\n\nWe follow Conventional Commits notation.\n\n\ntype(scope): short description\n\ntype: one of the allowed types below (required)\nscope: the affected section, e.g. team, publications, homepage (optional)\ndescription: imperative mood, present tense (“add”, not “added”/“adds”), no trailing period\n\n\n\n\n\n\n\n\n\n\n\n\nType\nDescription\nExamples\n\n\n\n\nfeat\nA new feature or content addition\nfeat: add publications pagefeat(team): add new PhD student profile\n\n\nfix\nA bug fix or correction\nfix: broken image link in about pagefix(team): correct typo in member bio\n\n\ndocs\nDocumentation-only changes\ndocs: update contributing guidelinesdocs(readme): fix instructions\n\n\nstyle\nFormatting changes with no logic impact (whitespace, CSS, layout)\nstyle: fix inconsistent indentationstyle(homepage): align navbar items\n\n\nchore\nMaintenance tasks (dependencies, config, build tools)\nchore: update dependencieschore(ci): fix GitHub Actions workflow"
+  },
+  {
+    "objectID": "CONTRIBUTING.html#commit-messages",
+    "href": "CONTRIBUTING.html#commit-messages",
+    "title": "Contributing guidelines",
+    "section": "",
+    "text": "We follow Conventional Commits notation.\n\n\ntype(scope): short description\n\ntype: one of the allowed types below (required)\nscope: the affected section, e.g. team, publications, homepage (optional)\ndescription: imperative mood, present tense (“add”, not “added”/“adds”), no trailing period\n\n\n\n\n\n\n\n\n\n\n\n\nType\nDescription\nExamples\n\n\n\n\nfeat\nA new feature or content addition\nfeat: add publications pagefeat(team): add new PhD student profile\n\n\nfix\nA bug fix or correction\nfix: broken image link in about pagefix(team): correct typo in member bio\n\n\ndocs\nDocumentation-only changes\ndocs: update contributing guidelinesdocs(readme): fix instructions\n\n\nstyle\nFormatting changes with no logic impact (whitespace, CSS, layout)\nstyle: fix inconsistent indentationstyle(homepage): align navbar items\n\n\nchore\nMaintenance tasks (dependencies, config, build tools)\nchore: update dependencieschore(ci): fix GitHub Actions workflow"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  }
+]
