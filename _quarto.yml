@@ -17,5 +17,7 @@ format:
     css: styles.css
     toc: true
 
+execute:
+  freeze: auto # code chunks are executed locally and results are saved in `_freeze` directory. without this, GitHub Actions would need to install R/python and all dependencies, then execute every chunk, which is slower and failure-prone.
 
 
