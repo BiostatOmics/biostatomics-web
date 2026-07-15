@@ -5,7 +5,7 @@ website:
     # - index.qmd
     - projects.qmd
     - publications.qmd
-    # - tools.qmd
+    # - tools/index.qmd
     - blog.qmd
     - people.qmd
     - contact.qmd

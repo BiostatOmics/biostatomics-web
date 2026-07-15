@@ -1,0 +1,7 @@
+---
+listing:
+  contents: tools.yml
+  template: tools-cards.ejs.md
+page-layout: full
+# page-layout: article
+---

@@ -46,7 +46,7 @@ website:
             href: publications.qmd 
             icon: book
       - text: "Tools"
-        href: tools.qmd
+        href: tools/index.qmd
         icon: gear-fill
       - text: "Blog"
         href: blog.qmd
