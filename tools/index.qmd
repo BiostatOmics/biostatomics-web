@@ -2,6 +2,7 @@
 listing:
   contents: tools.yml
   template: tools-cards.ejs.md
+  categories: true
 page-layout: full
 # page-layout: article
 ---

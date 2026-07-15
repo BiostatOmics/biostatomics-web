@@ -1,60 +1,60 @@
-- category: "Tools"
-  tiles:
-    - title: "Coxmos"
-      image: images/coxmos-logo.png
-      date: 2025-10-03
-      tags: ["package", "R"]
-      description: "R package for interpretable Cox survival analysis on high-dimensional and multiblock (multi-omics) data, combining classical Cox regression with sparse PLS-based methods."
-      links:
-        - label: "GitHub"
-          icon: github
-          url: "https://github.com/BiostatOmics/Coxmos"
-        - label: "CRAN"
-          icon: box-seam
-          url: "https://cran.r-project.org/package=Coxmos"
-        - label: "Paper"
-          icon: file-earmark-text
-          url: "https://doi.org/10.1101/2025.10.01.679727"
+- title: "Coxmos"
+  image: images/coxmos-logo.png
+  date: 2026-05
+  section: "Tools"
+  categories: [R, package, multi-omics]
+  description: "R package for interpretable Cox survival analysis on high-dimensional and multiblock (multi-omics) data, combining classical Cox regression with sparse PLS-based methods."
+  links:
+    - label: "GitHub"
+      icon: github
+      url: "https://github.com/BiostatOmics/Coxmos"
+    - label: "CRAN"
+      icon: box-seam
+      url: "https://cran.r-project.org/package=Coxmos"
+    - label: "Paper"
+      icon: file-earmark-text
+      url: "https://doi.org/10.1186/s13040-026-00559-9"
 
-    - title: "MORE"
-      image: images/more-logo.png
-      date: 2025-05-01
-      tags: ["package", "R"]
-      description: "R package to model multi-omics regulatory relationships using PLS or regularized regression, identifying candidate regulators for a target omic feature."
-      links:
-        - label: "GitHub"
-          icon: github
-          url: "https://github.com/BiostatOmics/MORE"
-        - label: "Paper"
-          icon: file-earmark-text
-          url: "https://doi.org/10.1093/bib/bbaf270"
+- title: "MORE"
+  image: images/more-logo.png
+  date: 2025-06
+  section: "Tools"
+  categories: [R, package, multi-omics]
+  description: "R package to model multi-omics regulatory relationships using PLS or regularized regression, identifying candidate regulators for a target omic feature."
+  links:
+    - label: "GitHub"
+      icon: github
+      url: "https://github.com/BiostatOmics/MORE"
+    - label: "Paper"
+      icon: file-earmark-text
+      url: "https://doi.org/10.1093/bib/bbaf270"
 
-    - title: "MOREshiny"
-      image: images/more-logo.png
-      date: 2025-05-01
-      tags: ["R", "shiny"]
-      description: "Dockerized Shiny interface for MORE, aimed at users with less experience in R or statistics who want to run its core functionality through a graphical interface."
-      links:
-        - label: "GitHub"
-          icon: github
-          url: "https://github.com/BiostatOmics/MOREshiny"
-        - label: "Paper"
-          icon: file-earmark-text
-          url: "https://doi.org/10.1093/bib/bbaf270"
+- title: "MOREshiny"
+  image: images/more-logo.png
+  date: 2025-06
+  section: "Tools"
+  categories: [Docker, Shiny, multi-omics]
+  description: "Dockerized Shiny interface for MORE, aimed at users with less experience in R or statistics who want to run its core functionality through a graphical interface."
+  links:
+    - label: "GitHub"
+      icon: github
+      url: "https://github.com/BiostatOmics/MOREshiny"
+    - label: "Paper"
+      icon: file-earmark-text
+      url: "https://doi.org/10.1093/bib/bbaf270"
 
-- category: "Web apps"
-  tiles:
-    - title: "PD Atlas Explorer"
-      date: 2026-04-02
-      tags: ["shiny", "single-cell"]
-      description: "Interactive explorer for the multiregional single-cell atlas of Parkinson's disease presented in Tejedor-Serrano et al., 2026."
-      links:
-        - label: "Launch app"
-          icon: box-arrow-up-right
-          url: "https://juantejedor-pd-atlas-explorer.share.connect.posit.cloud/"
-        - label: "Code"
-          icon: github
-          url: "https://github.com/BiostatOmics/TejedorSerrano2026-pd-atlas"
-        - label: "Paper"
-          icon: file-earmark-text
-          url: "https://doi.org/10.21203/rs.3.rs-9220144/v1"
+- title: "PD Atlas Explorer"
+  date: 2026-04-02
+  section: "Web apps"
+  categories: [Web, Shiny, single-cell]
+  description: "Interactive explorer for the multiregional single-cell atlas of Parkinson's disease presented in Tejedor-Serrano et al., 2026."
+  links:
+    - label: "Launch app"
+      icon: box-arrow-up-right
+      url: "https://tools.biostatomics.com/pd-atlas-explorer/"
+    - label: "Code"
+      icon: github
+      url: "https://github.com/BiostatOmics/TejedorSerrano2026-pd-atlas"
+    - label: "Paper"
+      icon: file-earmark-text
+      url: "https://doi.org/10.21203/rs.3.rs-9220144/v1"
