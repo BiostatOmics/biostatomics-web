@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>BiostatOmics Lab</title>
+<title>tools-cards.ejs – BiostatOmics Lab</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,23 +26,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./images/BioStatOmics_Favicon_web_512x512.svg" rel="icon" type="image/svg+xml">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-bba5ebae505b5c03f3f0d8040a416a6b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../images/BioStatOmics_Favicon_web_512x512.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-bba5ebae505b5c03f3f0d8040a416a6b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,16 +73,14 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="BiostatOmics Lab">
-<meta property="og:image" content="https://biostatomics.com/images/Logo_BioStatOmics_300x300Px_color_Transparent_Bckg.png">
+<meta property="og:image" content="https://biostatomics.com/tools/<%- item.image %>">
 <meta property="og:site_name" content="BiostatOmics Lab">
-<meta property="og:image:height" content="1501">
-<meta property="og:image:width" content="1501">
+<meta property="og:image:alt" content="<%- item.title %> logo">
 <meta name="twitter:title" content="BiostatOmics Lab">
-<meta name="twitter:image" content="https://biostatomics.com/images/Logo_BioStatOmics_300x300Px_color_Transparent_Bckg.png">
-<meta name="twitter:image-height" content="1501">
-<meta name="twitter:image-width" content="1501">
+<meta name="twitter:image" content="https://biostatomics.com/tools/<%- item.image %>">
+<meta name="twitter:image:alt" content="<%- item.title %> logo">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -92,7 +91,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">BiostatOmics Lab</span>
     </a>
   </div>
@@ -103,7 +102,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> <i class="bi bi-house-fill" role="img">
+    <a class="nav-link" href="../index.html"> <i class="bi bi-house-fill" role="img">
 </i> 
 <span class="menu-text">Home</span></a>
   </li>  
@@ -115,19 +114,19 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-research">    
         <li>
-    <a class="dropdown-item" href="./projects.html"><i class="bi bi-folder2-open" role="img">
+    <a class="dropdown-item" href="../projects.html"><i class="bi bi-folder2-open" role="img">
 </i> 
  <span class="dropdown-text">Projects</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./publications.html"><i class="bi bi-book" role="img">
+    <a class="dropdown-item" href="../publications.html"><i class="bi bi-book" role="img">
 </i> 
  <span class="dropdown-text">Publications</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./tools/index.html"> <i class="bi bi-gear-fill" role="img">
+    <a class="nav-link" href="../tools/index.html"> <i class="bi bi-gear-fill" role="img">
 </i> 
 <span class="menu-text">Tools</span></a>
   </li>  
@@ -142,50 +141,68 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-  <ul>
-  <li><a href="#wip" id="toc-wip" class="nav-link active" data-scroll-target="#wip">WIP</a>
-  <ul class="collapse">
-  <li><a href="#wip-1" id="toc-wip-1" class="nav-link" data-scroll-target="#wip-1">WIP</a></li>
-  </ul></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
-<div class="quarto-about-jolla">
-  <img src="images/Logo_BioStatOmics_300x300Px_color_Transparent_Bckg.png" class="about-image
-  round " style="height: 15em; width: 15em;">
- <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">BiostatOmics Lab</h1>
-</div>
-<div class="quarto-title-meta">
-  </div>
-</header><main class="content" id="quarto-document-content">
-
-<section id="wip" class="level2">
-<h2 data-anchor-id="wip">WIP</h2>
-<section id="wip-1" class="level3">
-<h3 data-anchor-id="wip-1">WIP</h3>
-<p>This is a test.</p>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
-</section>
-</section>
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> 
-  <hr class="about-sep">
-   <div class="about-links">
-  <a href="https://github.com/biostatomics" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text"></span>
-  </a>
+
+
+&lt;%
+  const sections = [];
+  for (const item of items) {
+    const name = item.section || "Other";
+    let bucket = sections.find((s) =&gt; s.name === name);
+    if (!bucket) {
+      bucket = { name: name, items: [] };
+      sections.push(bucket);
+    }
+    bucket.items.push(item);
+  }
+%&gt;
+<div class="tool-grid list">
+&lt;% for (const section of sections) { %&gt;
+  <h2 class="tools-section-title anchored">&lt;%= section.name %&gt;</h2>
+  &lt;% for (const item of section.items) { %&gt;
+    <div class="tool-card" <%="metadataAttrs(item)" %="">&gt;
+      &lt;% if (item.image) { %&gt;
+        <img src="<%- item.image %>" class="tool-card-img" alt="<%- item.title %> logo">
+      &lt;% } %&gt;
+      <div class="tool-card-body">
+        <h5 class="tool-card-title listing-title anchored">&lt;%= item.title %&gt;</h5>
+        <div class="tool-card-tags listing-categories">
+          &lt;% (item.categories || []).forEach(function(cat) { %&gt;
+            <span class="badge tool-badge">&lt;%= cat %&gt;</span>
+          &lt;% }) %&gt;
+        </div>
+        <p class="tool-card-text listing-description">&lt;%= item.description %&gt;</p>
+        <div class="tool-card-links">
+          &lt;% (item.links || []).forEach(function(link) { %&gt;
+            <a href="<%- link.url %>" class="tool-link" target="_blank" rel="noopener">
+              <i class="bi bi-<%= link.icon %>"></i> &lt;%= link.label %&gt;
+            </a>
+          &lt;% }) %&gt;
+        </div>
+      </div>
+    </div>
+  &lt;% } %&gt;
+&lt;% } %&gt;
 </div>
-</div>
- <!-- /main -->
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     

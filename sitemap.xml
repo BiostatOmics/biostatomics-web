@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://biostatomics.com/tools.html</loc>
-    <lastmod>2026-07-15T13:34:02.643Z</lastmod>
+    <loc>https://biostatomics.com/tools/tools-cards.ejs.html</loc>
+    <lastmod>2026-07-15T15:25:26.476Z</lastmod>
   </url>
   <url>
     <loc>https://biostatomics.com/index.html</loc>
-    <lastmod>2026-07-15T13:34:02.643Z</lastmod>
+    <lastmod>2026-07-15T15:25:26.475Z</lastmod>
+  </url>
+  <url>
+    <loc>https://biostatomics.com/tools/index.html</loc>
+    <lastmod>2026-07-15T15:25:26.476Z</lastmod>
   </url>
 </urlset>
