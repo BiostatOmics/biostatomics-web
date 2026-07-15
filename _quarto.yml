@@ -2,12 +2,61 @@ project:
   type: website
 
 website:
-  title: "biostatomics-web"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+  # basics
+  title: "BiostatOmics Lab"
+  site-url: https://biostatomics.com # for SEO
+  # TODO: description: summary of web# for SEO
+  favicon: images/BioStatOmics_Favicon_web_512x512.svg # little icon that appears in browser tab
+
+  repo-url: https://github.com/BiostatOmics/biostatomics-web
+  # repo-actions: [edit, source, issue] # adds the "edit this page", "view source" and "report an issue" options in website footer
+
+  # image: # thumbnail to show when sharing website link (open-graph/social media)
+  # image-alt: # the description of the image for accesibility
+
+  # social metadata options: enable to preview correctly the website (thumbnail, description, etc.) when sharing its link across social media (X, linkedin, etc.)
+  open-graph: true
+  twitter-card: true
+
+  # enable google analytics to analyze users traffic (how many visits, which sites are more popular, where does traffic comes from, device type, etc.)
+  # google-analytics: "G-XXXXXXXXXX"
+  # cookie-consent: true # as google analytics uses cookies, we need to show the "cookie consent banner"
+
+  # QoL utilities
+  search: # search for any word in the whole web
+    location: navbar
+    type: overlay
+    show-item-context: tree
+  back-to-top-navigation: true # when scrolling to the bottom of the web, show a button to go top
+  # page-navigation: true # add previous/next arrow to navigate between sites/pages
+
+  # ! website skeleton
+  navbar: # navbar = top bar that display the different tabs for navegation
+    right:
+      - text: "Home" # text is optional, by default, it takes the "title" value defined in the href. 
+        href: index.qmd # href is the linked document (internal) or URL (external) that will appear when clicking the "text" label in the navigation panel
+        icon: house-fill
+      - text: "Research"
+        icon: lightbulb-fill
+        menu:
+          - text: "Projects"
+            href: projects.qmd
+            icon: folder2-open
+          - text: "Publications"
+            href: publications.qmd 
+            icon: book
+      - text: "Tools"
+        href: tools.qmd
+        icon: gear-fill
+      - text: "Blog"
+        href: blog.qmd
+        icon: journal
+      - text: "People"
+        href: people.qmd
+        icon: people-fill
+      - text: "Contact"
+        href: contact.qmd
+        icon: envelope-fill
 
 format:
   html:
@@ -20,4 +69,5 @@ format:
 execute:
   freeze: auto # code chunks are executed locally and results are saved in `_freeze` directory. without this, GitHub Actions would need to install R/python and all dependencies, then execute every chunk, which is slower and failure-prone.
 
-
+metadata-files:
+  - drafts.yml

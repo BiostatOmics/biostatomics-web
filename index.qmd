@@ -1,7 +1,17 @@
 ---
-title: "biostatomics-web"
+title: "BiostatOmics Lab"
+image: images/Logo_BioStatOmics_300x300Px_color_Transparent_Bckg.png
+about: 
+    template: jolla
+    # template: trestles
+    links: 
+        - icon: github
+          href: https://github.com/biostatomics
 ---
 
-This is a Quarto website.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+## WIP
+
+### WIP
+
+This is a test.

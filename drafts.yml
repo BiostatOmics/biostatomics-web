@@ -1,0 +1,14 @@
+# specify which files are drafts. drafts are rendered blank (empty) and do not appear in navigation (unlinked).
+
+website:
+  drafts:
+    # - index.qmd
+    - projects.qmd
+    - publications.qmd
+    # - tools.qmd
+    - blog.qmd
+    - people.qmd
+    - contact.qmd
+  # draft-mode : gone # empty and unlinked
+  # draft-mode : unlinked # rendered and unlinked
+  # draft-mode : visible # rendered and linked (+ draft banner)

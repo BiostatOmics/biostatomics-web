@@ -1,0 +1,8 @@
+---
+title: "Contact"
+---
+
+WIP; ideas:
+- location (insert map to UPV, see: <https://quarto.org/docs/authoring/article-layout.html#screen-column>, leaflet package)
+- email
+- offers/opportunities
