@@ -9,10 +9,9 @@ people_group: "pi"
 email: sotacam@eio.upv.es
 education: |
   <ul>
-    <li><strong>PhD in Statistics</strong> — Universitat Politècnica de València, 2014</li>
-    <li><strong>BS in Mathematics & Statistics</strong> — Universitat Politècnica de València, 2001</li>
+    <li><strong>PhD in Statistics</strong> | Universitat Politècnica de València, 2014</li>
+    <li><strong>BS in Mathematics & Statistics</strong> | Universitat Politècnica de València, 2001</li>
   </ul>
-education_card: "<strong>PhD in Statistics</strong>, Universitat Politècnica de València, 2014 <br> <strong>BS in Mathematics & Statistics</strong>, Universitat Politècnica de València, 2001"
 affiliation: Universitat Politècnica de València
 
 about:
@@ -32,7 +31,7 @@ about:
       href: https://github.com/soniatarazona
     
     - text: '<i class="ai ai-google-scholar-square"></i>'
-      href: https://github.com/biostatomics
+      href: https://scholar.google.com/citations?user=Id0klxUAAAAJ&hl
     
     - text: '<i class="ai ai-orcid"></i>'
       href: https://orcid.org/0000-0001-5346-1407

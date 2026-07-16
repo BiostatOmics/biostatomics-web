@@ -1,7 +1,7 @@
 ```{=html}
 <%
   // This is a Quarto EJS template: it turns each person's profile (every people/<name>/index.qmd) into the HTML cards shown on the "Meet the group" page, grouped under the right heading. Quarto gives it a ready-made "items" array, one entry per person found via the "contents:" setting in people/index.qmd, with whatever fields that person's YAML header defines (item.title, item.image, item.people_group...).
-  // Three kinds of tags are used below: a code tag that runs JavaScript and prints nothing (loops, ifs, variables), a safe-print tag that prints a value as escaped text, and a raw-print tag that prints a value as-is, unescaped (used for links, image paths, or text that already contains HTML). Their real symbols can't be written here in a comment, because the template engine looks for those symbols everywhere, even inside comments — see the real tags just below for what they look like.
+  // Three kinds of tags are used below: a code tag that runs JavaScript and prints nothing (loops, ifs, variables), a raw-print tag that prints a value as-is, unescaped (used for text that already contains HTML, like the education line below), and an escaping-print tag that HTML-escapes a value first (used for links and image paths, so stray "&" or similar characters in a URL can't break the page). Their real symbols can't be written here in a comment, because the template engine looks for those symbols everywhere, even inside comments — see the real tags just below for what they look like. Note this template engine is Lodash's, not the more common EJS engine, so its escaping tag and raw tag are the reverse of what you may see documented elsewhere for ".ejs" files.
 
   // The groups, in the exact order they should appear. "key" must match the "people_group" value written in each person's YAML header exactly. "label" is the heading text shown on the page. "cols" is how many cards should fit per row for that group on a normal-width screen (see the ".person-card-cols-*" rules in styles.css) — groups with a lot of members (like alumni) look better with more, smaller cards. To add a new group, add a line here.
   const groups = [
@@ -13,6 +13,13 @@
     { key: "student",            label: "Students",                cols: 3 },
     { key: "alumni",             label: "Alumni",                  cols: 5 },
   ];
+
+  // The card shows a short, one-line version of "education", built automatically from the full "education" list in the person's YAML header (a "ul"/"li" HTML list) — so contributors only have to write their degrees once. This pulls out the text of every "li" entry and joins them with a line break.
+  function educationCard(educationHtml) {
+    if (!educationHtml) return "";
+    const entries = [...educationHtml.matchAll(/<li>([\s\S]*?)<\/li>/gi)].map((match) => match[1].trim());
+    return entries.join(" <br> ");
+  }
 %>
 
 <div class="people-grid list">
@@ -40,9 +47,9 @@
           <h5 class="person-card-title listing-title"><%= item.title %></h5>
           <p class="person-card-role listing-description"><%= role %></p>
 
-          <!-- education_card is a short version of "education" meant just for this compact card, with the degree title in bold (see people/_people-template.qmd); it's optional, so only print this block if the person filled it in -->
-          <% if (item.education_card) { %>
-            <div class="person-card-education"><%= item.education_card %></div>
+          <% const education = educationCard(item.education); %>
+          <% if (education) { %>
+            <div class="person-card-education"><%= education %></div>
           <% } %>
         </div>
       </a>

@@ -151,9 +151,9 @@
 }
 
 
-/* people page — card grid used by people/people-cards.ejs.md. Same overall approach as the tools cards above, just laid out differently: people cards are left-aligned (photo on top, text below) instead of a left-aligned image banner beside the text.
+/* people page — card grid used by people/_people-cards.ejs.md. Same overall approach as the tools cards above, just laid out differently: people cards are left-aligned (photo on top, text below) instead of a left-aligned image banner beside the text.
 
-   Unlike the tools grid, this one uses flexbox instead of CSS grid, because different groups need a different number of cards per row (e.g. 3 for "PhD Students", 5 for "Alumni" — see the "cols" value per group in people-cards.ejs.md). CSS grid applies one fixed column layout to the whole container, but flexbox lets every card just declare its own width (via a "person-card-cols-*" class below) and wrap naturally — so several different "row densities" can coexist in the same list. */
+   Unlike the tools grid, this one uses flexbox instead of CSS grid, because different groups need a different number of cards per row (e.g. 3 for "PhD Students", 5 for "Alumni" — see the "cols" value per group in _people-cards.ejs.md). CSS grid applies one fixed column layout to the whole container, but flexbox lets every card just declare its own width (via a "person-card-cols-*" class below) and wrap naturally — so several different "row densities" can coexist in the same list. */
 .people-grid {
   display: flex;
   flex-wrap: wrap;
@@ -173,7 +173,7 @@
   margin-top: 0;
 }
 
-/* The card itself. Unlike the tool cards, this one IS the clickable link (see the person-card anchor in people-cards.ejs.md). Laid out the same way as .tool-card: a full-width photo on top, then left-aligned text below. Its width (how many fit per row) is set by the "person-card-cols-*" rules further down, not here. */
+/* The card itself. Unlike the tool cards, this one IS the clickable link (see the person-card anchor in _people-cards.ejs.md). Laid out the same way as .tool-card: a full-width photo on top, then left-aligned text below. Its width (how many fit per row) is set by the "person-card-cols-*" rules further down, not here. */
 .person-card {
   display: flex;
   flex-direction: column;
@@ -192,7 +192,7 @@
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
-/* How many cards fit per row, for a given group's "cols" value: each card's width is "1/N of the row, minus its share of the gaps". Add a ".person-card-cols-N" rule here for any new N you use in people-cards.ejs.md. */
+/* How many cards fit per row, for a given group's "cols" value: each card's width is "1/N of the row, minus its share of the gaps". Add a ".person-card-cols-N" rule here for any new N you use in _people-cards.ejs.md. */
 .person-card-cols-3 {
   width: calc((100% - 2 * 1.5rem) / 3);
 }
@@ -222,6 +222,12 @@
   display: block;
 }
 
+/* * The following class fixes height so we avoid the problem of different proportions. DEPRECATED for the moment as the previous behavior is better */
+/* .person-card-img {
+  height: 200px;
+  object-fit: cover;
+} */
+
 /* The text area below the photo. */
 .person-card-body {
   padding: 1rem;
@@ -232,6 +238,12 @@
   margin-bottom: 0.2rem;
   font-weight: 700;
   font-size: 1.05rem;
+  transition: color 0.15s ease; /* animate the color change smoothly on hover, instead of it changing instantly */
+}
+
+/* on hover, the person's name switches to the theme's emphasis/link color, as a hint that the whole card is clickable */
+.person-card:hover .person-card-title {
+  color: var(--bs-primary, #2780e3);
 }
 
 .person-card-role {
@@ -240,8 +252,8 @@
   margin-bottom: 0.35rem;
 }
 
-/* The "education" line(s), separated with a plain br (not a bullet list — that richer format is reserved for the person's own page). The degree title itself comes wrapped in a "strong" tag from the YAML (see education_card in people/_people-template.qmd), which is what makes it bold here. */
+/* The "education" line(s), separated with a plain br (not a bullet list — that richer format is reserved for the person's own page). This compact version is built automatically in people-cards.ejs.md from the same "education" field written in the YAML header, so the degree title (wrapped in a "strong" tag there) shows up bold here too. */
 .person-card-education {
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   color: var(--bs-secondary-color, #6c757d);
 }

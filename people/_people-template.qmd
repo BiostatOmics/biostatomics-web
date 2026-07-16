@@ -1,5 +1,5 @@
 ---
-# ! HOW TO USE: copy and paste this template into your folder (lastname-firstname) and rename it into `index.qmd`.
+# ! HOW TO USE: copy and paste this template into your folder (lastname-firstname) and rename it into `index.qmd`. Then, complete the fiels and remove all comments.
 title: Full name
 description: Roles
 # use a square photo (same width and height) so it displays consistently with everyone else's card, with no empty margins or cropping
@@ -12,16 +12,14 @@ email: Your email of contact
 # select one of the following groups. introduce it as a string (surrounded by ""), as this allow to perform glob operations.  
 people_group: "pi | research_scientist | postdoc | visitor | phd | student | alumni"
 
-# education is shown as a HTML list where each title is an element of the list. the education title follows the structure "<PhD|MS|BS> in <X> - University <X>, <year>".
+# education is shown as a HTML list where each title is an element of the list. the education title follows the structure "<PhD|MS|BS> in <X> | University <X>, <year>". this same list is also reused automatically to build the short version shown on your compact card in the group listing, so you only need to fill it in once here.
 # just modify the following template with your data
 education: |
   <ul>
-    <li><strong>PhD in Statistics</strong> - Universitat Politècnica de València, 2014</li>
-    <li><strong>BS in Mathematics & Statistics</strong> - Universitat Politècnica de València, 2001</li>
+    <li><strong>PhD in Statistics</strong> | Universitat Politècnica de València, 2014</li>
+    <li><strong>BS in Mathematics & Statistics</strong> | Universitat Politècnica de València, 2001</li>
   </ul>
 
-# education_card is a short version of "education" shown on the compact card in the group listing (the full list above is only used on this page). Wrap the degree title itself in "<strong>...</strong>" so it shows up bold. Only list degrees you already hold — leave out anything still "in progress". Separate multiple degrees with " <br> ". If you don't have a finished degree yet, delete this field entirely.
-education_card: "<strong>BS in Mathematics & Statistics</strong>, Universitat Politècnica de València, 2001"
 affiliation: Your affiliation
 
 # we use the "trestles" template for the "about" div. 
