@@ -25,9 +25,9 @@ Some users have shared their website repos so anyone can dive into them and get 
 
 To create a new page the only thing needed is to create a Quarto valid file (``.qmd``, ``.md``, ``.ipynb``, ``.Rmd``). Quarto will render it and include it in the website. 
 
-Next step is allowing users to access this website. For that, we need to modify the `_quarto.yml` file and add, at least the `text` and `href` keys to the navigation panel (whether `navbar` or `sidebar`) for that page. 
+Next step is allowing users to access this page. For that, we need to modify the `_quarto.yml` file and add, at least the `text` and `href` keys to the navigation panel (whether `navbar` or `sidebar`) for that page. 
 
-> For example, if I want to create the "People" page and make it accesible at the top navigation bar, I should: 1) create `people.qmd` 2) go to `_quarto.yml` 3) in the `navbar` key, add `name: "People"` and `href: people.qmd`. 
+> For example, if I want to create the "People" page and make it accesible at the top navigation bar, I should: 1) create `people.qmd` 2) go to `_quarto.yml` 3) in the `navbar` key, add `text: "People"` and `href: people.qmd`. 
 
 `text` key is optional (by default, `text` is the linked (`href`) document's title), but is a good practice to always add it (except for pages that only require an icon).
 
@@ -38,21 +38,58 @@ That's the basic setup, for more info check <https://quarto.org/docs/websites/we
 
 As pages are `.qmd` files, those can be modified and designed with great flexibility. The following resources contain detailed information about it:
 
-- [About layout of pages](https://quarto.org/docs/authoring/article-layout.html#screen-column). Also, [this](https://quarto.org/docs/output-formats/page-layout.html#grid-customization). The layout of a page/site is essential as landing pages, for example, require a different layout than a "text only" page. 
+- [About layout of pages](https://quarto.org/docs/authoring/article-layout.html#screen-column). Also, [this](https://quarto.org/docs/output-formats/page-layout.html#grid-customization). The layout of a page is essential as landing pages, for example, require a different layout than a "text only" page. 
 - [About shortcodes (quarto native "snippets")](https://quarto.org/docs/authoring/shortcodes.html)
 
-### Avoid rendering (publishing) of private files/dirs
+### Add a new tool
+
+The [Tools](../tools/index.qmd) page is not built from individual `.qmd` files like other pages: it's a Quarto [listing](https://quarto.org/docs/websites/website-listings-custom.html) that renders cards automatically from a single metadata file. This keeps every card the same style.
+
+To add a new tool, add a card to `tools/tools.yml`:
+
+```yaml
+- title: "My Tool"
+  image: images/my-tool-logo.png # optional, path relative to tools/
+  date: 2026-01-01 # release/publication date
+  section: "Tools" # heading the card appears under: "Tools" or "Web apps"
+  categories: [package, R] # filterable tags shown on the card and in the sidebar
+  description: "One or two sentences describing the tool."
+  links:
+    - label: "GitHub"
+      icon: github # any Bootstrap Icons name
+      url: "https://github.com/BiostatOmics/my-tool"
+```
+
+No changes to `_quarto.yml` or the navbar are needed as the card appears automatically the next time the website is rendered.
+
+`section` and `categories` control two different things and are easy to confuse:
+
+- `section` decides which heading the card is grouped under ("Tools" vs "Web apps"). Only these two exist today.
+- `categories` are shown on the card (e.g. `R`, `shiny`, `package`) and power the clickable filter in the right sidebar. A tool can have as many as needed.
+
+> For example, adding a new Python package would use `section: "Tools"` (same heading as the R packages) and `categories: [package, python]` (its own filterable tags).
+
+If you need to change how cards look (not just their content), edit `tools/tools-cards.ejs.md` — see Quarto's [custom listing templates](https://quarto.org/docs/websites/website-listings-custom.html) docs.
+
+#### About tool thumbnails
+
+- The card thumbnail is shown at a fixed 120px height and scales the image to fit, so exact pixel dimensions aren't critical. 
+- However, for a good result generate the image around 900px wide (height following the image's own aspect ratio, trying to be close to 16:9). 
+- Save the image with transparent background.
+- Optimize the image converting it to `.webp` using [Squoosh](https://squoosh.app/) or similar.
+
+### Avoid rendering of private files/dirs
 
 By default, Quarto renders all valid Quarto files (``.qmd``, ``.md``, ``.ipynb``, ``.Rmd``) to the website. 
 
-To avoid rendering private documents to the website (such as `_CONTRIBUTING.md`) use the `_` (for files) or the `.` (for folders) prefixes in the filename. 
+To avoid rendering private files to the website (such as `_CONTRIBUTING.md`) use the `_` (for files) or the `.` (for folders) prefixes in the filename. 
 
 More info in <https://quarto.org/docs/websites/#render-targets>.
 
 
 ### Preview the website
 
-When developping in local, use `quarto preview index.qmd` to check the result. Importantly, only preview/render the `index.qmd` file, avoiding other "previewable" files (such as `_CONTRIBUTING.md`) to avoid generation of unnecesary files.
+When developping in local, use `quarto preview index.qmd` to check the result. Importantly, only preview the `index.qmd` file, avoiding other "previewable" files (such as `_CONTRIBUTING.md`) to avoid generation of unnecesary files.
 
 ### Icons
 

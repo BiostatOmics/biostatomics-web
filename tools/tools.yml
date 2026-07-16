@@ -1,5 +1,5 @@
 - title: "Coxmos"
-  image: images/coxmos-logo.png
+  image: images/coxmos-logo.webp
   date: 2026-05
   section: "Tools"
   categories: [R, package, multi-omics]
@@ -16,7 +16,7 @@
       url: "https://doi.org/10.1186/s13040-026-00559-9"
 
 - title: "MORE"
-  image: images/more-logo.png
+  image: images/more-logo.webp
   date: 2025-06
   section: "Tools"
   categories: [R, package, multi-omics]
@@ -30,7 +30,7 @@
       url: "https://doi.org/10.1093/bib/bbaf270"
 
 - title: "MOREshiny"
-  image: images/more-logo.png
+  image: images/more-logo.webp
   date: 2025-06
   section: "Tools"
   categories: [Docker, Shiny, multi-omics]
@@ -44,6 +44,7 @@
       url: "https://doi.org/10.1093/bib/bbaf270"
 
 - title: "PD Atlas Explorer"
+  image: images/pd-explorer.webp
   date: 2026-04-02
   section: "Web apps"
   categories: [Web, Shiny, single-cell]
@@ -52,7 +53,7 @@
     - label: "Launch app"
       icon: box-arrow-up-right
       url: "https://tools.biostatomics.com/pd-atlas-explorer/"
-    - label: "Code"
+    - label: "GitHub"
       icon: github
       url: "https://github.com/BiostatOmics/TejedorSerrano2026-pd-atlas"
     - label: "Paper"

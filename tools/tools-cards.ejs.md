@@ -10,6 +10,11 @@
     }
     bucket.items.push(item);
   }
+  const formatDate = (value) => {
+    if (!value) return "";
+    const d = new Date(value);
+    return d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+  };
 %>
 <div class="tool-grid list">
 <% for (const section of sections) { %>
@@ -20,7 +25,10 @@
         <img src="<%- item.image %>" class="tool-card-img" alt="<%- item.title %> logo">
       <% } %>
       <div class="tool-card-body">
-        <h5 class="tool-card-title listing-title"><%= item.title %></h5>
+        <div class="tool-card-heading">
+          <h5 class="tool-card-title listing-title"><%= item.title %></h5>
+          <span class="tool-card-date listing-date"><%= formatDate(item.date) %></span>
+        </div>
         <div class="tool-card-tags listing-categories">
           <% (item.categories || []).forEach(function(cat) { %>
             <span class="badge tool-badge"><%= cat %></span>

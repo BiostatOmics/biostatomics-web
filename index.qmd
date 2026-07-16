@@ -1,17 +1,15 @@
 ---
-title: "BiostatOmics Lab"
+# title: "BiostatOmics Lab"
 image: images/Logo_BioStatOmics_300x300Px_color_Transparent_Bckg.png
 about: 
-    template: jolla
-    # template: trestles
+    # template: jolla
+    template: trestles
     links: 
         - icon: github
           href: https://github.com/biostatomics
+toc: false
+layout: full
 ---
 
-
-## WIP
-
-### WIP
-
-This is a test.
+# About us
+{{< lipsum 1 >}}
