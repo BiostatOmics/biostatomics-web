@@ -1,87 +1,115 @@
-/* css styles */
+/* This is a CSS file: it controls how things LOOK (colors, spacing, sizes, borders...), not what they say. The content itself (text, images) lives in the .qmd/.yml files; this file only says how to display it.
 
-/* tools section */
+   Basic CSS syntax, in case you've never seen it:
+     .some-class {
+       property: value;
+       another-property: another-value;
+     }
+   This means: "for every HTML element that has class="some-class", apply these style rules". A "class" is just a label written in the HTML/EJS templates (e.g. a div with class="tool-card") that this file can then target.
+
+   A few symbols you'll see below:
+     .name              targets elements with class="name"
+     .name:hover        targets ".name", but ONLY while the mouse is over it
+     .name:first-child  targets ".name", but ONLY when it's the first element inside its parent
+     @media (...) { }   a block of rules that only apply on small screens (see the "responsive / mobile" comments below)
+
+   You'll also see values like "var(--bs-border-color, #dee2e6)". This reads a color already defined by the site's Bootstrap theme (--bs-border-color); the second value (#dee2e6) is just a fallback used if that theme color isn't available for some reason. You don't need to touch these. */
+
+
+/* tools page — card grid used by tools/tools-cards.ejs.md */
+
+/* The grid that holds every tool card, 2 cards per row. */
 .tool-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr); /* 2 equal-width columns */
+  gap: 1.5rem; /* space between cards, both horizontal and vertical */
 }
 
+/* responsive / mobile: below 700px wide (e.g. a phone screen), switch to a single column so cards don't get squeezed too narrow */
 @media (max-width: 700px) {
   .tool-grid {
     grid-template-columns: 1fr;
   }
 }
 
+/* The "Tools" / "Web apps" heading that sits above each group of cards. */
 .tools-section-title {
-  grid-column: 1 / -1;
-  margin-top: 1.5rem;
+  grid-column: 1 / -1; /* make the heading span the full width of the grid, instead of sitting inside a single card column */
+  margin-top: 1.5rem; /* space above the heading */
   margin-bottom: 0;
   padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--bs-border-color, #dee2e6);
+  border-bottom: 1px solid var(--bs-border-color, #dee2e6); /* thin line under the heading */
 }
 
+/* the very first heading on the page shouldn't have that extra space above it (there's nothing above it to separate from) */
 .tools-section-title:first-child {
   margin-top: 0;
 }
 
+/* The card box itself: border, rounded corners, subtle shadow. */
 .tool-card {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* stack its contents top-to-bottom */
   border: 1px solid var(--bs-border-color-translucent, rgba(0, 0, 0, 0.08));
-  border-radius: 0.75rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
-  overflow: hidden;
+  border-radius: 0.75rem; /* rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06); /* soft drop shadow */
+  overflow: hidden; /* clips anything (like the image) to the rounded corners */
   background-color: var(--bs-body-bg, #fff);
-  transition: box-shadow 0.15s ease;
+  transition: box-shadow 0.15s ease; /* animate the shadow smoothly on hover, instead of it changing instantly */
 }
 
+/* slightly bigger shadow when the mouse hovers the card, as a hint that it's part of an interactive page */
 .tool-card:hover {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
+/* The tool's logo/image at the top of the card. */
 .tool-card-img {
-  height: 150px;
-  object-fit: contain;
-  padding: 1rem;
-  background-color: #fff;
+  height: 150px; /* fixed height, so every card lines up evenly */
+  object-fit: contain; /* scale the image to fit inside that height without cropping or distorting it */
+  padding: 1rem; /* small margin of empty space around the image */
+  background-color: #fff; /* white backdrop, useful for logos with a transparent background */
 }
 
+/* The text area below the image (title, description, links...). */
 .tool-card-body {
   display: flex;
   flex-direction: column;
-  flex: 1;
-  padding: 1.1rem 1.25rem 1.25rem;
+  flex: 1; /* stretch to fill the remaining height of the card, so the "links" footer (further below) always sticks to the bottom */
+  padding: 1.1rem 1.25rem 1.25rem; /* top / left-right / bottom spacing */
 }
 
+/* Row that holds the title on the left and the date on the right. */
 .tool-card-heading {
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
+  align-items: baseline; /* line up title and date on the same text baseline */
+  justify-content: space-between; /* push title to the left, date to the right */
   gap: 0.75rem;
   margin-bottom: 0.5rem;
 }
 
 .tool-card-title {
   margin-bottom: 0;
-  font-weight: 700;
+  font-weight: 700; /* bold */
   font-size: 1.05rem;
 }
 
 .tool-card-date {
-  flex-shrink: 0;
+  flex-shrink: 0; /* never let the date shrink/wrap, even in a narrow card */
   font-size: 0.8rem;
-  color: var(--bs-secondary-color, #6c757d);
-  white-space: nowrap;
+  color: var(--bs-secondary-color, #6c757d); /* muted grey */
+  white-space: nowrap; /* keep "May 2026" on a single line */
 }
 
+/* Row of small category badges (e.g. "R", "package"). */
 .tool-card-tags {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* let badges wrap onto a new line if there are many */
   gap: 0.4rem;
   margin-bottom: 0.75rem;
 }
 
+/* A single "hollow" badge: colored border, no fill. */
 .tool-badge {
   font-weight: 500;
   background-color: transparent;
@@ -94,22 +122,24 @@
   color: var(--bs-secondary-color, #495057);
 }
 
+/* Footer strip with the link buttons (GitHub, CRAN, Paper...). It "bleeds" to the edges of the card (negative margins cancel out the card's own padding) so it looks like a distinct panel rather than floating text. */
 .tool-card-links {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-top: auto;
+  margin-top: auto; /* push this footer all the way to the bottom of the card, however short the description above it is */
   margin-left: -1.25rem;
   margin-right: -1.25rem;
   margin-bottom: -1.25rem;
   padding: 0.9rem 1.25rem;
-  background-color: var(--bs-tertiary-bg, #f8f9fa);
+  background-color: var(--bs-tertiary-bg, #f8f9fa); /* light grey panel */
   border-top: 1px solid var(--bs-border-color-translucent, rgba(0, 0, 0, 0.08));
 }
 
+/* A single link button inside that footer. */
 .tool-link {
   font-size: 0.8rem;
-  text-decoration: none;
+  text-decoration: none; /* remove the default underline on links */
   border: 1px solid var(--bs-border-color, #dee2e6);
   border-radius: 0.375rem;
   padding: 0.15rem 0.45rem;
@@ -118,4 +148,100 @@
 
 .tool-link:hover {
   background-color: var(--bs-secondary-bg, #e9ecef);
+}
+
+
+/* people page — card grid used by people/people-cards.ejs.md. Same overall approach as the tools cards above, just laid out differently: people cards are left-aligned (photo on top, text below) instead of a left-aligned image banner beside the text.
+
+   Unlike the tools grid, this one uses flexbox instead of CSS grid, because different groups need a different number of cards per row (e.g. 3 for "PhD Students", 5 for "Alumni" — see the "cols" value per group in people-cards.ejs.md). CSS grid applies one fixed column layout to the whole container, but flexbox lets every card just declare its own width (via a "person-card-cols-*" class below) and wrap naturally — so several different "row densities" can coexist in the same list. */
+.people-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+/* The group heading (e.g. "Postdoctoral Fellows") that sits above each group of person cards. "width: 100%" forces it onto its own line, pushing every card after it to start a new row. */
+.people-section-title {
+  width: 100%;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--bs-border-color, #dee2e6);
+}
+
+.people-section-title:first-child {
+  margin-top: 0;
+}
+
+/* The card itself. Unlike the tool cards, this one IS the clickable link (see the person-card anchor in people-cards.ejs.md). Laid out the same way as .tool-card: a full-width photo on top, then left-aligned text below. Its width (how many fit per row) is set by the "person-card-cols-*" rules further down, not here. */
+.person-card {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0; /* never let a card shrink below the width its "person-card-cols-*" class gives it */
+  text-decoration: none; /* this card is a link: remove the default underline */
+  color: inherit; /* ...and make it use normal text color, not "link blue" */
+  border: 1px solid var(--bs-border-color-translucent, rgba(0, 0, 0, 0.08));
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  overflow: hidden; /* clips the photo to the card's rounded corners */
+  background-color: var(--bs-body-bg, #fff);
+  transition: box-shadow 0.15s ease;
+}
+
+.person-card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* How many cards fit per row, for a given group's "cols" value: each card's width is "1/N of the row, minus its share of the gaps". Add a ".person-card-cols-N" rule here for any new N you use in people-cards.ejs.md. */
+.person-card-cols-3 {
+  width: calc((100% - 2 * 1.5rem) / 3);
+}
+
+.person-card-cols-5 {
+  width: calc((100% - 4 * 1.5rem) / 5);
+}
+
+/* responsive / mobile: regardless of how many columns a group uses on a normal screen, collapse everything to 2 columns on tablet-sized screens and 1 on phone-sized screens, so cards never get squeezed too small to read */
+@media (max-width: 900px) {
+  .person-card-cols-3,
+  .person-card-cols-5 {
+    width: calc((100% - 1.5rem) / 2);
+  }
+}
+
+@media (max-width: 600px) {
+  .person-card-cols-3,
+  .person-card-cols-5 {
+    width: 100%;
+  }
+}
+
+/* The photo, spanning the full width of the card. No fixed height and no "object-fit" here on purpose: the box always takes exactly the photo's own proportions, scaled to the card's width — that's the only way to guarantee zero empty space AND zero cropping at the same time. The trade-off: if two people in the same row upload photos with different proportions, their image boxes (and therefore their cards) won't line up at exactly the same height. */
+.person-card-img {
+  width: 100%;
+  display: block;
+}
+
+/* The text area below the photo. */
+.person-card-body {
+  padding: 1rem;
+  text-align: left;
+}
+
+.person-card-title {
+  margin-bottom: 0.2rem;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.person-card-role {
+  color: var(--bs-secondary-color, #495057);
+  font-size: 0.9rem;
+  margin-bottom: 0.35rem;
+}
+
+/* The "education" line(s), separated with a plain br (not a bullet list — that richer format is reserved for the person's own page). The degree title itself comes wrapped in a "strong" tag from the YAML (see education_card in people/_people-template.qmd), which is what makes it bold here. */
+.person-card-education {
+  font-size: 0.72rem;
+  color: var(--bs-secondary-color, #6c757d);
 }

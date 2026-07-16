@@ -1,4 +1,5 @@
 ---
+pagetitle: Tools
 listing:
   contents: tools.yml
   template: tools-cards.ejs.md

@@ -78,6 +78,16 @@ If you need to change how cards look (not just their content), edit `tools/tools
 - Save the image with transparent background.
 - Optimize the image converting it to `.webp` using [Squoosh](https://squoosh.app/) or similar.
 
+### Add a new person
+
+The [People](../people/index.qmd) page is not a single page either: it's a Quarto [listing](https://quarto.org/docs/websites/website-listings-custom.html) that gathers one `.qmd` per person and renders a card for each, grouped under the right heading automatically.
+
+To add a new person, copy `people/_people-template.qmd` into a new folder named `lastname-firstname/`, rename it to `index.qmd`, and fill in your own data: the template has a comment above every field explaining what it's for and how it's used, including the photo, the `people_group` (which heading your card appears under), and `education_card` (the short version of your education shown on the card).
+
+No changes to `_quarto.yml` or the navbar are needed as the card appears automatically the next time the website is rendered.
+
+If you need to change how cards look (not just their content), edit `people/people-cards.ejs.md` — see Quarto's [custom listing templates](https://quarto.org/docs/websites/website-listings-custom.html) docs.
+
 ### Avoid rendering of private files/dirs
 
 By default, Quarto renders all valid Quarto files (``.qmd``, ``.md``, ``.ipynb``, ``.Rmd``) to the website. 

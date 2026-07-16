@@ -52,7 +52,7 @@ website:
         href: blog.qmd
         icon: journal
       - text: "People"
-        href: people.qmd
+        href: people/index.qmd
         icon: people-fill
       - text: "Contact"
         href: contact.qmd
@@ -64,7 +64,14 @@ format:
       - cosmo
       - brand
     css: styles.css
-    toc: true
+    toc: true # add a "table of contents" 
+    include-in-header: # this allows to include HTML in the HTML header of the website. HTML header contains all the external resources needed.
+    # load AcademicIcons icon pack (for google scholar, orcid, zotero, etc.)
+      - text: <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    # load FontAwesome icon pack (not needed for now -> commented)
+      # - text: <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.2.0/css/all.min.css">
+    # load AltMetric widget (for citations and impact of each paper, not needed for now -> commented)
+      # - text: <script src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
 
 execute:
   freeze: auto # code chunks are executed locally and results are saved in `_freeze` directory. without this, GitHub Actions would need to install R/python and all dependencies, then execute every chunk, which is slower and failure-prone.

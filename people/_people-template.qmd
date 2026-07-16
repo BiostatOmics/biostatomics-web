@@ -1,0 +1,70 @@
+---
+# ! HOW TO USE: copy and paste this template into your folder (lastname-firstname) and rename it into `index.qmd`.
+title: Full name
+description: Roles
+# use a square photo (same width and height) so it displays consistently with everyone else's card, with no empty margins or cropping
+image: avatar.webp
+
+last: Last name
+first: First name
+email: Your email of contact
+
+# select one of the following groups. introduce it as a string (surrounded by ""), as this allow to perform glob operations.  
+people_group: "pi | research_scientist | postdoc | visitor | phd | student | alumni"
+
+# education is shown as a HTML list where each title is an element of the list. the education title follows the structure "<PhD|MS|BS> in <X> - University <X>, <year>".
+# just modify the following template with your data
+education: |
+  <ul>
+    <li><strong>PhD in Statistics</strong> - Universitat Politècnica de València, 2014</li>
+    <li><strong>BS in Mathematics & Statistics</strong> - Universitat Politècnica de València, 2001</li>
+  </ul>
+
+# education_card is a short version of "education" shown on the compact card in the group listing (the full list above is only used on this page). Wrap the degree title itself in "<strong>...</strong>" so it shows up bold. Only list degrees you already hold — leave out anything still "in progress". Separate multiple degrees with " <br> ". If you don't have a finished degree yet, delete this field entirely.
+education_card: "<strong>BS in Mathematics & Statistics</strong>, Universitat Politècnica de València, 2001"
+affiliation: Your affiliation
+
+# we use the "trestles" template for the "about" div. 
+about:
+  template: trestles
+  image-shape: round
+
+  # remove the links fields that are unnecessary
+  links: 
+    - icon: envelope-fill
+      href: mailto:example@email.com
+
+    - icon: globe2
+      href: https://www.example-website.com
+    
+    - icon: linkedin
+      href: https://www.linkedin.com/in/example-profile.com
+    
+    - icon: github
+      href: https://github.com/example-profile.com
+    
+    - text: '<i class="ai ai-google-scholar-square"></i>'
+      href: https://github.com/example-scholar.com
+    
+    - text: '<i class="ai ai-orcid"></i>'
+      href: https://orcid.org/example-orcid.com
+
+layout: full
+---
+
+
+## About me
+
+<!-- replace this command with your description: biography, research interests, etc. -->
+{{< lipsum 1 >}}
+
+
+## Education
+
+<!-- this command inserts the "education" key filled in the YAML header -->
+{{< meta education >}}
+
+
+<!-- ## Group Publications -->
+<!-- TODO: embed the list of the publications in which this member has contributed, see https://github.com/MasielloGroup/MasielloGroupWebsite/blob/main/people/masiello-david/index.qmd -->
+<!-- to this end, we need to split the page in two "divs" one for the "about" and another for the "listing" of publications. in the linked repo the method is shown: use fenced divs (:::{#section}) to split the "about" div from the "listing" div -->

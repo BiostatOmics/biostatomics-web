@@ -7,7 +7,6 @@ website:
     - publications.qmd
     # - tools/index.qmd
     - blog.qmd
-    - people.qmd
     - contact.qmd
   # draft-mode : gone # empty and unlinked
   # draft-mode : unlinked # rendered and unlinked

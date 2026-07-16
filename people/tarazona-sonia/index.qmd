@@ -1,0 +1,49 @@
+---
+title: Sonia Tarazona
+description: Statistics Associate Professor <br> BiostatOmics's PI
+image: avatar.webp
+
+last: Tarazona
+first: Sonia
+people_group: "pi"
+email: sotacam@eio.upv.es
+education: |
+  <ul>
+    <li><strong>PhD in Statistics</strong> — Universitat Politècnica de València, 2014</li>
+    <li><strong>BS in Mathematics & Statistics</strong> — Universitat Politècnica de València, 2001</li>
+  </ul>
+education_card: "<strong>PhD in Statistics</strong>, Universitat Politècnica de València, 2014 <br> <strong>BS in Mathematics & Statistics</strong>, Universitat Politècnica de València, 2001"
+affiliation: Universitat Politècnica de València
+
+about:
+  template: trestles
+  image-shape: round
+  links: 
+    - icon: envelope-fill
+      href: mailto:sotacam@eio.upv.es
+
+    - icon: globe2
+      href: https://www.upv.es/ficha-personal/sotacam
+    
+    - icon: linkedin
+      href: https://www.linkedin.com/in/sonia-tarazona-37928a47
+    
+    - icon: github
+      href: https://github.com/soniatarazona
+    
+    - text: '<i class="ai ai-google-scholar-square"></i>'
+      href: https://github.com/biostatomics
+    
+    - text: '<i class="ai ai-orcid"></i>'
+      href: https://orcid.org/0000-0001-5346-1407
+
+layout: full
+---
+
+## About me
+
+{{< lipsum 1 >}}
+
+## Education
+
+{{< meta education >}}

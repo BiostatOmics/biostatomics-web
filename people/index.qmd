@@ -1,0 +1,9 @@
+---
+title: Meet the group
+pagetitle: People
+listing:
+  contents: "*/index.qmd" # include all members `index.qmd` file for the listing
+  template: people-cards.ejs.md # use this template for making the card of each member (custom listing)
+# page-layout: article
+# toc: true
+---
