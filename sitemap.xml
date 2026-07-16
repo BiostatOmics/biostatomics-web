@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://biostatomics.com/index.html</loc>
-    <lastmod>2026-07-16T14:41:56.215Z</lastmod>
-  </url>
-  <url>
-    <loc>https://biostatomics.com/people/tejedor-juan/index.html</loc>
-    <lastmod>2026-07-16T14:41:56.216Z</lastmod>
-  </url>
-  <url>
     <loc>https://biostatomics.com/tools/index.html</loc>
-    <lastmod>2026-07-16T14:41:56.217Z</lastmod>
-  </url>
-  <url>
-    <loc>https://biostatomics.com/people/tarazona-sonia/index.html</loc>
-    <lastmod>2026-07-16T14:41:56.216Z</lastmod>
+    <lastmod>2026-07-16T14:51:42.856Z</lastmod>
   </url>
   <url>
     <loc>https://biostatomics.com/people/index.html</loc>
-    <lastmod>2026-07-16T14:41:56.216Z</lastmod>
+    <lastmod>2026-07-16T14:51:42.855Z</lastmod>
+  </url>
+  <url>
+    <loc>https://biostatomics.com/people/tarazona-sonia/index.html</loc>
+    <lastmod>2026-07-16T14:51:42.855Z</lastmod>
+  </url>
+  <url>
+    <loc>https://biostatomics.com/people/tejedor-juan/index.html</loc>
+    <lastmod>2026-07-16T14:51:42.856Z</lastmod>
+  </url>
+  <url>
+    <loc>https://biostatomics.com/index.html</loc>
+    <lastmod>2026-07-16T14:51:42.855Z</lastmod>
   </url>
 </urlset>

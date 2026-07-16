@@ -1,38 +1,17 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "About us",
-    "section": "",
-    "text": "About us\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "people/tejedor-juan/index.html",
-    "href": "people/tejedor-juan/index.html",
-    "title": "Juan Andrés Tejedor-Serrano",
-    "section": "",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
-  },
-  {
-    "objectID": "people/tejedor-juan/index.html#about-me",
-    "href": "people/tejedor-juan/index.html#about-me",
-    "title": "Juan Andrés Tejedor-Serrano",
-    "section": "",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
-  },
-  {
-    "objectID": "people/tejedor-juan/index.html#education",
-    "href": "people/tejedor-juan/index.html#education",
-    "title": "Juan Andrés Tejedor-Serrano",
-    "section": "Education",
-    "text": "Education\n\n\nMS in Omics Data Analysis & Systems Biology | University of Seville, 2024\n\n\nBS in Biotechnology | University of Granada, 2023"
-  },
-  {
     "objectID": "tools/index.html",
     "href": "tools/index.html",
     "title": "BiostatOmics Lab",
     "section": "",
     "text": "Tools\n\n  \n    \n    \n      \n        \n      \n      \n        \n          Coxmos\n          May 2026\n        \n\n        \n        \n          \n            R\n          \n            package\n          \n            multi-omics\n          \n        \n\n        R package for interpretable Cox survival analysis on high-dimensional and multiblock (multi-omics) data, combining classical Cox regression with sparse PLS-based methods.\n\n        \n        \n          \n            \n               GitHub\n            \n          \n            \n               CRAN\n            \n          \n            \n               Paper\n            \n          \n        \n      \n    \n  \n    \n    \n      \n        \n      \n      \n        \n          MORE\n          Jun 2025\n        \n\n        \n        \n          \n            R\n          \n            package\n          \n            multi-omics\n          \n        \n\n        R package to model multi-omics regulatory relationships using PLS or regularized regression, identifying candidate regulators for a target omic feature.\n\n        \n        \n          \n            \n               GitHub\n            \n          \n            \n               Paper\n            \n          \n        \n      \n    \n  \n    \n    \n      \n        \n      \n      \n        \n          MOREshiny\n          Jun 2025\n        \n\n        \n        \n          \n            Docker\n          \n            Shiny\n          \n            multi-omics\n          \n        \n\n        Dockerized Shiny interface for MORE, aimed at users with less experience in R or statistics who want to run its core functionality through a graphical interface.\n\n        \n        \n          \n            \n               GitHub\n            \n          \n            \n               Paper\n            \n          \n        \n      \n    \n  \n\n  Web apps\n\n  \n    \n    \n      \n        \n      \n      \n        \n          PD Atlas Explorer\n          Apr 2026\n        \n\n        \n        \n          \n            Web\n          \n            Shiny\n          \n            single-cell\n          \n        \n\n        Interactive explorer for the multiregional single-cell atlas of Parkinson's disease presented in Tejedor-Serrano et al., 2026.\n\n        \n        \n          \n            \n               Launch app\n            \n          \n            \n               GitHub\n            \n          \n            \n               Paper\n            \n          \n        \n      \n    \n  \n\n\nNo matching items\n Back to top"
+  },
+  {
+    "objectID": "people/index.html",
+    "href": "people/index.html",
+    "title": "Meet the group",
+    "section": "",
+    "text": "Principal Investigator\n\n    \n      \n      \n        \n          \n        \n        \n        \n          Sonia Tarazona\n          Statistics Associate Professor\n\n          \n          \n            PhD in Statistics | Universitat Politècnica de València, 2014  BS in Mathematics & Statistics | Universitat Politècnica de València, 2001\n          \n        \n      \n    \n\n  \n\n  \n\n  \n  \n\n  \n\n  \n  \n\n  \n\n  \n  \n\n    PhD Students\n\n    \n      \n      \n        \n          \n        \n        \n        \n          Juan Andrés Tejedor-Serrano\n          PhD Student\n\n          \n          \n            MS in Omics Data Analysis & Systems Biology | University of Seville, 2024  BS in Biotechnology | University of Granada, 2023\n          \n        \n      \n    \n\n  \n\n  \n\n  \n  \n\n  \n\n  \n  \n\n  \n\n  \n  \n\n\nNo matching items\n Back to top"
   },
   {
     "objectID": "people/tarazona-sonia/index.html",
@@ -56,10 +35,31 @@
     "text": "Education\n\n\nPhD in Statistics | Universitat Politècnica de València, 2014\n\n\nBS in Mathematics & Statistics | Universitat Politècnica de València, 2001"
   },
   {
-    "objectID": "people/index.html",
-    "href": "people/index.html",
-    "title": "Meet the group",
+    "objectID": "people/tejedor-juan/index.html",
+    "href": "people/tejedor-juan/index.html",
+    "title": "Juan Andrés Tejedor-Serrano",
     "section": "",
-    "text": "Principal Investigator\n\n    \n      \n      \n        \n          \n        \n        \n        \n          Sonia Tarazona\n          Statistics Associate Professor\n\n          \n          \n            PhD in Statistics | Universitat Politècnica de València, 2014  BS in Mathematics & Statistics | Universitat Politècnica de València, 2001\n          \n        \n      \n    \n\n  \n\n  \n\n  \n  \n\n  \n\n  \n  \n\n  \n\n  \n  \n\n    PhD Students\n\n    \n      \n      \n        \n          \n        \n        \n        \n          Juan Andrés Tejedor-Serrano\n          PhD Student\n\n          \n          \n            MS in Omics Data Analysis & Systems Biology | University of Seville, 2024  BS in Biotechnology | University of Granada, 2023\n          \n        \n      \n    \n\n  \n\n  \n\n  \n  \n\n  \n\n  \n  \n\n  \n\n  \n  \n\n\nNo matching items\n Back to top"
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+  },
+  {
+    "objectID": "people/tejedor-juan/index.html#about-me",
+    "href": "people/tejedor-juan/index.html#about-me",
+    "title": "Juan Andrés Tejedor-Serrano",
+    "section": "",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+  },
+  {
+    "objectID": "people/tejedor-juan/index.html#education",
+    "href": "people/tejedor-juan/index.html#education",
+    "title": "Juan Andrés Tejedor-Serrano",
+    "section": "Education",
+    "text": "Education\n\n\nMS in Omics Data Analysis & Systems Biology | University of Seville, 2024\n\n\nBS in Biotechnology | University of Granada, 2023"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "About us",
+    "section": "",
+    "text": "About us\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n\n\n\n Back to top"
   }
 ]
