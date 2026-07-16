@@ -2,5 +2,11 @@
   {
     "listing": "/tools/index.html",
     "items": []
+  },
+  {
+    "listing": "/people/index.html",
+    "items": [
+      "/people/tarazona-sonia/index.html"
+    ]
   }
 ]

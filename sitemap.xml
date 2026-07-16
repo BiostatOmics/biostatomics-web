@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://biostatomics.com/tools/tools-cards.ejs.html</loc>
-    <lastmod>2026-07-16T08:16:31.201Z</lastmod>
+    <loc>https://biostatomics.com/tools/index.html</loc>
+    <lastmod>2026-07-16T11:54:04.597Z</lastmod>
   </url>
   <url>
     <loc>https://biostatomics.com/index.html</loc>
-    <lastmod>2026-07-16T08:16:31.201Z</lastmod>
+    <lastmod>2026-07-16T11:54:04.596Z</lastmod>
   </url>
   <url>
-    <loc>https://biostatomics.com/tools/index.html</loc>
-    <lastmod>2026-07-16T08:16:31.201Z</lastmod>
+    <loc>https://biostatomics.com/people/tarazona-sonia/index.html</loc>
+    <lastmod>2026-07-16T11:54:04.597Z</lastmod>
+  </url>
+  <url>
+    <loc>https://biostatomics.com/people/people-cards.ejs.html</loc>
+    <lastmod>2026-07-16T11:54:04.596Z</lastmod>
+  </url>
+  <url>
+    <loc>https://biostatomics.com/people/index.html</loc>
+    <lastmod>2026-07-16T11:54:04.596Z</lastmod>
+  </url>
+  <url>
+    <loc>https://biostatomics.com/tools/tools-cards.ejs.html</loc>
+    <lastmod>2026-07-16T11:54:04.597Z</lastmod>
   </url>
 </urlset>

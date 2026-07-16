@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>tools-cards.ejs – BiostatOmics Lab</title>
+<title>people-cards.ejs – BiostatOmics Lab</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -76,12 +76,12 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="BiostatOmics Lab">
-<meta property="og:image" content="https://biostatomics.com/tools/<%- item.image %>">
+<meta property="og:image" content="https://biostatomics.com/people/<%- item.image %>">
 <meta property="og:site_name" content="BiostatOmics Lab">
-<meta property="og:image:alt" content="<%- item.title %> logo">
+<meta property="og:image:alt" content="<%= item.title %>">
 <meta name="twitter:title" content="BiostatOmics Lab">
-<meta name="twitter:image" content="https://biostatomics.com/tools/<%- item.image %>">
-<meta name="twitter:image:alt" content="<%- item.title %> logo">
+<meta name="twitter:image" content="https://biostatomics.com/people/<%- item.image %>">
+<meta name="twitter:image:alt" content="<%= item.title %>">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -157,65 +157,54 @@ ul.task-list li input[type="checkbox"] {
 
 
 &lt;%
-  // This is a Quarto EJS template: it turns the tools listed in tools.yml into the HTML cards shown on the Tools page. Quarto gives it a ready-made "items" array, one entry per tool, with whatever fields you wrote in the YAML (item.title, item.image, item.categories...).
+  // This is a Quarto EJS template: it turns each person's profile (every people/<name>/index.qmd) into the HTML cards shown on the "Meet the group" page, grouped under the right heading. Quarto gives it a ready-made "items" array, one entry per person found via the "contents:" setting in people/index.qmd, with whatever fields that person's YAML header defines (item.title, item.image, item.people_group...).
   // Three kinds of tags are used below: a code tag that runs JavaScript and prints nothing (loops, ifs, variables), a safe-print tag that prints a value as escaped text, and a raw-print tag that prints a value as-is, unescaped (used for links, image paths, or text that already contains HTML). Their real symbols can't be written here in a comment, because the template engine looks for those symbols everywhere, even inside comments — see the real tags just below for what they look like.
 
-  // Group the flat list of tools by their "section" field (e.g. "Tools", "Web apps") so we can print one heading per group further down.
-  const sections = [];
-  for (const item of items) {
-    const name = item.section || "Other";
-    let bucket = sections.find((s) =&gt; s.name === name);
-    if (!bucket) {
-      bucket = { name: name, items: [] };
-      sections.push(bucket);
-    }
-    bucket.items.push(item);
-  }
-
-  // Turns a date like "2026-05" into "May 2026".
-  const formatDate = (value) =&gt; {
-    if (!value) return "";
-    const d = new Date(value);
-    return d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
-  };
+  // The groups, in the exact order they should appear. "key" must match the "people_group" value written in each person's YAML header exactly. "label" is the heading text shown on the page. "cols" is how many cards should fit per row for that group on a normal-width screen (see the ".person-card-cols-*" rules in styles.css) — groups with a lot of members (like alumni) look better with more, smaller cards. To add a new group, add a line here.
+  const groups = [
+    { key: "pi",                 label: "Principal Investigator",  cols: 3 },
+    { key: "research_scientist", label: "Research Scientists",     cols: 3 },
+    { key: "postdoc",            label: "Postdoctoral Fellows",    cols: 3 },
+    { key: "phd",                label: "PhD Students",            cols: 3 },
+    { key: "visitor",            label: "Visiting Researchers",    cols: 3 },
+    { key: "student",            label: "Students",                cols: 3 },
+    { key: "alumni",             label: "Alumni",                  cols: 5 },
+  ];
 %&gt;
 
-<div class="tool-grid list">
-&lt;% for (const section of sections) { %&gt;
+<div class="people-grid list">
+&lt;% for (const group of groups) { %&gt;
 
-  <h2 class="tools-section-title anchored">&lt;%= section.name %&gt;</h2>
+  &lt;% const groupItems = items.filter((item) =&gt; item.people_group === group.key); %&gt;
 
-  &lt;% for (const item of section.items) { %&gt;
-    <!-- metadataAttrs(item) is a helper Quarto provides for free: it adds hidden attributes this card needs so search/sort/filter keep working. Always keep it here. -->
-    <div class="tool-card" <%="metadataAttrs(item)" %="">&gt;
-      &lt;% if (item.image) { %&gt;
-        <img src="<%- item.image %>" class="tool-card-img" alt="<%- item.title %> logo">
-      &lt;% } %&gt;
-      <div class="tool-card-body">
-        <div class="tool-card-heading">
-          <h5 class="tool-card-title listing-title anchored">&lt;%= item.title %&gt;</h5>
-          <span class="tool-card-date listing-date">&lt;%= formatDate(item.date) %&gt;</span>
+  <!-- only print the heading (and the cards) if this group actually has someone in it — this is what makes empty groups disappear automatically -->
+  &lt;% if (groupItems.length &gt; 0) { %&gt;
+
+    <h2 class="people-section-title anchored">&lt;%= group.label %&gt;</h2>
+
+    &lt;% for (const item of groupItems) { %&gt;
+      <!-- the whole card is a link to that person's own page; item.path is given automatically by Quarto. metadataAttrs(item) is a helper Quarto provides for free: it adds hidden attributes this card needs so search/sort/filter keep working. Always keep it here. "person-card-cols-<N>" sets this card's width so exactly "cols" of them fit per row (see the group definition above). -->
+      <a href="<%- item.path %>" class="person-card person-card-cols-<%= group.cols %>" <%="metadataAttrs(item)" %="">&gt;
+        &lt;% if (item.image) { %&gt;
+          <img src="<%- item.image %>" class="person-card-img" alt="<%= item.title %>">
+        &lt;% } %&gt;
+        &lt;%
+          // "description" often has two parts separated by a literal "<br>", e.g. "PhD Student <br> Sparse regression for genomics".
+          // On the card we only want the first part (the role); the full text is still used elsewhere (e.g. as this page's meta description).
+          const role = (item.description || "").split("<br>")[0].trim();
+        %&gt;
+        <div class="person-card-body">
+          <h5 class="person-card-title listing-title anchored">&lt;%= item.title %&gt;</h5>
+          <p class="person-card-role listing-description">&lt;%= role %&gt;</p>
+
+          <!-- education_card is a short version of "education" meant just for this compact card, with the degree title in bold (see people/_people-template.qmd); it's optional, so only print this block if the person filled it in -->
+          &lt;% if (item.education_card) { %&gt;
+            <div class="person-card-education">&lt;%= item.education_card %&gt;</div>
+          &lt;% } %&gt;
         </div>
+      </a>
+    &lt;% } %&gt;
 
-        <!-- one badge per category; "|| []" avoids an error if a tool has no categories defined -->
-        <div class="tool-card-tags listing-categories">
-          &lt;% (item.categories || []).forEach(function(cat) { %&gt;
-            <span class="badge tool-badge">&lt;%= cat %&gt;</span>
-          &lt;% }) %&gt;
-        </div>
-
-        <p class="tool-card-text listing-description">&lt;%= item.description %&gt;</p>
-
-        <!-- one button per link; each entry in item.links needs a label, an icon (a Bootstrap Icons name) and a url -->
-        <div class="tool-card-links">
-          &lt;% (item.links || []).forEach(function(link) { %&gt;
-            <a href="<%- link.url %>" class="tool-link" target="_blank" rel="noopener">
-              <i class="bi bi-<%= link.icon %>"></i> &lt;%= link.label %&gt;
-            </a>
-          &lt;% }) %&gt;
-        </div>
-      </div>
-    </div>
   &lt;% } %&gt;
 
 &lt;% } %&gt;
@@ -223,7 +212,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+</name><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

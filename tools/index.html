@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>index – BiostatOmics Lab</title>
+<title>Tools – BiostatOmics Lab</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -102,6 +102,7 @@ ul.task-list li input[type="checkbox"] {
     }
   })
   </script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -134,11 +135,11 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="BiostatOmics Lab">
+<meta property="og:title" content="Tools">
 <meta property="og:image" content="https://biostatomics.com/tools/images/coxmos-logo.webp">
 <meta property="og:site_name" content="BiostatOmics Lab">
 <meta property="og:image:alt" content="Coxmos logo">
-<meta name="twitter:title" content="BiostatOmics Lab">
+<meta name="twitter:title" content="Tools">
 <meta name="twitter:image" content="https://biostatomics.com/tools/images/coxmos-logo.webp">
 <meta name="twitter:image:alt" content="Coxmos logo">
 <meta name="twitter:card" content="summary_large_image">
@@ -190,6 +191,11 @@ window.Quarto = {
 </i> 
 <span class="menu-text">Tools</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../people/index.html"> <i class="bi bi-people-fill" role="img">
+</i> 
+<span class="menu-text">People</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -219,7 +225,9 @@ window.Quarto = {
 <div class="tool-grid list">
 
   <h2 class="tools-section-title anchored">Tools</h2>
+
   
+    <!-- metadataAttrs(item) is a helper Quarto provides for free: it adds hidden attributes this card needs so search/sort/filter keep working. Always keep it here. -->
     <div class="tool-card" data-index="0" data-categories="UiUyQ3BhY2thZ2UlMkNtdWx0aS1vbWljcw==" data-listing-date-sort="1777593600000">
       
         <img src="images/coxmos-logo.webp" class="tool-card-img" alt="Coxmos logo">
@@ -229,6 +237,8 @@ window.Quarto = {
           <h5 class="tool-card-title listing-title anchored">Coxmos</h5>
           <span class="tool-card-date listing-date">May 2026</span>
         </div>
+
+        <!-- one badge per category; "|| []" avoids an error if a tool has no categories defined -->
         <div class="tool-card-tags listing-categories">
           
             <span class="badge tool-badge">R</span>
@@ -238,7 +248,10 @@ window.Quarto = {
             <span class="badge tool-badge">multi-omics</span>
           
         </div>
+
         <p class="tool-card-text listing-description">R package for interpretable Cox survival analysis on high-dimensional and multiblock (multi-omics) data, combining classical Cox regression with sparse PLS-based methods.</p>
+
+        <!-- one button per link; each entry in item.links needs a label, an icon (a Bootstrap Icons name) and a url -->
         <div class="tool-card-links">
           
             <a href="https://github.com/BiostatOmics/Coxmos" class="tool-link" target="_blank" rel="noopener">
@@ -257,6 +270,7 @@ window.Quarto = {
       </div>
     </div>
   
+    <!-- metadataAttrs(item) is a helper Quarto provides for free: it adds hidden attributes this card needs so search/sort/filter keep working. Always keep it here. -->
     <div class="tool-card" data-index="1" data-categories="UiUyQ3BhY2thZ2UlMkNtdWx0aS1vbWljcw==" data-listing-date-sort="1748736000000">
       
         <img src="images/more-logo.webp" class="tool-card-img" alt="MORE logo">
@@ -266,6 +280,8 @@ window.Quarto = {
           <h5 class="tool-card-title listing-title anchored">MORE</h5>
           <span class="tool-card-date listing-date">Jun 2025</span>
         </div>
+
+        <!-- one badge per category; "|| []" avoids an error if a tool has no categories defined -->
         <div class="tool-card-tags listing-categories">
           
             <span class="badge tool-badge">R</span>
@@ -275,7 +291,10 @@ window.Quarto = {
             <span class="badge tool-badge">multi-omics</span>
           
         </div>
+
         <p class="tool-card-text listing-description">R package to model multi-omics regulatory relationships using PLS or regularized regression, identifying candidate regulators for a target omic feature.</p>
+
+        <!-- one button per link; each entry in item.links needs a label, an icon (a Bootstrap Icons name) and a url -->
         <div class="tool-card-links">
           
             <a href="https://github.com/BiostatOmics/MORE" class="tool-link" target="_blank" rel="noopener">
@@ -290,6 +309,7 @@ window.Quarto = {
       </div>
     </div>
   
+    <!-- metadataAttrs(item) is a helper Quarto provides for free: it adds hidden attributes this card needs so search/sort/filter keep working. Always keep it here. -->
     <div class="tool-card" data-index="2" data-categories="RG9ja2VyJTJDU2hpbnklMkNtdWx0aS1vbWljcw==" data-listing-date-sort="1748736000000">
       
         <img src="images/more-logo.webp" class="tool-card-img" alt="MOREshiny logo">
@@ -299,6 +319,8 @@ window.Quarto = {
           <h5 class="tool-card-title listing-title anchored">MOREshiny</h5>
           <span class="tool-card-date listing-date">Jun 2025</span>
         </div>
+
+        <!-- one badge per category; "|| []" avoids an error if a tool has no categories defined -->
         <div class="tool-card-tags listing-categories">
           
             <span class="badge tool-badge">Docker</span>
@@ -308,7 +330,10 @@ window.Quarto = {
             <span class="badge tool-badge">multi-omics</span>
           
         </div>
+
         <p class="tool-card-text listing-description">Dockerized Shiny interface for MORE, aimed at users with less experience in R or statistics who want to run its core functionality through a graphical interface.</p>
+
+        <!-- one button per link; each entry in item.links needs a label, an icon (a Bootstrap Icons name) and a url -->
         <div class="tool-card-links">
           
             <a href="https://github.com/BiostatOmics/MOREshiny" class="tool-link" target="_blank" rel="noopener">
@@ -325,7 +350,9 @@ window.Quarto = {
   
 
   <h2 class="tools-section-title anchored">Web apps</h2>
+
   
+    <!-- metadataAttrs(item) is a helper Quarto provides for free: it adds hidden attributes this card needs so search/sort/filter keep working. Always keep it here. -->
     <div class="tool-card" data-index="3" data-categories="V2ViJTJDU2hpbnklMkNzaW5nbGUtY2VsbA==" data-listing-date-sort="1775088000000">
       
         <img src="images/pd-explorer.webp" class="tool-card-img" alt="PD Atlas Explorer logo">
@@ -335,6 +362,8 @@ window.Quarto = {
           <h5 class="tool-card-title listing-title anchored">PD Atlas Explorer</h5>
           <span class="tool-card-date listing-date">Apr 2026</span>
         </div>
+
+        <!-- one badge per category; "|| []" avoids an error if a tool has no categories defined -->
         <div class="tool-card-tags listing-categories">
           
             <span class="badge tool-badge">Web</span>
@@ -344,7 +373,10 @@ window.Quarto = {
             <span class="badge tool-badge">single-cell</span>
           
         </div>
+
         <p class="tool-card-text listing-description">Interactive explorer for the multiregional single-cell atlas of Parkinson's disease presented in Tejedor-Serrano et al., 2026.</p>
+
+        <!-- one button per link; each entry in item.links needs a label, an icon (a Bootstrap Icons name) and a url -->
         <div class="tool-card-links">
           
             <a href="https://tools.biostatomics.com/pd-atlas-explorer/" class="tool-link" target="_blank" rel="noopener">

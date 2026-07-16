@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>tools-cards.ejs – BiostatOmics Lab</title>
+<title>People – BiostatOmics Lab</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -34,6 +34,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../images/BioStatOmics_Favicon_web_512x512.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -71,17 +73,75 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-project','listing-website','listing-format','listing-execute','listing-engines','listing-language','listing-drafts','listing-title','listing-description','listing-image','listing-last','listing-first','listing-people_group','listing-email','listing-education','listing-education_card','listing-affiliation','listing-about','listing-layout','listing-path','listing-outputHref','listing-author','listing-filename','listing-file-modified','listing-reading-time','listing-word-count',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
+      
+      searchColumns: ["listing-project","listing-website","listing-format","listing-execute","listing-engines","listing-language","listing-drafts","listing-title","listing-description","listing-image","listing-last","listing-first","listing-people_group","listing-email","listing-education","listing-education_card","listing-affiliation","listing-about","listing-layout","listing-path","listing-outputHref","listing-author","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="BiostatOmics Lab">
-<meta property="og:image" content="https://biostatomics.com/tools/<%- item.image %>">
+<meta property="og:title" content="People">
+<meta property="og:image" content="https://biostatomics.com/people/tarazona-sonia/avatar.webp">
 <meta property="og:site_name" content="BiostatOmics Lab">
-<meta property="og:image:alt" content="<%- item.title %> logo">
-<meta name="twitter:title" content="BiostatOmics Lab">
-<meta name="twitter:image" content="https://biostatomics.com/tools/<%- item.image %>">
-<meta name="twitter:image:alt" content="<%- item.title %> logo">
+<meta property="og:image:alt" content="Sonia Tarazona">
+<meta name="twitter:title" content="People">
+<meta name="twitter:image" content="https://biostatomics.com/people/tarazona-sonia/avatar.webp">
+<meta name="twitter:image:alt" content="Sonia Tarazona">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -132,7 +192,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Tools</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../people/index.html"> <i class="bi bi-people-fill" role="img">
+    <a class="nav-link active" href="../people/index.html" aria-current="page"> <i class="bi bi-people-fill" role="img">
 </i> 
 <span class="menu-text">People</span></a>
   </li>  
@@ -151,79 +211,96 @@ ul.task-list li input[type="checkbox"] {
         
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
 
-
-
-
-&lt;%
-  // This is a Quarto EJS template: it turns the tools listed in tools.yml into the HTML cards shown on the Tools page. Quarto gives it a ready-made "items" array, one entry per tool, with whatever fields you wrote in the YAML (item.title, item.image, item.categories...).
-  // Three kinds of tags are used below: a code tag that runs JavaScript and prints nothing (loops, ifs, variables), a safe-print tag that prints a value as escaped text, and a raw-print tag that prints a value as-is, unescaped (used for links, image paths, or text that already contains HTML). Their real symbols can't be written here in a comment, because the template engine looks for those symbols everywhere, even inside comments — see the real tags just below for what they look like.
-
-  // Group the flat list of tools by their "section" field (e.g. "Tools", "Web apps") so we can print one heading per group further down.
-  const sections = [];
-  for (const item of items) {
-    const name = item.section || "Other";
-    let bucket = sections.find((s) =&gt; s.name === name);
-    if (!bucket) {
-      bucket = { name: name, items: [] };
-      sections.push(bucket);
-    }
-    bucket.items.push(item);
-  }
-
-  // Turns a date like "2026-05" into "May 2026".
-  const formatDate = (value) =&gt; {
-    if (!value) return "";
-    const d = new Date(value);
-    return d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
-  };
-%&gt;
-
-<div class="tool-grid list">
-&lt;% for (const section of sections) { %&gt;
-
-  <h2 class="tools-section-title anchored">&lt;%= section.name %&gt;</h2>
-
-  &lt;% for (const item of section.items) { %&gt;
-    <!-- metadataAttrs(item) is a helper Quarto provides for free: it adds hidden attributes this card needs so search/sort/filter keep working. Always keep it here. -->
-    <div class="tool-card" <%="metadataAttrs(item)" %="">&gt;
-      &lt;% if (item.image) { %&gt;
-        <img src="<%- item.image %>" class="tool-card-img" alt="<%- item.title %> logo">
-      &lt;% } %&gt;
-      <div class="tool-card-body">
-        <div class="tool-card-heading">
-          <h5 class="tool-card-title listing-title anchored">&lt;%= item.title %&gt;</h5>
-          <span class="tool-card-date listing-date">&lt;%= formatDate(item.date) %&gt;</span>
-        </div>
-
-        <!-- one badge per category; "|| []" avoids an error if a tool has no categories defined -->
-        <div class="tool-card-tags listing-categories">
-          &lt;% (item.categories || []).forEach(function(cat) { %&gt;
-            <span class="badge tool-badge">&lt;%= cat %&gt;</span>
-          &lt;% }) %&gt;
-        </div>
-
-        <p class="tool-card-text listing-description">&lt;%= item.description %&gt;</p>
-
-        <!-- one button per link; each entry in item.links needs a label, an icon (a Bootstrap Icons name) and a url -->
-        <div class="tool-card-links">
-          &lt;% (item.links || []).forEach(function(link) { %&gt;
-            <a href="<%- link.url %>" class="tool-link" target="_blank" rel="noopener">
-              <i class="bi bi-<%= link.icon %>"></i> &lt;%= link.label %&gt;
-            </a>
-          &lt;% }) %&gt;
-        </div>
-      </div>
-    </div>
-  &lt;% } %&gt;
-
-&lt;% } %&gt;
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Meet the group</h1>
 </div>
 
 
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+
+
+
+
+<div class="quarto-listing quarto-listing-container-custom" id="listing-listing">
+
+<div class="people-grid list">
+
+  
+
+  <!-- only print the heading (and the cards) if this group actually has someone in it — this is what makes empty groups disappear automatically -->
+  
+
+    <h2 class="people-section-title anchored">Principal Investigator</h2>
+
+    
+      <!-- the whole card is a link to that person's own page; item.path is given automatically by Quarto. metadataAttrs(item) is a helper Quarto provides for free: it adds hidden attributes this card needs so search/sort/filter keep working. Always keep it here. "person-card-cols-<N>" sets this card's width so exactly "cols" of them fit per row (see the group definition above). -->
+      <a href="../people/tarazona-sonia/index.html" class="person-card person-card-cols-3" data-index="0" data-listing-file-modified-sort="1784202844597" data-listing-reading-time-sort="1" data-listing-word-count-sort="8">
+        
+          <img src="../people/tarazona-sonia/avatar.webp" class="person-card-img" alt="Sonia Tarazona">
+        
+        
+        <div class="person-card-body">
+          <h5 class="person-card-title listing-title anchored">Sonia Tarazona</h5>
+          <p class="person-card-role listing-description">Statistics Associate Professor</p>
+
+          <!-- education_card is a short version of "education" meant just for this compact card, with the degree title in bold (see people/_people-template.qmd); it's optional, so only print this block if the person filled it in -->
+          
+            <div class="person-card-education"><strong>PhD in Statistics</strong>, Universitat Politècnica de València, 2014 <br> <strong>BS in Mathematics &amp; Statistics</strong>, Universitat Politècnica de València, 2001</div>
+          
+        </div>
+      </a>
+    
+
+  
+
+  
+
+  <!-- only print the heading (and the cards) if this group actually has someone in it — this is what makes empty groups disappear automatically -->
+  
+
+  
+
+  <!-- only print the heading (and the cards) if this group actually has someone in it — this is what makes empty groups disappear automatically -->
+  
+
+  
+
+  <!-- only print the heading (and the cards) if this group actually has someone in it — this is what makes empty groups disappear automatically -->
+  
+
+  
+
+  <!-- only print the heading (and the cards) if this group actually has someone in it — this is what makes empty groups disappear automatically -->
+  
+
+  
+
+  <!-- only print the heading (and the cards) if this group actually has someone in it — this is what makes empty groups disappear automatically -->
+  
+
+  
+
+  <!-- only print the heading (and the cards) if this group actually has someone in it — this is what makes empty groups disappear automatically -->
+  
+
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
