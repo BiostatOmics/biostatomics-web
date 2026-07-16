@@ -161,6 +161,11 @@ ul.task-list li input[type="checkbox"] {
     }
     bucket.items.push(item);
   }
+  const formatDate = (value) =&gt; {
+    if (!value) return "";
+    const d = new Date(value);
+    return d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+  };
 %&gt;
 <div class="tool-grid list">
 &lt;% for (const section of sections) { %&gt;
@@ -171,7 +176,10 @@ ul.task-list li input[type="checkbox"] {
         <img src="<%- item.image %>" class="tool-card-img" alt="<%- item.title %> logo">
       &lt;% } %&gt;
       <div class="tool-card-body">
-        <h5 class="tool-card-title listing-title anchored">&lt;%= item.title %&gt;</h5>
+        <div class="tool-card-heading">
+          <h5 class="tool-card-title listing-title anchored">&lt;%= item.title %&gt;</h5>
+          <span class="tool-card-date listing-date">&lt;%= formatDate(item.date) %&gt;</span>
+        </div>
         <div class="tool-card-tags listing-categories">
           &lt;% (item.categories || []).forEach(function(cat) { %&gt;
             <span class="badge tool-badge">&lt;%= cat %&gt;</span>
