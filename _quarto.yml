@@ -27,11 +27,12 @@ website:
     location: navbar
     type: overlay
     show-item-context: tree
-  back-to-top-navigation: true # when scrolling to the bottom of the web, show a button to go top
+  # back-to-top-navigation: true # when scrolling to the bottom of the web, show a button to go top
   # page-navigation: true # add previous/next arrow to navigate between sites/pages
 
   # ! website skeleton
   navbar: # navbar = top bar that display the different tabs for navegation
+    pinned: true
     right:
       - text: "Home" # text is optional, by default, it takes the "title" value defined in the href. 
         href: index.qmd # href is the linked document (internal) or URL (external) that will appear when clicking the "text" label in the navigation panel
@@ -58,6 +59,16 @@ website:
         href: contact.qmd
         icon: envelope-fill
 
+  page-footer: # footer = bottom bar shown on every page
+    border: true # thin divider line above the footer, to separate it from the page content
+    background: "#F8F9FA"
+    left: |
+      © 2026 BiostatOmics <br>
+      All content licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+    right: |
+      Made with [Quarto](https://quarto.org) <br>
+      View source at [<i class="bi bi-github"></i>](https://github.com/BiostatOmics/biostatomics-web)
+
 format:
   html:
     theme:
@@ -72,6 +83,8 @@ format:
       # - text: <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.2.0/css/all.min.css">
     # load AltMetric widget (for citations and impact of each paper, not needed for now -> commented)
       # - text: <script src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+    include-after-body:
+      - file: includes/highlight-active-navbar-dropdown.html
 
 execute:
   freeze: auto # code chunks are executed locally and results are saved in `_freeze` directory. without this, GitHub Actions would need to install R/python and all dependencies, then execute every chunk, which is slower and failure-prone.

@@ -1,0 +1,14 @@
+<!-- Quarto only highlights a navbar tab when its own "href" matches the current page. A dropdown trigger (e.g. "Research", which just opens "Research lines" / "Publications") has no "href" of its own, so it never gets highlighted this way even while you're on one of its pages. This adds the same highlight class ("active") to the dropdown trigger whenever one of its entries matches the current page. -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".nav-item.dropdown").forEach(function (dropdown) {
+    var childLinks = dropdown.querySelectorAll(".dropdown-menu a[href]");
+    var hasActiveChild = Array.from(childLinks).some(function (link) {
+      return link.href === window.location.href;
+    });
+    if (hasActiveChild) {
+      dropdown.querySelector(".dropdown-toggle").classList.add("active");
+    }
+  });
+});
+</script>
