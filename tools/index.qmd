@@ -1,8 +1,22 @@
 ---
 pagetitle: Tools
 listing:
-  contents: tools.yml
-  template: _tools-cards.ejs.md
-  categories: true
+  - id: tools-listing
+    contents: tools.yml
+    # TODO: we can reduce redundancy using yaml variables (`&alias` to anchor, `*alias` to paste) 
+    template: _tools-cards.ejs.md
+  - id: webapps-listing
+    contents: webapps.yml
+    template: _tools-cards.ejs.md
 page-layout: full
 ---
+
+## Tools
+
+:::{#tools-listing}
+:::
+
+## Web apps
+
+:::{#webapps-listing}
+:::

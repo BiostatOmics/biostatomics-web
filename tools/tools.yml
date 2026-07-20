@@ -1,8 +1,9 @@
+# --- 2026 ---
 - title: "Coxmos"
+  href: "https://github.com/BiostatOmics/Coxmos"
   image: images/coxmos-logo.webp
   date: 2026-05
-  section: "Tools"
-  categories: [R, package, multi-omics]
+  categories: [R, Package, Multi-omics]
   description: "R package for interpretable Cox survival analysis on high-dimensional and multiblock (multi-omics) data, combining classical Cox regression with sparse PLS-based methods."
   links:
     - label: "GitHub"
@@ -15,11 +16,12 @@
       icon: file-earmark-text
       url: "https://doi.org/10.1186/s13040-026-00559-9"
 
+# --- 2025 ---
 - title: "MORE"
+  href: "https://github.com/BiostatOmics/MORE"
   image: images/more-logo.webp
   date: 2025-06
-  section: "Tools"
-  categories: [R, package, multi-omics]
+  categories: [R, Package, Multi-omics]
   description: "R package to model multi-omics regulatory relationships using PLS or regularized regression, identifying candidate regulators for a target omic feature."
   links:
     - label: "GitHub"
@@ -30,10 +32,10 @@
       url: "https://doi.org/10.1093/bib/bbaf270"
 
 - title: "MOREshiny"
-  image: images/more-logo.webp
+  href: "https://github.com/BiostatOmics/MOREshiny"
+  image: images/more-shiny-logo.webp
   date: 2025-06
-  section: "Tools"
-  categories: [Docker, Shiny, multi-omics]
+  categories: [Docker, Shiny, Multi-omics]
   description: "Dockerized Shiny interface for MORE, aimed at users with less experience in R or statistics who want to run its core functionality through a graphical interface."
   links:
     - label: "GitHub"
@@ -43,19 +45,20 @@
       icon: file-earmark-text
       url: "https://doi.org/10.1093/bib/bbaf270"
 
-- title: "PD Atlas Explorer"
-  image: images/pd-explorer.webp
-  date: 2026-04-02
-  section: "Web apps"
-  categories: [Web, Shiny, single-cell]
-  description: "Interactive explorer for the multiregional single-cell atlas of Parkinson's disease presented in Tejedor-Serrano et al., 2026."
+- title: "MOSim"
+  href: "https://github.com/ConesaLab/MOSim"
+  # MOSim has no logo, the alternative is to plot its GitHub preview.
+  image: https://opengraph.githubassets.com/1/ConesaLab/MOSim
+  date: 2025-03
+  categories: [R, Package, Multi-omics]
+  description: "R package to simulate multi-omic bulk and single-cell experiments that mimic regulatory mechanisms within the cell."
   links:
-    - label: "Launch app"
-      icon: box-arrow-up-right
-      url: "https://tools.biostatomics.com/pd-atlas-explorer/"
     - label: "GitHub"
       icon: github
-      url: "https://github.com/BiostatOmics/TejedorSerrano2026-pd-atlas"
+      url: "https://github.com/ConesaLab/MOSim"
+    - label: "Bioconductor"
+      icon: music-note
+      url: "https://doi.org/doi:10.18129/B9.bioc.MOSim"
     - label: "Paper"
       icon: file-earmark-text
-      url: "https://doi.org/10.21203/rs.3.rs-9220144/v1"
+      url: "https://doi.org/10.1093/bib/bbaf110"

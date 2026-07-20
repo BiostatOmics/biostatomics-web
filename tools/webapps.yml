@@ -1,0 +1,17 @@
+# --- 2026 ---
+- title: "PD Atlas Explorer"
+  href: "https://tools.biostatomics.com/pd-atlas-explorer/"
+  image: images/pd-explorer.webp
+  date: 2026-04-02
+  categories: [Web, Shiny, Single-cell]
+  description: "Interactive explorer for the multiregional single-cell atlas of Parkinson's disease presented in Tejedor-Serrano et al., 2026."
+  links:
+    - label: "Launch app"
+      icon: box-arrow-up-right
+      url: "https://tools.biostatomics.com/pd-atlas-explorer/"
+    - label: "GitHub"
+      icon: github
+      url: "https://github.com/BiostatOmics/TejedorSerrano2026-pd-atlas"
+    - label: "Paper"
+      icon: file-earmark-text
+      url: "https://doi.org/10.21203/rs.3.rs-9220144/v1"
