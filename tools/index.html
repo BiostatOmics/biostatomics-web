@@ -27,7 +27,6 @@ ul.task-list li input[type="checkbox"] {
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
@@ -45,7 +44,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-bba5ebae505b5c03f3f0d8040a416a6b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-e4f632a0fb0409da0febba546aa63054.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -76,20 +75,48 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    const listingTargetEl = window.document.querySelector('#listing-tools-listing .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-title','listing-image','listing-date','listing-section','listing-categories','listing-description','listing-links',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
+      valueNames: ['listing-title','listing-href','listing-image','listing-date','listing-categories','listing-description','listing-links',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
       
-      searchColumns: ["listing-title","listing-image","listing-date","listing-section","listing-categories","listing-description","listing-links"],
+      searchColumns: ["listing-title","listing-href","listing-image","listing-date","listing-categories","listing-description","listing-links"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+    window['quarto-listings']['listing-tools-listing'] = new List('listing-tools-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-webapps-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-href','listing-image','listing-date','listing-categories','listing-description','listing-links',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
+      
+      searchColumns: ["listing-title","listing-href","listing-image","listing-date","listing-categories","listing-description","listing-links"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-webapps-listing'] = new List('listing-webapps-listing', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -175,9 +202,9 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-research">    
         <li>
-    <a class="dropdown-item" href="../projects.html"><i class="bi bi-folder2-open" role="img">
+    <a class="dropdown-item" href="../research_lines.html"><i class="bi bi-folder2-open" role="img">
 </i> 
- <span class="dropdown-text">Projects</span></a>
+ <span class="dropdown-text">Research lines</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../publications.html"><i class="bi bi-book" role="img">
@@ -208,197 +235,283 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="RG9ja2Vy">Docker <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bXVsdGktb21pY3M=">multi-omics <span class="quarto-category-count">(3)</span></div><div class="category" data-category="cGFja2FnZQ==">package <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Ug==">R <span class="quarto-category-count">(2)</span></div><div class="category" data-category="U2hpbnk=">Shiny <span class="quarto-category-count">(2)</span></div><div class="category" data-category="c2luZ2xlLWNlbGw=">single-cell <span class="quarto-category-count">(1)</span></div><div class="category" data-category="V2Vi">Web <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#tools" id="toc-tools" class="nav-link active" data-scroll-target="#tools">Tools</a></li>
+  <li><a href="#web-apps" id="toc-web-apps" class="nav-link" data-scroll-target="#web-apps">Web apps</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
 
-
-
-
-
-<div class="quarto-listing quarto-listing-container-custom" id="listing-listing">
+<section id="tools" class="level2">
+<h2 class="anchored" data-anchor-id="tools">Tools</h2>
+<div id="listing-tools-listing" class="quarto-listing quarto-listing-container-custom">
 
 <div class="tool-grid list">
 
-  <h2 class="tools-section-title anchored">Tools</h2>
+  <!-- metadataAttrs(item) is a helper Quarto provides for free: it adds hidden attributes this card needs so search/sort/filter keep working. Always keep it here. -->
+  <!-- the card's click-through target comes only from the tool's own "href" field in tools.yml — no automatic fallback to any of its "links" entries, so it must be set explicitly for every tool -->
+  <div class="tool-card" data-index="0" data-categories="UiUyQ1BhY2thZ2UlMkNNdWx0aS1vbWljcw==" data-listing-date-sort="1777593600000">
+    
+      <img src="images/coxmos-logo.webp" class="tool-card-img" alt="Coxmos logo">
+    
+    <div class="tool-card-body">
+      <div class="tool-card-heading">
+        <h5 class="tool-card-title listing-title anchored">
+          
+            <!-- "stretched-link" is a built-in Bootstrap class: it stretches an invisible layer over the entire closest "position: relative" ancestor (the card), making the whole card clickable. ".tool-card-links" below stays clickable on its own because it also has "position: relative" in styles.css, so it sits above that invisible layer. -->
+            <a href="https://github.com/BiostatOmics/Coxmos" class="stretched-link" target="_blank" rel="noopener">Coxmos</a>
+          
+        </h5>
+        <span class="tool-card-date listing-date">May 2026</span>
+      </div>
 
-  
-    <!-- metadataAttrs(item) is a helper Quarto provides for free: it adds hidden attributes this card needs so search/sort/filter keep working. Always keep it here. -->
-    <div class="tool-card" data-index="0" data-categories="UiUyQ3BhY2thZ2UlMkNtdWx0aS1vbWljcw==" data-listing-date-sort="1777593600000">
-      
-        <img src="images/coxmos-logo.webp" class="tool-card-img" alt="Coxmos logo">
-      
-      <div class="tool-card-body">
-        <div class="tool-card-heading">
-          <h5 class="tool-card-title listing-title anchored">Coxmos</h5>
-          <span class="tool-card-date listing-date">May 2026</span>
-        </div>
+      <!-- one badge per category; "|| []" avoids an error if a tool has no categories defined -->
+      <div class="tool-card-tags listing-categories">
+        
+          <span class="badge tool-badge">R</span>
+        
+          <span class="badge tool-badge">Package</span>
+        
+          <span class="badge tool-badge">Multi-omics</span>
+        
+      </div>
 
-        <!-- one badge per category; "|| []" avoids an error if a tool has no categories defined -->
-        <div class="tool-card-tags listing-categories">
-          
-            <span class="badge tool-badge">R</span>
-          
-            <span class="badge tool-badge">package</span>
-          
-            <span class="badge tool-badge">multi-omics</span>
-          
-        </div>
+      <p class="tool-card-text listing-description">R package for interpretable Cox survival analysis on high-dimensional and multiblock (multi-omics) data, combining classical Cox regression with sparse PLS-based methods.</p>
 
-        <p class="tool-card-text listing-description">R package for interpretable Cox survival analysis on high-dimensional and multiblock (multi-omics) data, combining classical Cox regression with sparse PLS-based methods.</p>
-
-        <!-- one button per link; each entry in item.links needs a label, an icon (a Bootstrap Icons name) and a url -->
-        <div class="tool-card-links">
-          
-            <a href="https://github.com/BiostatOmics/Coxmos" class="tool-link" target="_blank" rel="noopener">
-              <i class="bi bi-github"></i> GitHub
-            </a>
-          
-            <a href="https://cran.r-project.org/package=Coxmos" class="tool-link" target="_blank" rel="noopener">
-              <i class="bi bi-box-seam"></i> CRAN
-            </a>
-          
-            <a href="https://doi.org/10.1186/s13040-026-00559-9" class="tool-link" target="_blank" rel="noopener">
-              <i class="bi bi-file-earmark-text"></i> Paper
-            </a>
-          
-        </div>
+      <!-- one button per link; each entry in item.links needs a label, an icon (a Bootstrap Icons name) and a url -->
+      <div class="tool-card-links">
+        
+          <a href="https://github.com/BiostatOmics/Coxmos" class="tool-link" target="_blank" rel="noopener">
+            <i class="bi bi-github"></i> GitHub
+          </a>
+        
+          <a href="https://cran.r-project.org/package=Coxmos" class="tool-link" target="_blank" rel="noopener">
+            <i class="bi bi-box-seam"></i> CRAN
+          </a>
+        
+          <a href="https://doi.org/10.1186/s13040-026-00559-9" class="tool-link" target="_blank" rel="noopener">
+            <i class="bi bi-file-earmark-text"></i> Paper
+          </a>
+        
       </div>
     </div>
-  
-    <!-- metadataAttrs(item) is a helper Quarto provides for free: it adds hidden attributes this card needs so search/sort/filter keep working. Always keep it here. -->
-    <div class="tool-card" data-index="1" data-categories="UiUyQ3BhY2thZ2UlMkNtdWx0aS1vbWljcw==" data-listing-date-sort="1748736000000">
-      
-        <img src="images/more-logo.webp" class="tool-card-img" alt="MORE logo">
-      
-      <div class="tool-card-body">
-        <div class="tool-card-heading">
-          <h5 class="tool-card-title listing-title anchored">MORE</h5>
-          <span class="tool-card-date listing-date">Jun 2025</span>
-        </div>
+  </div>
 
-        <!-- one badge per category; "|| []" avoids an error if a tool has no categories defined -->
-        <div class="tool-card-tags listing-categories">
+  <!-- metadataAttrs(item) is a helper Quarto provides for free: it adds hidden attributes this card needs so search/sort/filter keep working. Always keep it here. -->
+  <!-- the card's click-through target comes only from the tool's own "href" field in tools.yml — no automatic fallback to any of its "links" entries, so it must be set explicitly for every tool -->
+  <div class="tool-card" data-index="1" data-categories="UiUyQ1BhY2thZ2UlMkNNdWx0aS1vbWljcw==" data-listing-date-sort="1748736000000">
+    
+      <img src="images/more-logo.webp" class="tool-card-img" alt="MORE logo">
+    
+    <div class="tool-card-body">
+      <div class="tool-card-heading">
+        <h5 class="tool-card-title listing-title anchored">
           
-            <span class="badge tool-badge">R</span>
+            <!-- "stretched-link" is a built-in Bootstrap class: it stretches an invisible layer over the entire closest "position: relative" ancestor (the card), making the whole card clickable. ".tool-card-links" below stays clickable on its own because it also has "position: relative" in styles.css, so it sits above that invisible layer. -->
+            <a href="https://github.com/BiostatOmics/MORE" class="stretched-link" target="_blank" rel="noopener">MORE</a>
           
-            <span class="badge tool-badge">package</span>
-          
-            <span class="badge tool-badge">multi-omics</span>
-          
-        </div>
+        </h5>
+        <span class="tool-card-date listing-date">Jun 2025</span>
+      </div>
 
-        <p class="tool-card-text listing-description">R package to model multi-omics regulatory relationships using PLS or regularized regression, identifying candidate regulators for a target omic feature.</p>
+      <!-- one badge per category; "|| []" avoids an error if a tool has no categories defined -->
+      <div class="tool-card-tags listing-categories">
+        
+          <span class="badge tool-badge">R</span>
+        
+          <span class="badge tool-badge">Package</span>
+        
+          <span class="badge tool-badge">Multi-omics</span>
+        
+      </div>
 
-        <!-- one button per link; each entry in item.links needs a label, an icon (a Bootstrap Icons name) and a url -->
-        <div class="tool-card-links">
-          
-            <a href="https://github.com/BiostatOmics/MORE" class="tool-link" target="_blank" rel="noopener">
-              <i class="bi bi-github"></i> GitHub
-            </a>
-          
-            <a href="https://doi.org/10.1093/bib/bbaf270" class="tool-link" target="_blank" rel="noopener">
-              <i class="bi bi-file-earmark-text"></i> Paper
-            </a>
-          
-        </div>
+      <p class="tool-card-text listing-description">R package to model multi-omics regulatory relationships using PLS or regularized regression, identifying candidate regulators for a target omic feature.</p>
+
+      <!-- one button per link; each entry in item.links needs a label, an icon (a Bootstrap Icons name) and a url -->
+      <div class="tool-card-links">
+        
+          <a href="https://github.com/BiostatOmics/MORE" class="tool-link" target="_blank" rel="noopener">
+            <i class="bi bi-github"></i> GitHub
+          </a>
+        
+          <a href="https://doi.org/10.1093/bib/bbaf270" class="tool-link" target="_blank" rel="noopener">
+            <i class="bi bi-file-earmark-text"></i> Paper
+          </a>
+        
       </div>
     </div>
-  
-    <!-- metadataAttrs(item) is a helper Quarto provides for free: it adds hidden attributes this card needs so search/sort/filter keep working. Always keep it here. -->
-    <div class="tool-card" data-index="2" data-categories="RG9ja2VyJTJDU2hpbnklMkNtdWx0aS1vbWljcw==" data-listing-date-sort="1748736000000">
-      
-        <img src="images/more-logo.webp" class="tool-card-img" alt="MOREshiny logo">
-      
-      <div class="tool-card-body">
-        <div class="tool-card-heading">
-          <h5 class="tool-card-title listing-title anchored">MOREshiny</h5>
-          <span class="tool-card-date listing-date">Jun 2025</span>
-        </div>
+  </div>
 
-        <!-- one badge per category; "|| []" avoids an error if a tool has no categories defined -->
-        <div class="tool-card-tags listing-categories">
+  <!-- metadataAttrs(item) is a helper Quarto provides for free: it adds hidden attributes this card needs so search/sort/filter keep working. Always keep it here. -->
+  <!-- the card's click-through target comes only from the tool's own "href" field in tools.yml — no automatic fallback to any of its "links" entries, so it must be set explicitly for every tool -->
+  <div class="tool-card" data-index="2" data-categories="RG9ja2VyJTJDU2hpbnklMkNNdWx0aS1vbWljcw==" data-listing-date-sort="1748736000000">
+    
+      <img src="images/more-shiny-logo.webp" class="tool-card-img" alt="MOREshiny logo">
+    
+    <div class="tool-card-body">
+      <div class="tool-card-heading">
+        <h5 class="tool-card-title listing-title anchored">
           
-            <span class="badge tool-badge">Docker</span>
+            <!-- "stretched-link" is a built-in Bootstrap class: it stretches an invisible layer over the entire closest "position: relative" ancestor (the card), making the whole card clickable. ".tool-card-links" below stays clickable on its own because it also has "position: relative" in styles.css, so it sits above that invisible layer. -->
+            <a href="https://github.com/BiostatOmics/MOREshiny" class="stretched-link" target="_blank" rel="noopener">MOREshiny</a>
           
-            <span class="badge tool-badge">Shiny</span>
-          
-            <span class="badge tool-badge">multi-omics</span>
-          
-        </div>
+        </h5>
+        <span class="tool-card-date listing-date">Jun 2025</span>
+      </div>
 
-        <p class="tool-card-text listing-description">Dockerized Shiny interface for MORE, aimed at users with less experience in R or statistics who want to run its core functionality through a graphical interface.</p>
+      <!-- one badge per category; "|| []" avoids an error if a tool has no categories defined -->
+      <div class="tool-card-tags listing-categories">
+        
+          <span class="badge tool-badge">Docker</span>
+        
+          <span class="badge tool-badge">Shiny</span>
+        
+          <span class="badge tool-badge">Multi-omics</span>
+        
+      </div>
 
-        <!-- one button per link; each entry in item.links needs a label, an icon (a Bootstrap Icons name) and a url -->
-        <div class="tool-card-links">
-          
-            <a href="https://github.com/BiostatOmics/MOREshiny" class="tool-link" target="_blank" rel="noopener">
-              <i class="bi bi-github"></i> GitHub
-            </a>
-          
-            <a href="https://doi.org/10.1093/bib/bbaf270" class="tool-link" target="_blank" rel="noopener">
-              <i class="bi bi-file-earmark-text"></i> Paper
-            </a>
-          
-        </div>
+      <p class="tool-card-text listing-description">Dockerized Shiny interface for MORE, aimed at users with less experience in R or statistics who want to run its core functionality through a graphical interface.</p>
+
+      <!-- one button per link; each entry in item.links needs a label, an icon (a Bootstrap Icons name) and a url -->
+      <div class="tool-card-links">
+        
+          <a href="https://github.com/BiostatOmics/MOREshiny" class="tool-link" target="_blank" rel="noopener">
+            <i class="bi bi-github"></i> GitHub
+          </a>
+        
+          <a href="https://doi.org/10.1093/bib/bbaf270" class="tool-link" target="_blank" rel="noopener">
+            <i class="bi bi-file-earmark-text"></i> Paper
+          </a>
+        
       </div>
     </div>
-  
+  </div>
 
-  <h2 class="tools-section-title anchored">Web apps</h2>
+  <!-- metadataAttrs(item) is a helper Quarto provides for free: it adds hidden attributes this card needs so search/sort/filter keep working. Always keep it here. -->
+  <!-- the card's click-through target comes only from the tool's own "href" field in tools.yml — no automatic fallback to any of its "links" entries, so it must be set explicitly for every tool -->
+  <div class="tool-card" data-index="3" data-categories="UiUyQ1BhY2thZ2UlMkNNdWx0aS1vbWljcw==" data-listing-date-sort="1740787200000">
+    
+      <img src="https://opengraph.githubassets.com/1/ConesaLab/MOSim" class="tool-card-img" alt="MOSim logo">
+    
+    <div class="tool-card-body">
+      <div class="tool-card-heading">
+        <h5 class="tool-card-title listing-title anchored">
+          
+            <!-- "stretched-link" is a built-in Bootstrap class: it stretches an invisible layer over the entire closest "position: relative" ancestor (the card), making the whole card clickable. ".tool-card-links" below stays clickable on its own because it also has "position: relative" in styles.css, so it sits above that invisible layer. -->
+            <a href="https://github.com/ConesaLab/MOSim" class="stretched-link" target="_blank" rel="noopener">MOSim</a>
+          
+        </h5>
+        <span class="tool-card-date listing-date">Mar 2025</span>
+      </div>
 
-  
-    <!-- metadataAttrs(item) is a helper Quarto provides for free: it adds hidden attributes this card needs so search/sort/filter keep working. Always keep it here. -->
-    <div class="tool-card" data-index="3" data-categories="V2ViJTJDU2hpbnklMkNzaW5nbGUtY2VsbA==" data-listing-date-sort="1775088000000">
-      
-        <img src="images/pd-explorer.webp" class="tool-card-img" alt="PD Atlas Explorer logo">
-      
-      <div class="tool-card-body">
-        <div class="tool-card-heading">
-          <h5 class="tool-card-title listing-title anchored">PD Atlas Explorer</h5>
-          <span class="tool-card-date listing-date">Apr 2026</span>
-        </div>
+      <!-- one badge per category; "|| []" avoids an error if a tool has no categories defined -->
+      <div class="tool-card-tags listing-categories">
+        
+          <span class="badge tool-badge">R</span>
+        
+          <span class="badge tool-badge">Package</span>
+        
+          <span class="badge tool-badge">Multi-omics</span>
+        
+      </div>
 
-        <!-- one badge per category; "|| []" avoids an error if a tool has no categories defined -->
-        <div class="tool-card-tags listing-categories">
-          
-            <span class="badge tool-badge">Web</span>
-          
-            <span class="badge tool-badge">Shiny</span>
-          
-            <span class="badge tool-badge">single-cell</span>
-          
-        </div>
+      <p class="tool-card-text listing-description">R package to simulate multi-omic bulk and single-cell experiments that mimic regulatory mechanisms within the cell.</p>
 
-        <p class="tool-card-text listing-description">Interactive explorer for the multiregional single-cell atlas of Parkinson's disease presented in Tejedor-Serrano et al., 2026.</p>
-
-        <!-- one button per link; each entry in item.links needs a label, an icon (a Bootstrap Icons name) and a url -->
-        <div class="tool-card-links">
-          
-            <a href="https://tools.biostatomics.com/pd-atlas-explorer/" class="tool-link" target="_blank" rel="noopener">
-              <i class="bi bi-box-arrow-up-right"></i> Launch app
-            </a>
-          
-            <a href="https://github.com/BiostatOmics/TejedorSerrano2026-pd-atlas" class="tool-link" target="_blank" rel="noopener">
-              <i class="bi bi-github"></i> GitHub
-            </a>
-          
-            <a href="https://doi.org/10.21203/rs.3.rs-9220144/v1" class="tool-link" target="_blank" rel="noopener">
-              <i class="bi bi-file-earmark-text"></i> Paper
-            </a>
-          
-        </div>
+      <!-- one button per link; each entry in item.links needs a label, an icon (a Bootstrap Icons name) and a url -->
+      <div class="tool-card-links">
+        
+          <a href="https://github.com/ConesaLab/MOSim" class="tool-link" target="_blank" rel="noopener">
+            <i class="bi bi-github"></i> GitHub
+          </a>
+        
+          <a href="https://doi.org/doi:10.18129/B9.bioc.MOSim" class="tool-link" target="_blank" rel="noopener">
+            <i class="bi bi-music-note"></i> Bioconductor
+          </a>
+        
+          <a href="https://doi.org/10.1093/bib/bbaf110" class="tool-link" target="_blank" rel="noopener">
+            <i class="bi bi-file-earmark-text"></i> Paper
+          </a>
+        
       </div>
     </div>
-  
+  </div>
 
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
-</div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+</div>
+</section>
+<section id="web-apps" class="level2">
+<h2 class="anchored" data-anchor-id="web-apps">Web apps</h2>
+<div id="listing-webapps-listing" class="quarto-listing quarto-listing-container-custom">
+
+<div class="tool-grid list">
+
+  <!-- metadataAttrs(item) is a helper Quarto provides for free: it adds hidden attributes this card needs so search/sort/filter keep working. Always keep it here. -->
+  <!-- the card's click-through target comes only from the tool's own "href" field in tools.yml — no automatic fallback to any of its "links" entries, so it must be set explicitly for every tool -->
+  <div class="tool-card" data-index="0" data-categories="V2ViJTJDU2hpbnklMkNTaW5nbGUtY2VsbA==" data-listing-date-sort="1775088000000">
+    
+      <img src="images/pd-explorer.webp" class="tool-card-img" alt="PD Atlas Explorer logo">
+    
+    <div class="tool-card-body">
+      <div class="tool-card-heading">
+        <h5 class="tool-card-title listing-title anchored">
+          
+            <!-- "stretched-link" is a built-in Bootstrap class: it stretches an invisible layer over the entire closest "position: relative" ancestor (the card), making the whole card clickable. ".tool-card-links" below stays clickable on its own because it also has "position: relative" in styles.css, so it sits above that invisible layer. -->
+            <a href="https://tools.biostatomics.com/pd-atlas-explorer/" class="stretched-link" target="_blank" rel="noopener">PD Atlas Explorer</a>
+          
+        </h5>
+        <span class="tool-card-date listing-date">Apr 2026</span>
+      </div>
+
+      <!-- one badge per category; "|| []" avoids an error if a tool has no categories defined -->
+      <div class="tool-card-tags listing-categories">
+        
+          <span class="badge tool-badge">Web</span>
+        
+          <span class="badge tool-badge">Shiny</span>
+        
+          <span class="badge tool-badge">Single-cell</span>
+        
+      </div>
+
+      <p class="tool-card-text listing-description">Interactive explorer for the multiregional single-cell atlas of Parkinson's disease presented in Tejedor-Serrano et al., 2026.</p>
+
+      <!-- one button per link; each entry in item.links needs a label, an icon (a Bootstrap Icons name) and a url -->
+      <div class="tool-card-links">
+        
+          <a href="https://tools.biostatomics.com/pd-atlas-explorer/" class="tool-link" target="_blank" rel="noopener">
+            <i class="bi bi-box-arrow-up-right"></i> Launch app
+          </a>
+        
+          <a href="https://github.com/BiostatOmics/TejedorSerrano2026-pd-atlas" class="tool-link" target="_blank" rel="noopener">
+            <i class="bi bi-github"></i> GitHub
+          </a>
+        
+          <a href="https://doi.org/10.21203/rs.3.rs-9220144/v1" class="tool-link" target="_blank" rel="noopener">
+            <i class="bi bi-file-earmark-text"></i> Paper
+          </a>
+        
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -800,6 +913,33 @@ window.Quarto = {
   });
   </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 BiostatOmics <br> All content licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Made with <a href="https://quarto.org">Quarto</a> <br> View source at <a href="https://github.com/BiostatOmics/biostatomics-web"><i class="bi bi-github"></i></a></p>
+</div>
+  </div>
+</footer>
+<!-- Quarto only highlights a navbar tab when its own "href" matches the current page. A dropdown trigger (e.g. "Research", which just opens "Research lines" / "Publications") has no "href" of its own, so it never gets highlighted this way even while you're on one of its pages. This adds the same highlight class ("active") to the dropdown trigger whenever one of its entries matches the current page. -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".nav-item.dropdown").forEach(function (dropdown) {
+    var childLinks = dropdown.querySelectorAll(".dropdown-menu a[href]");
+    var hasActiveChild = Array.from(childLinks).some(function (link) {
+      return link.href === window.location.href;
+    });
+    if (hasActiveChild) {
+      dropdown.querySelector(".dropdown-toggle").classList.add("active");
+    }
+  });
+});
+</script>
 
 
 

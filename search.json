@@ -1,38 +1,10 @@
 [
   {
-    "objectID": "tools/index.html",
-    "href": "tools/index.html",
-    "title": "BiostatOmics Lab",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "About us",
     "section": "",
-    "text": "Tools\n\n  \n    \n    \n      \n        \n      \n      \n        \n          Coxmos\n          May 2026\n        \n\n        \n        \n          \n            R\n          \n            package\n          \n            multi-omics\n          \n        \n\n        R package for interpretable Cox survival analysis on high-dimensional and multiblock (multi-omics) data, combining classical Cox regression with sparse PLS-based methods.\n\n        \n        \n          \n            \n               GitHub\n            \n          \n            \n               CRAN\n            \n          \n            \n               Paper\n            \n          \n        \n      \n    \n  \n    \n    \n      \n        \n      \n      \n        \n          MORE\n          Jun 2025\n        \n\n        \n        \n          \n            R\n          \n            package\n          \n            multi-omics\n          \n        \n\n        R package to model multi-omics regulatory relationships using PLS or regularized regression, identifying candidate regulators for a target omic feature.\n\n        \n        \n          \n            \n               GitHub\n            \n          \n            \n               Paper\n            \n          \n        \n      \n    \n  \n    \n    \n      \n        \n      \n      \n        \n          MOREshiny\n          Jun 2025\n        \n\n        \n        \n          \n            Docker\n          \n            Shiny\n          \n            multi-omics\n          \n        \n\n        Dockerized Shiny interface for MORE, aimed at users with less experience in R or statistics who want to run its core functionality through a graphical interface.\n\n        \n        \n          \n            \n               GitHub\n            \n          \n            \n               Paper\n            \n          \n        \n      \n    \n  \n\n  Web apps\n\n  \n    \n    \n      \n        \n      \n      \n        \n          PD Atlas Explorer\n          Apr 2026\n        \n\n        \n        \n          \n            Web\n          \n            Shiny\n          \n            single-cell\n          \n        \n\n        Interactive explorer for the multiregional single-cell atlas of Parkinson's disease presented in Tejedor-Serrano et al., 2026.\n\n        \n        \n          \n            \n               Launch app\n            \n          \n            \n               GitHub\n            \n          \n            \n               Paper\n            \n          \n        \n      \n    \n  \n\n\nNo matching items\n Back to top"
-  },
-  {
-    "objectID": "people/index.html",
-    "href": "people/index.html",
-    "title": "Meet the group",
-    "section": "",
-    "text": "Principal Investigator\n\n    \n      \n      \n        \n          \n        \n        \n        \n          Sonia Tarazona\n          Statistics Associate Professor\n\n          \n          \n            PhD in Statistics | Universitat Politècnica de València, 2014  BS in Mathematics & Statistics | Universitat Politècnica de València, 2001\n          \n        \n      \n    \n\n  \n\n  \n\n  \n  \n\n  \n\n  \n  \n\n  \n\n  \n  \n\n    PhD Students\n\n    \n      \n      \n        \n          \n        \n        \n        \n          Juan Andrés Tejedor-Serrano\n          PhD Student\n\n          \n          \n            MS in Omics Data Analysis & Systems Biology | University of Seville, 2024  BS in Biotechnology | University of Granada, 2023\n          \n        \n      \n    \n\n  \n\n  \n\n  \n  \n\n  \n\n  \n  \n\n  \n\n  \n  \n\n\nNo matching items\n Back to top"
-  },
-  {
-    "objectID": "people/tarazona-sonia/index.html",
-    "href": "people/tarazona-sonia/index.html",
-    "title": "Sonia Tarazona",
-    "section": "",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
-  },
-  {
-    "objectID": "people/tarazona-sonia/index.html#about-me",
-    "href": "people/tarazona-sonia/index.html#about-me",
-    "title": "Sonia Tarazona",
-    "section": "",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
-  },
-  {
-    "objectID": "people/tarazona-sonia/index.html#education",
-    "href": "people/tarazona-sonia/index.html#education",
-    "title": "Sonia Tarazona",
-    "section": "Education",
-    "text": "Education\n\n\nPhD in Statistics | Universitat Politècnica de València, 2014\n\n\nBS in Mathematics & Statistics | Universitat Politècnica de València, 2001"
+    "text": "About us\nThe BiostatOmics group was established in January 2024 at the Department of Applied Statistics, Operations Research and Quality, Universitat Politècnica de València (UPV) (Spain), and is led by Dr. Sonia Tarazona.\nWe are a research group at the interface of statistics, machine learning and computational biology.\nOur work focuses on developing novel statistical methods and open-source software for the analysis of omic or multi-omics (MO) datasets (transcriptomics, proteomics, metabolomics, epigenomics, and beyond) to understand complex biological systems."
   },
   {
     "objectID": "people/tejedor-juan/index.html",
@@ -53,13 +25,62 @@
     "href": "people/tejedor-juan/index.html#education",
     "title": "Juan Andrés Tejedor-Serrano",
     "section": "Education",
-    "text": "Education\n\n\nMS in Omics Data Analysis & Systems Biology | University of Seville, 2024\n\n\nBS in Biotechnology | University of Granada, 2023"
+    "text": "Education\n\n\nMS in Omics Data Analysis & Systems Biology | University of Seville (2024)\n\n\nBS in Biotechnology | University of Granada (2023)"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "About us",
+    "objectID": "tools/index.html",
+    "href": "tools/index.html",
+    "title": "BiostatOmics Lab",
     "section": "",
-    "text": "About us\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n\n\n\n Back to top"
+    "text": "May 2026\n      \n\n      \n      \n        \n          R\n        \n          Package\n        \n          Multi-omics\n        \n      \n\n      R package for interpretable Cox survival analysis on high-dimensional and multiblock (multi-omics) data, combining classical Cox regression with sparse PLS-based methods.\n\n      \n      \n        \n          \n             GitHub\n          \n        \n          \n             CRAN\n          \n        \n          \n             Paper\n          \n        \n      \n    \n  \n\n  \n  \n  \n    \n      \n    \n    \n      \n        \n        Jun 2025\n      \n\n      \n      \n        \n          R\n        \n          Package\n        \n          Multi-omics\n        \n      \n\n      R package to model multi-omics regulatory relationships using PLS or regularized regression, identifying candidate regulators for a target omic feature.\n\n      \n      \n        \n          \n             GitHub\n          \n        \n          \n             Paper\n          \n        \n      \n    \n  \n\n  \n  \n  \n    \n      \n    \n    \n      \n        \n        Jun 2025\n      \n\n      \n      \n        \n          Docker\n        \n          Shiny\n        \n          Multi-omics\n        \n      \n\n      Dockerized Shiny interface for MORE, aimed at users with less experience in R or statistics who want to run its core functionality through a graphical interface.\n\n      \n      \n        \n          \n             GitHub\n          \n        \n          \n             Paper\n          \n        \n      \n    \n  \n\n  \n  \n  \n    \n      \n    \n    \n      \n        \n        Mar 2025\n      \n\n      \n      \n        \n          R\n        \n          Package\n        \n          Multi-omics\n        \n      \n\n      R package to simulate multi-omic bulk and single-cell experiments that mimic regulatory mechanisms within the cell.\n\n      \n      \n        \n          \n             GitHub\n          \n        \n          \n             Bioconductor\n          \n        \n          \n             Paper\n          \n        \n      \n    \n  \n\n\nNo matching items"
+  },
+  {
+    "objectID": "tools/index.html#tools",
+    "href": "tools/index.html#tools",
+    "title": "BiostatOmics Lab",
+    "section": "",
+    "text": "May 2026\n      \n\n      \n      \n        \n          R\n        \n          Package\n        \n          Multi-omics\n        \n      \n\n      R package for interpretable Cox survival analysis on high-dimensional and multiblock (multi-omics) data, combining classical Cox regression with sparse PLS-based methods.\n\n      \n      \n        \n          \n             GitHub\n          \n        \n          \n             CRAN\n          \n        \n          \n             Paper\n          \n        \n      \n    \n  \n\n  \n  \n  \n    \n      \n    \n    \n      \n        \n        Jun 2025\n      \n\n      \n      \n        \n          R\n        \n          Package\n        \n          Multi-omics\n        \n      \n\n      R package to model multi-omics regulatory relationships using PLS or regularized regression, identifying candidate regulators for a target omic feature.\n\n      \n      \n        \n          \n             GitHub\n          \n        \n          \n             Paper\n          \n        \n      \n    \n  \n\n  \n  \n  \n    \n      \n    \n    \n      \n        \n        Jun 2025\n      \n\n      \n      \n        \n          Docker\n        \n          Shiny\n        \n          Multi-omics\n        \n      \n\n      Dockerized Shiny interface for MORE, aimed at users with less experience in R or statistics who want to run its core functionality through a graphical interface.\n\n      \n      \n        \n          \n             GitHub\n          \n        \n          \n             Paper\n          \n        \n      \n    \n  \n\n  \n  \n  \n    \n      \n    \n    \n      \n        \n        Mar 2025\n      \n\n      \n      \n        \n          R\n        \n          Package\n        \n          Multi-omics\n        \n      \n\n      R package to simulate multi-omic bulk and single-cell experiments that mimic regulatory mechanisms within the cell.\n\n      \n      \n        \n          \n             GitHub\n          \n        \n          \n             Bioconductor\n          \n        \n          \n             Paper\n          \n        \n      \n    \n  \n\n\nNo matching items"
+  },
+  {
+    "objectID": "tools/index.html#web-apps",
+    "href": "tools/index.html#web-apps",
+    "title": "BiostatOmics Lab",
+    "section": "Web apps",
+    "text": "Web apps\n\n\n\n\n  \n  \n  \n    \n      \n    \n    \n      \n        \n          \n            \n            PD Atlas Explorer\n          \n        \n        Apr 2026\n      \n\n      \n      \n        \n          Web\n        \n          Shiny\n        \n          Single-cell\n        \n      \n\n      Interactive explorer for the multiregional single-cell atlas of Parkinson's disease presented in Tejedor-Serrano et al., 2026.\n\n      \n      \n        \n          \n             Launch app\n          \n        \n          \n             GitHub\n          \n        \n          \n             Paper\n          \n        \n      \n    \n  \n\n\nNo matching items"
+  },
+  {
+    "objectID": "research_lines.html",
+    "href": "research_lines.html",
+    "title": "Research lines",
+    "section": "",
+    "text": "Our research spans three interconnected areas:\n\nMulti-omics data integration: We develop statistical frameworks and tools to jointly analyze data from heterogeneous omics sources. Some examples of these tools are:\n\nMORE, for the inference of multi-layer regulatory networks and compare them across different phenotypes;\nMOSim, for simulating multi-omic bulk and single-cell data, which is useful to prepare and test pipelines and tools;\nCoxmos, for the discovery of molecular signatures associated with survival.\n\n\n\n\nSingle-cell and spatial technologies: We build computational methods tailored to the unique challenges of single-cell RNA-seq, long-read sequencing, and spatial transcriptomics data. We are currently adapting our tools to deal with the specific features of these new technologies.\nClinical and translational applications: We apply our methods to real biomedical problems, including cancer (ovarian, lung), neurodegenerative diseases (Parkinson’s), metabolic disorders (diabetes, hepatic encephalopathy), etc."
+  },
+  {
+    "objectID": "people/tarazona-sonia/index.html",
+    "href": "people/tarazona-sonia/index.html",
+    "title": "Sonia Tarazona",
+    "section": "",
+    "text": "Sonia Tarazona is an Associate Professor (Profesora Titular de Universidad) at the Department of Applied Statistics, Operations Research and Quality, Universitat Politècnica de València (UPV), where she has been teaching statistics and machine learning since 2005.\nSonia holds a degree in Mathematics (1997) and a degree in Statistical Sciences and Techniques (2001), both from the Universitat de València. She obtained her PhD in Statistics and Optimization (Cum Laude, with International Mention and Extraordinary Thesis Award) from UPV in 2014, under the supervision of Dr. Ana Conesa at the Centro de Investigación Príncipe Felipe (València) and Dr. Alberto Ferrer (UPV). Her doctoral thesis laid the groundwork for the NOISeq R/Bioconductor package — a landmark tool for differential expression analysis in RNA-seq data — and produced one of the most-cited papers in the field on the effect of sequencing depth on differential expression (Genome Research, 2011).\nFrom 2008 to 2024, Sonia was a key member of the Genomics of Gene Expression (GGE) group led by Dr. Ana Conesa, co-leading it from July 2018 to January 2024."
+  },
+  {
+    "objectID": "people/tarazona-sonia/index.html#about-me",
+    "href": "people/tarazona-sonia/index.html#about-me",
+    "title": "Sonia Tarazona",
+    "section": "",
+    "text": "Sonia Tarazona is an Associate Professor (Profesora Titular de Universidad) at the Department of Applied Statistics, Operations Research and Quality, Universitat Politècnica de València (UPV), where she has been teaching statistics and machine learning since 2005.\nSonia holds a degree in Mathematics (1997) and a degree in Statistical Sciences and Techniques (2001), both from the Universitat de València. She obtained her PhD in Statistics and Optimization (Cum Laude, with International Mention and Extraordinary Thesis Award) from UPV in 2014, under the supervision of Dr. Ana Conesa at the Centro de Investigación Príncipe Felipe (València) and Dr. Alberto Ferrer (UPV). Her doctoral thesis laid the groundwork for the NOISeq R/Bioconductor package — a landmark tool for differential expression analysis in RNA-seq data — and produced one of the most-cited papers in the field on the effect of sequencing depth on differential expression (Genome Research, 2011).\nFrom 2008 to 2024, Sonia was a key member of the Genomics of Gene Expression (GGE) group led by Dr. Ana Conesa, co-leading it from July 2018 to January 2024."
+  },
+  {
+    "objectID": "people/tarazona-sonia/index.html#education",
+    "href": "people/tarazona-sonia/index.html#education",
+    "title": "Sonia Tarazona",
+    "section": "Education",
+    "text": "Education\n\n\nPhD in Statistics | Universitat Politècnica de València (2014)\n\n\nBS in Statistical Sciences and Techniques | Universitat de València (2001)\n\n\nBS in Mathematics | Universitat de València (1997)"
+  },
+  {
+    "objectID": "people/index.html",
+    "href": "people/index.html",
+    "title": "Meet the group",
+    "section": "",
+    "text": "Principal Investigator\n\n    \n      \n      \n        \n          \n        \n        \n        \n          Sonia Tarazona\n          Statistics Associate Professor\n\n          \n          \n            PhD in Statistics | Universitat Politècnica de València (2014)  BS in Statistical Sciences and Techniques | Universitat de València (2001)  BS in Mathematics | Universitat de València (1997)\n          \n        \n      \n    \n\n  \n\n  \n\n  \n  \n\n  \n\n  \n  \n\n  \n\n  \n  \n\n    PhD Students\n\n    \n      \n      \n        \n          \n        \n        \n        \n          Juan Andrés Tejedor-Serrano\n          PhD Student\n\n          \n          \n            MS in Omics Data Analysis & Systems Biology | University of Seville (2024)  BS in Biotechnology | University of Granada (2023)\n          \n        \n      \n    \n\n  \n\n  \n\n  \n  \n\n  \n\n  \n  \n\n  \n\n  \n  \n\n\nNo matching items"
   }
 ]

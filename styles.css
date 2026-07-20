@@ -16,6 +16,40 @@
    You'll also see values like "var(--bs-border-color, #dee2e6)". This reads a color already defined by the site's Bootstrap theme (--bs-border-color); the second value (#dee2e6) is just a fallback used if that theme color isn't available for some reason. You don't need to touch these. */
 
 
+/* shared look-and-feel, used across the tools, people, and research-lines sections below, so it's written once here instead of three times in each section. */
+
+/* The "elevated card" surface: rounded border, soft shadow, slightly bigger shadow + a small lift on hover — shared by the tool cards, the person cards, and the research-lines figure. Each of those keeps its own layout rules (flex vs. block, sizing, etc.) in its own section further down; only this shared "surface" look lives here. */
+.tool-card,
+.person-card,
+.research-line-img {
+  border: 1px solid var(--bs-border-color-translucent, rgba(0, 0, 0, 0.08));
+  border-radius: 0.75rem;
+  background-color: var(--bs-body-bg, #fff);
+  box-shadow: 0 2px 10px rgba(var(--bs-black-rgb, 0, 0, 0), 0.06);
+  transition: box-shadow 0.15s ease, transform 0.15s ease; /* animate the shadow and lift smoothly on hover, instead of them changing instantly */
+}
+
+.tool-card:hover,
+.person-card:hover,
+.research-line-img:hover {
+  box-shadow: 0 6px 18px rgba(var(--bs-black-rgb, 0, 0, 0), 0.1);
+  transform: translateY(-2px);
+}
+
+/* The group heading (e.g. "Postdoctoral Fellows") that sits above each group of person cards on the people page. "Tools" and "Web apps" on the tools page used to need this same treatment too, but those are now plain "##" headings in tools/index.qmd, styled by Quarto's own default heading look instead. */
+.people-section-title {
+  width: 100%; /* forces it onto its own line in the flexbox grid, pushing every card after it to start a new row */
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--bs-border-color, #dee2e6);
+}
+
+.people-section-title:first-child {
+  margin-top: 0;
+}
+
+
 /* tools page — card grid used by tools/tools-cards.ejs.md */
 
 /* The grid that holds every tool card, 2 cards per row. */
@@ -32,43 +66,23 @@
   }
 }
 
-/* The "Tools" / "Web apps" heading that sits above each group of cards. */
-.tools-section-title {
-  grid-column: 1 / -1; /* make the heading span the full width of the grid, instead of sitting inside a single card column */
-  margin-top: 1.5rem; /* space above the heading */
-  margin-bottom: 0;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--bs-border-color, #dee2e6); /* thin line under the heading */
-}
-
-/* the very first heading on the page shouldn't have that extra space above it (there's nothing above it to separate from) */
-.tools-section-title:first-child {
-  margin-top: 0;
-}
-
-/* The card box itself: border, rounded corners, subtle shadow. */
+/* The card box itself: layout only — border, shadow, background and hover are shared above. */
 .tool-card {
+  position: relative; /* anchors the card title's ".stretched-link", which stretches an invisible clickable layer to fill this box */
   display: flex;
   flex-direction: column; /* stack its contents top-to-bottom */
-  border: 1px solid var(--bs-border-color-translucent, rgba(0, 0, 0, 0.08));
-  border-radius: 0.75rem; /* rounded corners */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06); /* soft drop shadow */
   overflow: hidden; /* clips anything (like the image) to the rounded corners */
-  background-color: var(--bs-body-bg, #fff);
-  transition: box-shadow 0.15s ease; /* animate the shadow smoothly on hover, instead of it changing instantly */
-}
-
-/* slightly bigger shadow when the mouse hovers the card, as a hint that it's part of an interactive page */
-.tool-card:hover {
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
 /* The tool's logo/image at the top of the card. */
 .tool-card-img {
-  height: 150px; /* fixed height, so every card lines up evenly */
+  /* ! for now, card size adapts to the card's image. the advantage is that images/logos with height > 150px are not re-scaled to a tiny size; the disadvantage is that now cards does not line up */
+  /* height: 150px; /* fixed height, so every card lines up evenly */ 
+
+  
   object-fit: contain; /* scale the image to fit inside that height without cropping or distorting it */
   padding: 1rem; /* small margin of empty space around the image */
-  background-color: #fff; /* white backdrop, useful for logos with a transparent background */
+  background-color: var(--bs-body-bg, #fff); /* white backdrop, useful for logos with a transparent background */
 }
 
 /* The text area below the image (title, description, links...). */
@@ -92,6 +106,12 @@
   margin-bottom: 0;
   font-weight: 700; /* bold */
   font-size: 1.05rem;
+}
+
+/* The title's ".stretched-link" (see _tools-cards.ejs.md) covers the whole card, but should still read as plain bold text rather than a typical blue underlined link. */
+.tool-card-title a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .tool-card-date {
@@ -124,6 +144,7 @@
 
 /* Footer strip with the link buttons (GitHub, CRAN, Paper...). It "bleeds" to the edges of the card (negative margins cancel out the card's own padding) so it looks like a distinct panel rather than floating text. */
 .tool-card-links {
+  position: relative; /* keeps these buttons individually clickable on top of the card's ".stretched-link" overlay, instead of every click on this row triggering the card's own link */
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -141,7 +162,7 @@
   font-size: 0.8rem;
   text-decoration: none; /* remove the default underline on links */
   border: 1px solid var(--bs-border-color, #dee2e6);
-  border-radius: 0.375rem;
+  border-radius: var(--bs-border-radius, 0.375rem);
   padding: 0.15rem 0.45rem;
   background-color: var(--bs-body-bg, #fff);
 }
@@ -160,36 +181,14 @@
   gap: 1.5rem;
 }
 
-/* The group heading (e.g. "Postdoctoral Fellows") that sits above each group of person cards. "width: 100%" forces it onto its own line, pushing every card after it to start a new row. */
-.people-section-title {
-  width: 100%;
-  margin-top: 1.5rem;
-  margin-bottom: 0;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--bs-border-color, #dee2e6);
-}
-
-.people-section-title:first-child {
-  margin-top: 0;
-}
-
-/* The card itself. Unlike the tool cards, this one IS the clickable link (see the person-card anchor in _people-cards.ejs.md). Laid out the same way as .tool-card: a full-width photo on top, then left-aligned text below. Its width (how many fit per row) is set by the "person-card-cols-*" rules further down, not here. */
+/* The card itself: layout only — border, shadow, background and hover are shared above. Unlike the tool cards, this one IS the clickable link (see the person-card anchor in _people-cards.ejs.md). Laid out the same way as .tool-card: a full-width photo on top, then left-aligned text below. Its width (how many fit per row) is set by the "person-card-cols-*" rules further down, not here. */
 .person-card {
   display: flex;
   flex-direction: column;
   flex-shrink: 0; /* never let a card shrink below the width its "person-card-cols-*" class gives it */
   text-decoration: none; /* this card is a link: remove the default underline */
   color: inherit; /* ...and make it use normal text color, not "link blue" */
-  border: 1px solid var(--bs-border-color-translucent, rgba(0, 0, 0, 0.08));
-  border-radius: 0.75rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
   overflow: hidden; /* clips the photo to the card's rounded corners */
-  background-color: var(--bs-body-bg, #fff);
-  transition: box-shadow 0.15s ease;
-}
-
-.person-card:hover {
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
 /* How many cards fit per row, for a given group's "cols" value: each card's width is "1/N of the row, minus its share of the gaps". Add a ".person-card-cols-N" rule here for any new N you use in _people-cards.ejs.md. */
@@ -256,4 +255,15 @@
 .person-card-education {
   font-size: 0.7rem;
   color: var(--bs-secondary-color, #6c757d);
+}
+
+
+/* research lines page — the multi-omics integration diagram embedded mid-article. Layout only — border, shadow, background and hover are shared above; the shared background-color also doubles here as the fill behind the padding, since padding on an <img> is otherwise transparent. Constrained and framed like a figure instead of stretching edge-to-edge at full text width. */
+.research-line-img {
+  display: block;
+  box-sizing: border-box; /* keep the padding inside max-width instead of adding to it */
+  max-width: 700px;
+  width: 100%;
+  margin: 1.5rem auto;
+  padding: 1rem;
 }
