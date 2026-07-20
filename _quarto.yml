@@ -39,8 +39,8 @@ website:
       - text: "Research"
         icon: lightbulb-fill
         menu:
-          - text: "Projects"
-            href: projects.qmd
+          - text: "Research lines"
+            href: research_lines.qmd
             icon: folder2-open
           - text: "Publications"
             href: publications.qmd 

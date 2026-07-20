@@ -9,12 +9,14 @@ people_group: "pi"
 email: sotacam@eio.upv.es
 education: |
   <ul>
-    <li><strong>PhD in Statistics</strong> | Universitat Politècnica de València, 2014</li>
-    <li><strong>BS in Mathematics & Statistics</strong> | Universitat Politècnica de València, 2001</li>
+    <li><strong>PhD in Statistics</strong> | Universitat Politècnica de València (2014)</li>
+    <li><strong>BS in Statistical Sciences and Techniques</strong> | Universitat de València (2001)</li>
+    <li><strong>BS in Mathematics</strong> | Universitat de València (1997)</li>
   </ul>
 affiliation: Universitat Politècnica de València
 
 about:
+  id: hero-heading
   template: trestles
   image-shape: round
   links: 
@@ -36,12 +38,18 @@ about:
     - text: '<i class="ai ai-orcid"></i>'
       href: https://orcid.org/0000-0001-5346-1407
 
-layout: full
+page-layout: full
 ---
 
 ## About me
 
-{{< lipsum 1 >}}
+:::{#hero-heading}
+**Sonia Tarazona** is an Associate Professor (*Profesora Titular de Universidad*) at the [Department of Applied Statistics, Operations Research and Quality](https://www.upv.es/entidades/DEIO/), [Universitat Politècnica de València (UPV)](https://www.upv.es/), where she has been teaching statistics and machine learning since 2005.
+
+Sonia holds a degree in Mathematics (1997) and a degree in Statistical Sciences and Techniques (2001), both from the Universitat de València. She obtained her PhD in Statistics and Optimization (*Cum Laude*, with International Mention and Extraordinary Thesis Award) from UPV in 2014, under the supervision of Dr. Ana Conesa at the Centro de Investigación Príncipe Felipe (València) and Dr. Alberto Ferrer (UPV). Her doctoral thesis laid the groundwork for the NOISeq R/Bioconductor package — a landmark tool for differential expression analysis in RNA-seq data — and produced one of the most-cited papers in the field on the effect of sequencing depth on differential expression (*Genome Research*, 2011).
+
+From 2008 to 2024, Sonia was a key member of the Genomics of Gene Expression (GGE) group led by Dr. Ana Conesa, co-leading it from July 2018 to January 2024.
+:::
 
 ## Education
 

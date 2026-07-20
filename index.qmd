@@ -1,15 +1,24 @@
 ---
 # title: "BiostatOmics Lab"
 image: images/Logo_BioStatOmics_300x300Px_color_Transparent_Bckg.png
-about: 
-    # template: jolla
+about:
     template: trestles
-    links: 
+    links:
         - icon: github
           href: https://github.com/biostatomics
 toc: false
-layout: full
+page-layout: full
 ---
 
 # About us
-{{< lipsum 1 >}}
+
+The **BiostatOmics** group was established in January 2024 at the
+[Department of Applied Statistics, Operations Research and Quality](https://www.upv.es/entidades/DEIO/),
+[Universitat Politècnica de València (UPV)](https://www.upv.es/) (Spain), and is led by [Dr. Sonia Tarazona](people/tarazona-sonia/index.qmd).
+
+We are a research group at the interface of **statistics**, **machine learning** and **computational biology**.
+
+Our work focuses on developing novel [statistical methods and open-source software](tools/index.qmd) for the analysis of **omic** or **multi-omics (MO)** datasets (transcriptomics, proteomics, metabolomics, epigenomics, and beyond) to understand complex biological systems.
+
+
+[](people/index.qmd#meet-the-group)

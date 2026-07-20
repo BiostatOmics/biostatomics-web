@@ -257,3 +257,24 @@
   font-size: 0.7rem;
   color: var(--bs-secondary-color, #6c757d);
 }
+
+
+/* research lines page — the multi-omics integration diagram embedded mid-article. Constrained and framed like a figure instead of stretching edge-to-edge at full text width. */
+.research-line-img {
+  display: block;
+  box-sizing: border-box; /* keep the padding inside max-width instead of adding to it */
+  max-width: 700px;
+  width: 100%;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  background-color: var(--bs-body-bg, #fff); /* fills the padding area, since padding on an <img> is otherwise transparent */
+  border: 1px solid var(--bs-border-color-translucent, rgba(0, 0, 0, 0.08));
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.research-line-img:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}

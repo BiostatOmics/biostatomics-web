@@ -11,14 +11,15 @@ people_group: "phd"
 
 education: |
   <ul>
-    <li><strong>MS in Omics Data Analysis & Systems Biology</strong> | University of Seville, 2024</li>
-    <li><strong>BS in Biotechnology</strong> | University of Granada, 2023</li>
+    <li><strong>MS in Omics Data Analysis & Systems Biology</strong> | University of Seville (2024)</li>
+    <li><strong>BS in Biotechnology</strong> | University of Granada (2023)</li>
   </ul>
 
 affiliation: Universitat Politècnica de València
 
 
 about:
+  id: hero-heading
   template: trestles
   image-shape: round
 
@@ -41,14 +42,14 @@ about:
     - text: '<i class="ai ai-orcid"></i>'
       href: https://orcid.org/0009-0002-9722-7545
 
-layout: full
+page-layout: full
 ---
-
 
 ## About me
 
+:::{#hero-heading}
 {{< lipsum 1 >}}
-
+:::
 
 ## Education
 

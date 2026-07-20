@@ -12,18 +12,19 @@ email: Your email of contact
 # select one of the following groups. introduce it as a string (surrounded by ""), as this allow to perform glob operations.  
 people_group: "pi | research_scientist | postdoc | visitor | phd | student | alumni"
 
-# education is shown as a HTML list where each title is an element of the list. the education title follows the structure "<PhD|MS|BS> in <X> | University <X>, <year>". this same list is also reused automatically to build the short version shown on your compact card in the group listing, so you only need to fill it in once here.
+# education is shown as a HTML list where each title is an element of the list. the education title follows the structure "<PhD|MS|BS> in <X> | University <X> (<year>)". this same list is also reused automatically to build the short version shown on your compact card in the group listing, so you only need to fill it in once here.
 # just modify the following template with your data
 education: |
   <ul>
-    <li><strong>PhD in Statistics</strong> | Universitat Politècnica de València, 2014</li>
-    <li><strong>BS in Mathematics & Statistics</strong> | Universitat Politècnica de València, 2001</li>
+    <li><strong>PhD in Statistics</strong> | Universitat Politècnica de València (2014)</li>
+    <li><strong>BS in Mathematics & Statistics</strong> | Universitat Politècnica de València (2001)</li>
   </ul>
 
 affiliation: Your affiliation
 
 # we use the "trestles" template for the "about" div. 
 about:
+  id: hero-heading
   template: trestles
   image-shape: round
 
@@ -47,15 +48,16 @@ about:
     - text: '<i class="ai ai-orcid"></i>'
       href: https://orcid.org/example-orcid.com
 
-layout: full
+page-layout: full
 ---
-
 
 ## About me
 
+<!-- add div fence so the "about me" gets encapsulated in its own div (allow the other sections (eg. "Education") to be allocated outside the "About me" div) -->
+:::{#hero-heading}
 <!-- replace this command with your description: biography, research interests, etc. -->
 {{< lipsum 1 >}}
-
+:::
 
 ## Education
 

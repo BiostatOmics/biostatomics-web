@@ -2,10 +2,7 @@
 
 website:
   drafts:
-    # - index.qmd
-    - projects.qmd
     - publications.qmd
-    # - tools/index.qmd
     - blog.qmd
     - contact.qmd
   # draft-mode : gone # empty and unlinked
