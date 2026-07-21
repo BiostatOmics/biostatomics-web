@@ -1,9 +1,97 @@
 ---
 title: Meet the group
 pagetitle: People
+# One listing block per group. Each is scoped to a "people_group" value (see people/_people-template.qmd)
+# via "include", so any member's own index.qmd is picked up automatically as long as its people_group
+# matches — no need to list members individually here.
 listing:
-  contents: "*/index.qmd" # include all members `index.qmd` file for the listing
-  template: _people-cards.ejs.md # use this template for making the card of each member (custom listing)
+  - id: pi-listing
+    contents: "*/index.qmd"
+    include:
+      people_group: "pi"
+    template: _people-cards.ejs.md
+  # - id: research_scientist-listing
+  #   contents: "*/index.qmd"
+  #   include:
+  #     people_group: "research_scientist"
+  #   template: _people-cards.ejs.md
+  # - id: postdoc-listing
+  #   contents: "*/index.qmd"
+  #   include:
+  #     people_group: "postdoc"
+  #   template: _people-cards.ejs.md
+  - id: phd-listing
+    contents: "*/index.qmd"
+    include:
+      people_group: "phd"
+    template: _people-cards.ejs.md
+  # - id: visitor-listing
+  #   contents: "*/index.qmd"
+  #   include:
+  #     people_group: "visitor"
+  #   template: _people-cards.ejs.md
+  # - id: student-listing
+  #   contents: "*/index.qmd"
+  #   include:
+  #     people_group: "student"
+  #   template: _people-cards.ejs.md
+  # - id: alumni-listing
+  #   contents: "*/index.qmd"
+  #   include:
+  #     people_group: "alumni"
+  #   template: _people-cards.ejs.md
 page-layout: article
-# toc: true
+toc: true
 ---
+
+<!--
+To show or hide a group: comment/uncomment BOTH its "listing:" entry above AND its heading + div
+block below (commenting only one half leaves an empty section, or makes Quarto append the listing
+at the bottom of the page unstyled). To add a new group, copy an existing pair and change the
+"people_group" value/id/heading.
+-->
+
+## Principal Investigator
+
+:::{#pi-listing}
+:::
+
+<!--
+## Research Scientists
+
+:::{#research_scientist-listing}
+:::
+-->
+
+<!--
+## Postdoctoral Fellows
+
+:::{#postdoc-listing}
+:::
+-->
+
+## PhD Students
+
+:::{#phd-listing}
+:::
+
+<!--
+## Visiting Researchers
+
+:::{#visitor-listing}
+:::
+-->
+
+<!--
+## Students
+
+:::{#student-listing}
+:::
+-->
+
+<!--
+## Alumni
+
+:::{#alumni-listing}
+:::
+-->
