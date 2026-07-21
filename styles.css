@@ -36,20 +36,6 @@
   transform: translateY(-2px);
 }
 
-/* The group heading (e.g. "Postdoctoral Fellows") that sits above each group of person cards on the people page. "Tools" and "Web apps" on the tools page used to need this same treatment too, but those are now plain "##" headings in tools/index.qmd, styled by Quarto's own default heading look instead. */
-.people-section-title {
-  width: 100%; /* forces it onto its own line in the flexbox grid, pushing every card after it to start a new row */
-  margin-top: 1.5rem;
-  margin-bottom: 0;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--bs-border-color, #dee2e6);
-}
-
-.people-section-title:first-child {
-  margin-top: 0;
-}
-
-
 /* tools page — card grid used by tools/tools-cards.ejs.md */
 
 /* The grid that holds every tool card, 2 cards per row. */
@@ -123,18 +109,24 @@
 
 /* Row of small category badges (e.g. "R", "package"). */
 .tool-card-tags {
+  position: relative; /* keeps the badges individually clickable on top of the card's ".stretched-link" overlay, same fix as ".tool-card-links" */
   display: flex;
   flex-wrap: wrap; /* let badges wrap onto a new line if there are many */
   gap: 0.4rem;
   margin-bottom: 0.75rem;
 }
 
-/* A single "hollow" badge: colored border, no fill. */
+/* A single "hollow" badge: colored border, no fill. Clicking it filters the tools by that category. */
 .tool-badge {
   font-weight: 500;
   background-color: transparent;
   border: 1px solid var(--bs-border-color, #ced4da);
   color: var(--bs-secondary-color, #495057);
+  cursor: pointer;
+}
+
+.tool-badge:hover {
+  background-color: var(--bs-tertiary-bg, #f8f9fa);
 }
 
 .tool-card-text {
@@ -174,45 +166,20 @@
 
 /* people page — card grid used by people/_people-cards.ejs.md. Same overall approach as the tools cards above, just laid out differently: people cards are left-aligned (photo on top, text below) instead of a left-aligned image banner beside the text.
 
-   Unlike the tools grid, this one uses flexbox instead of CSS grid, because different groups need a different number of cards per row (e.g. 3 for "PhD Students", 5 for "Alumni" — see the "cols" value per group in _people-cards.ejs.md). CSS grid applies one fixed column layout to the whole container, but flexbox lets every card just declare its own width (via a "person-card-cols-*" class below) and wrap naturally — so several different "row densities" can coexist in the same list. */
+   Each group (PI, PhD Students, Alumni...) is its own listing with its own ".people-grid" container (see people/index.qmd), so a plain auto-filling CSS grid is enough: every card asks for at least 200px, and as many fit per row as the container is wide — a group with one member gets one wide-ish card, a group with many gets several per row, with no per-group column count to maintain. */
 .people-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1.5rem;
 }
 
-/* The card itself: layout only — border, shadow, background and hover are shared above. Unlike the tool cards, this one IS the clickable link (see the person-card anchor in _people-cards.ejs.md). Laid out the same way as .tool-card: a full-width photo on top, then left-aligned text below. Its width (how many fit per row) is set by the "person-card-cols-*" rules further down, not here. */
+/* The card itself: layout only — border, shadow, background and hover are shared above. Unlike the tool cards, this one IS the clickable link (see the person-card anchor in _people-cards.ejs.md). Laid out the same way as .tool-card: a full-width photo on top, then left-aligned text below. */
 .person-card {
   display: flex;
   flex-direction: column;
-  flex-shrink: 0; /* never let a card shrink below the width its "person-card-cols-*" class gives it */
   text-decoration: none; /* this card is a link: remove the default underline */
   color: inherit; /* ...and make it use normal text color, not "link blue" */
   overflow: hidden; /* clips the photo to the card's rounded corners */
-}
-
-/* How many cards fit per row, for a given group's "cols" value: each card's width is "1/N of the row, minus its share of the gaps". Add a ".person-card-cols-N" rule here for any new N you use in _people-cards.ejs.md. */
-.person-card-cols-3 {
-  width: calc((100% - 2 * 1.5rem) / 3);
-}
-
-.person-card-cols-5 {
-  width: calc((100% - 4 * 1.5rem) / 5);
-}
-
-/* responsive / mobile: regardless of how many columns a group uses on a normal screen, collapse everything to 2 columns on tablet-sized screens and 1 on phone-sized screens, so cards never get squeezed too small to read */
-@media (max-width: 900px) {
-  .person-card-cols-3,
-  .person-card-cols-5 {
-    width: calc((100% - 1.5rem) / 2);
-  }
-}
-
-@media (max-width: 600px) {
-  .person-card-cols-3,
-  .person-card-cols-5 {
-    width: 100%;
-  }
 }
 
 /* The photo, spanning the full width of the card. No fixed height and no "object-fit" here on purpose: the box always takes exactly the photo's own proportions, scaled to the card's width — that's the only way to guarantee zero empty space AND zero cropping at the same time. The trade-off: if two people in the same row upload photos with different proportions, their image boxes (and therefore their cards) won't line up at exactly the same height. */
@@ -257,6 +224,18 @@
   color: var(--bs-secondary-color, #6c757d);
 }
 
+
+/* Table of contents (the sidebar nav that lists the page's own headings). Bootstrap sets its title and links to 0.875rem by default, smaller than normal body text (1rem); this brings both up to match. The title's weight (600) is also matched here to the "Categories" sidebar title, so any page's toc-title looks the same without needing markdown bold in the YAML. */
+.sidebar nav[role="doc-toc"] > h2,
+.sidebar nav[role="doc-toc"] > .h2,
+.sidebar nav[role="doc-toc"] > ul {
+  font-size: 1rem;
+}
+
+.sidebar nav[role="doc-toc"] > h2,
+.sidebar nav[role="doc-toc"] > .h2 {
+  font-weight: 600;
+}
 
 /* research lines page — the multi-omics integration diagram embedded mid-article. Layout only — border, shadow, background and hover are shared above; the shared background-color also doubles here as the fill behind the padding, since padding on an <img> is otherwise transparent. Constrained and framed like a figure instead of stretching edge-to-edge at full text width. */
 .research-line-img {
