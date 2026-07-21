@@ -2,8 +2,92 @@
 title: Meet the group
 pagetitle: People
 listing:
-  contents: "*/index.qmd" # include all members `index.qmd` file for the listing
-  template: _people-cards.ejs.md # use this template for making the card of each member (custom listing)
+  - id: pi-listing
+    contents: "*/index.qmd"
+    include:
+      people_group: "pi"
+    template: _people-cards.ejs.md
+  # - id: research_scientist-listing
+  #   contents: "*/index.qmd"
+  #   include:
+  #     people_group: "research_scientist"
+  #   template: _people-cards.ejs.md
+  # - id: postdoc-listing
+  #   contents: "*/index.qmd"
+  #   include:
+  #     people_group: "postdoc"
+  #   template: _people-cards.ejs.md
+  - id: phd-listing
+    contents: "*/index.qmd"
+    include:
+      people_group: "phd"
+    template: _people-cards.ejs.md
+  # - id: visitor-listing
+  #   contents: "*/index.qmd"
+  #   include:
+  #     people_group: "visitor"
+  #   template: _people-cards.ejs.md
+  # - id: student-listing
+  #   contents: "*/index.qmd"
+  #   include:
+  #     people_group: "student"
+  #   template: _people-cards.ejs.md
+  # - id: alumni-listing
+  #   contents: "*/index.qmd"
+  #   include:
+  #     people_group: "alumni"
+  #   template: _people-cards.ejs.md
 page-layout: article
-# toc: true
+toc: true
 ---
+
+<!--
+! HOW TO USE: 
+! to show or hide a group: comment/uncomment BOTH its "listing:" entry above AND its "heading + div block" below
+! to add a new group, copy an existing pair and change the "people_group" value/id/heading. 
+-->
+
+## Principal Investigator
+
+:::{#pi-listing}
+:::
+
+<!--
+## Research Scientists
+
+:::{#research_scientist-listing}
+:::
+-->
+
+<!--
+## Postdoctoral Fellows
+
+:::{#postdoc-listing}
+:::
+-->
+
+## PhD Students
+
+:::{#phd-listing}
+:::
+
+<!--
+## Visiting Researchers
+
+:::{#visitor-listing}
+:::
+-->
+
+<!--
+## Students
+
+:::{#student-listing}
+:::
+-->
+
+<!--
+## Alumni
+
+:::{#alumni-listing}
+:::
+-->
