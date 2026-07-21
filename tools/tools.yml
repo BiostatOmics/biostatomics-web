@@ -1,4 +1,18 @@
 # --- 2026 ---
+- title: "MOREshiny"
+  href: "https://github.com/BiostatOmics/MOREshiny"
+  image: images/more-shiny-logo.webp
+  date: 2026-06
+  categories: [Docker, Shiny, Multi-omics]
+  description: "Dockerized Shiny interface for MORE, aimed at users with less experience in R or statistics who want to run its core functionality through a graphical interface."
+  links:
+    - label: "GitHub"
+      icon: github
+      url: "https://github.com/BiostatOmics/MOREshiny"
+    - label: "Paper"
+      icon: file-earmark-text
+      url: "https://doi.org/10.1093/bioadv/vbag175"
+      
 - title: "Coxmos"
   href: "https://github.com/BiostatOmics/Coxmos"
   image: images/coxmos-logo.webp
@@ -27,20 +41,6 @@
     - label: "GitHub"
       icon: github
       url: "https://github.com/BiostatOmics/MORE"
-    - label: "Paper"
-      icon: file-earmark-text
-      url: "https://doi.org/10.1093/bib/bbaf270"
-
-- title: "MOREshiny"
-  href: "https://github.com/BiostatOmics/MOREshiny"
-  image: images/more-shiny-logo.webp
-  date: 2025-06
-  categories: [Docker, Shiny, Multi-omics]
-  description: "Dockerized Shiny interface for MORE, aimed at users with less experience in R or statistics who want to run its core functionality through a graphical interface."
-  links:
-    - label: "GitHub"
-      icon: github
-      url: "https://github.com/BiostatOmics/MOREshiny"
     - label: "Paper"
       icon: file-earmark-text
       url: "https://doi.org/10.1093/bib/bbaf270"

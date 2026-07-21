@@ -33,9 +33,10 @@
       </div>
 
       <!-- one badge per category; "|| []" avoids an error if a tool has no categories defined -->
+      <!-- clicking a badge filters every listing on the page to that category, via Quarto's own filtering JS (window.quartoListingCategory) - the same mechanism its native listing templates use -->
       <div class="tool-card-tags listing-categories">
         <% (item.categories || []).forEach(function(cat) { %>
-          <span class="badge tool-badge"><%= cat %></span>
+          <span class="badge tool-badge" onclick="window.quartoListingCategory('<%= utils.b64encode(cat) %>'); return false;"><%= cat %></span>
         <% }) %>
       </div>
 

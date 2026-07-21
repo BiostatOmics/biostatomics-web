@@ -5,10 +5,13 @@ listing:
     contents: tools.yml
     # TODO: we can reduce redundancy using yaml variables (`&alias` to anchor, `*alias` to paste) 
     template: _tools-cards.ejs.md
+    categories: true
   - id: webapps-listing
     contents: webapps.yml
     template: _tools-cards.ejs.md
-page-layout: full
+    categories: true
+page-layout: article
+toc-title: Our software
 ---
 
 ## Tools
