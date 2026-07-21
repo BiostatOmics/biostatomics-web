@@ -5,14 +5,14 @@ website:
   # basics
   title: "BiostatOmics Lab"
   site-url: https://biostatomics.com # for SEO
-  # TODO: description: summary of web# for SEO
+  description: "BiostatOmics is a research group at the Universitat Politècnica de València (UPV) developing statistical and machine learning methods for the analysis of multi-omics data, applied to biomedical and clinical research."
   favicon: images/BioStatOmics_Favicon_web_512x512.svg # little icon that appears in browser tab
 
   repo-url: https://github.com/BiostatOmics/biostatomics-web
   # repo-actions: [edit, source, issue] # adds the "edit this page", "view source" and "report an issue" options in website footer
 
-  # image: # thumbnail to show when sharing website link (open-graph/social media)
-  # image-alt: # the description of the image for accesibility
+  image: images/Logo_BioStatOmics_300x300Px_color_Transparent_Bckg.png # thumbnail to show when sharing website link (open-graph/social media)
+  image-alt: "BiostatOmics Lab logo" # the description of the image for accesibility
 
   # social metadata options: enable to preview correctly the website (thumbnail, description, etc.) when sharing its link across social media (X, linkedin, etc.)
   open-graph: true
@@ -33,6 +33,7 @@ website:
   # ! website skeleton
   navbar: # navbar = top bar that display the different tabs for navegation
     pinned: true
+    logo: images/BioStatOmics_Favicon_web_512x512.svg
     right:
       - text: "Home" # text is optional, by default, it takes the "title" value defined in the href. 
         href: index.qmd # href is the linked document (internal) or URL (external) that will appear when clicking the "text" label in the navigation panel
@@ -60,8 +61,8 @@ website:
         icon: envelope-fill
 
   page-footer: # footer = bottom bar shown on every page
-    border: true # thin divider line above the footer, to separate it from the page content
-    background: "#F8F9FA"
+    border: true
+    background: light
     left: |
       © 2026 BiostatOmics <br>
       All content licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
@@ -76,7 +77,7 @@ format:
       - brand
     css: styles.css
     toc: true # add a "table of contents" 
-    include-in-header: # this allows to include HTML in the HTML header of the website. HTML header contains all the external resources needed.
+    include-in-header: # this allows to include HTML code in the HTML header of the website. HTML header contains all the external resources needed.
     # load AcademicIcons icon pack (for google scholar, orcid, zotero, etc.)
       - text: <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     # load FontAwesome icon pack (not needed for now -> commented)
