@@ -11,31 +11,37 @@ listing:
   #   contents: "*/index.qmd"
   #   include:
   #     people_group: "research_scientist"
+  #   sort: "member-since desc"
   #   template: _people-cards.ejs.md
   # - id: postdoc-listing
   #   contents: "*/index.qmd"
   #   include:
   #     people_group: "postdoc"
+  #   sort: "member-since desc"
   #   template: _people-cards.ejs.md
   - id: phd-listing
     contents: "*/index.qmd"
     include:
       people_group: "phd"
+    sort: "member-since desc"
     template: _people-cards.ejs.md
   # - id: visitor-listing
   #   contents: "*/index.qmd"
   #   include:
   #     people_group: "visitor"
+  #   sort: "member-since desc"
   #   template: _people-cards.ejs.md
   # - id: student-listing
   #   contents: "*/index.qmd"
   #   include:
   #     people_group: "student"
+  #   sort: "member-since desc"
   #   template: _people-cards.ejs.md
   # - id: alumni-listing
   #   contents: "*/index.qmd"
   #   include:
   #     people_group: "alumni"
+  #   sort: "member-since desc"
   #   template: _people-cards.ejs.md
 page-layout: article
 toc: true

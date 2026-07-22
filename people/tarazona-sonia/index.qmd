@@ -1,6 +1,7 @@
 ---
 title: Sonia Tarazona
-description: Statistics Associate Professor <br> BiostatOmics's PI
+description: Statistics Associate Professor
+subtitle: BiostatOmics PI
 image: avatar.webp
 
 last: Tarazona

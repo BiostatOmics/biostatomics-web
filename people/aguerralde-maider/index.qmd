@@ -1,0 +1,57 @@
+---
+title: Maider Aguerralde Martin
+description: PhD Student
+image: avatar.webp
+
+last: Aguerralde Martin
+first: Maider
+email: maider.aguerraldemartin@gmail.com
+
+people_group: "phd"
+
+education: |
+  <ul>
+    <li><strong>MS in Data Analysis, Process Improvement and Decision Support Engineering</strong> | Universitat Politècnica de València (2021)</li>
+    <li><strong>BS in Mathematics</strong> | University of the Basque Country (2019)</li>
+  </ul>
+
+affiliation: Universitat Politècnica de València
+member-since: 2022-01
+
+about:
+  id: hero-heading
+  template: trestles
+  image-shape: round
+
+  links: 
+    - icon: envelope-fill
+      href: mailto:maider.aguerraldemartin@gmail.com
+
+    # - icon: globe2
+    #   href: https://www.example-website.com
+    
+    - icon: linkedin
+      href: https://www.linkedin.com/in/maider-aguerralde-martin-029742207/
+    
+    - icon: github
+      href: https://github.com/maiderag
+    
+    # - text: '<i class="ai ai-google-scholar-square"></i>'
+    #   href: no encontré :/
+    
+    - text: '<i class="ai ai-orcid"></i>'
+      href: https://orcid.org/0000-0001-9266-8689
+
+page-layout: full
+---
+
+## About me
+
+:::{#hero-heading}
+{{< lipsum 1 >}}
+:::
+
+## Education
+
+{{< meta education >}}
+

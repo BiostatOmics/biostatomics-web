@@ -1,0 +1,57 @@
+---
+title: Roxana Andreea Moldovan
+description: PhD Student
+image: roxana.webp
+
+last: Moldovan
+first: Roxana Andreea
+email: ramolmol@eio.upv.es
+
+people_group: "phd"
+
+education: |
+  <ul>
+    <li><strong>MS in Bioinformatics</strong> | University of Valencia (2023)</li>
+    <li><strong>BS in Biochemistry</strong> | University of Castilla-La Mancha (2021)</li>
+  </ul>
+
+affiliation: Universitat Politècnica de València
+member-since: 2025-03
+
+about:
+  id: hero-heading
+  template: trestles
+  image-shape: round
+
+  links: 
+    - icon: envelope-fill
+      href: mailto:ramolmol@eio.upv.es
+
+    # - icon: globe2
+    #   href: https://www.example-website.com
+    
+    - icon: linkedin
+      href: https://www.linkedin.com/in/roxana-andreea-moldovan/
+    
+    - icon: github
+      href: https://github.com/Roxyam
+    
+    - text: '<i class="ai ai-google-scholar-square"></i>'
+      href: https://scholar.google.com/citations?user=1W3UXtoAAAAJ&hl=es
+    
+    - text: '<i class="ai ai-orcid"></i>'
+      href: https://orcid.org/0000-0002-6822-0224
+
+page-layout: full
+---
+
+## About me
+
+:::{#hero-heading}
+{{< lipsum 1 >}}
+:::
+
+## Education
+
+{{< meta education >}}
+

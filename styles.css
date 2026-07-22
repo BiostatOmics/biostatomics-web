@@ -183,16 +183,17 @@
 }
 
 /* The photo, spanning the full width of the card. No fixed height and no "object-fit" here on purpose: the box always takes exactly the photo's own proportions, scaled to the card's width — that's the only way to guarantee zero empty space AND zero cropping at the same time. The trade-off: if two people in the same row upload photos with different proportions, their image boxes (and therefore their cards) won't line up at exactly the same height. */
-.person-card-img {
+/* * DEPRECATED for the moment as the fixed behavior is better */
+/* .person-card-img {
   width: 100%;
   display: block;
-}
-
-/* * The following class fixes height so we avoid the problem of different proportions. DEPRECATED for the moment as the previous behavior is better */
-/* .person-card-img {
-  height: 200px;
-  object-fit: cover;
 } */
+
+/* The following class fixes height so we avoid the problem of different proportions. */
+.person-card-img {
+  height: 250px;
+  object-fit: cover;
+}
 
 /* The text area below the photo. */
 .person-card-body {
