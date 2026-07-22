@@ -3,7 +3,7 @@ project:
 
 website:
   # basics
-  title: "BiostatOmics Lab"
+  title: "BiostatOmics Group"
   site-url: https://biostatomics.com # for SEO
   description: "BiostatOmics is a research group at the Universitat Politècnica de València (UPV) developing statistical and machine learning methods for the analysis of multi-omics data, applied to biomedical and clinical research."
   favicon: images/BioStatOmics_Favicon_web_512x512.svg # little icon that appears in browser tab
@@ -12,7 +12,7 @@ website:
   # repo-actions: [edit, source, issue] # adds the "edit this page", "view source" and "report an issue" options in website footer
 
   image: images/Logo_BioStatOmics_300x300Px_color_Transparent_Bckg.png # thumbnail to show when sharing website link (open-graph/social media)
-  image-alt: "BiostatOmics Lab logo" # the description of the image for accesibility
+  image-alt: "BiostatOmics Group logo" # the description of the image for accesibility
 
   # social metadata options: enable to preview correctly the website (thumbnail, description, etc.) when sharing its link across social media (X, linkedin, etc.)
   open-graph: true

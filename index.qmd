@@ -1,5 +1,5 @@
 ---
-# title: "BiostatOmics Lab"
+# title: "BiostatOmics Group"
 image: images/Logo_BioStatOmics_300x300Px_color_Transparent_Bckg.png
 about:
     template: trestles

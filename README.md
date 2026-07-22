@@ -1,6 +1,6 @@
-# BiostatOmics Lab website
+# BiostatOmics Group website
 
-Source of the [BiostatOmics Lab](https://biostatomics.com) website, built with [Quarto](https://quarto.org/) and published automatically to GitHub Pages.
+Source of the [BiostatOmics Group](https://biostatomics.com) website, built with [Quarto](https://quarto.org/) and published automatically to GitHub Pages.
 
 For details on how to add content (a new tool, a new person, a new page...) and our commit message conventions, see [`_CONTRIBUTING.md`](_CONTRIBUTING.md).
 
