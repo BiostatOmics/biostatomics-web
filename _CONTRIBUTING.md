@@ -50,6 +50,8 @@ To add a new tool, add a card to `tools/tools.yml`:
 ```yaml
 - title: "My Tool"
   image: images/my-tool-logo.png # optional, path relative to tools/
+  # If a tool has no logo, the alternative is to plot its GitHub preview (via opengraph)
+  # image: https://opengraph.githubassets.com/1/username/repo
   date: 2026-01-01 # release/publication date
   section: "Tools" # heading the card appears under: "Tools" or "Web apps"
   categories: [package, R] # filterable tags shown on the card and in the sidebar

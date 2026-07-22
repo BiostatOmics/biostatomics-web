@@ -14,7 +14,7 @@
       url: "https://doi.org/10.1093/bioadv/vbag175"
       
 - title: "Coxmos"
-  href: "https://github.com/BiostatOmics/Coxmos"
+  href: "https://cran.r-project.org/package=Coxmos"
   image: images/coxmos-logo.webp
   date: 2026-05
   categories: [R, Package, Multi-omics]
@@ -46,9 +46,9 @@
       url: "https://doi.org/10.1093/bib/bbaf270"
 
 - title: "MOSim"
-  href: "https://github.com/ConesaLab/MOSim"
+  href: "https://doi.org/doi:10.18129/B9.bioc.MOSim"
   # MOSim has no logo, the alternative is to plot its GitHub preview.
-  image: https://opengraph.githubassets.com/1/ConesaLab/MOSim
+  image: images/mosim-logo.webp
   date: 2025-03
   categories: [R, Package, Multi-omics]
   description: "R package to simulate multi-omic bulk and single-cell experiments that mimic regulatory mechanisms within the cell."
