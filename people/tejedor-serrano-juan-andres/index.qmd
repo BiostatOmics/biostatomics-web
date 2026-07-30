@@ -1,6 +1,6 @@
 ---
 title: Juan Andrés Tejedor-Serrano
-description: PhD Student
+description: Predoctoral Researcher
 image: /images/avatar-placeholder.webp
 
 last: Tejedor-Serrano
@@ -8,15 +8,15 @@ first: Juan Andrés
 email: jatejser@doctor.upv.es
 
 people_group: "phd"
+member-since: 2025-01
+institution: "<strong>UPV</strong>"
+thesis_directors: "<a href='../tarazona-sonia/index.qmd'>Sonia Tarazona</a> (dir.); Jordi Martorell-Marugán & Ángeles Arzalluz-Luque (codir.)"
 
 education: |
   <ul>
     <li><strong>MS in Omics Data Analysis & Systems Biology</strong> | University of Seville (2024)</li>
     <li><strong>BS in Biotechnology</strong> | University of Granada (2023)</li>
   </ul>
-
-affiliation: Universitat Politècnica de València
-member-since: 2025-01
 
 
 about:
@@ -55,4 +55,8 @@ page-layout: full
 ## Education
 
 {{< meta education >}}
+
+## Thesis directors
+
+{{< meta thesis_directors >}}
 

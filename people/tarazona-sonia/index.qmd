@@ -1,5 +1,5 @@
 ---
-title: Sonia Tarazona
+title: Dr. Sonia Tarazona
 description: Statistics Associate Professor
 subtitle: BiostatOmics PI
 image: avatar.webp
@@ -14,7 +14,6 @@ education: |
     <li><strong>BS in Statistical Sciences and Techniques</strong> | Universitat de València (2001)</li>
     <li><strong>BS in Mathematics</strong> | Universitat de València (1997)</li>
   </ul>
-affiliation: Universitat Politècnica de València
 
 about:
   id: hero-heading
@@ -49,7 +48,7 @@ page-layout: full
 
 Sonia holds a degree in Mathematics (1997) and a degree in Statistical Sciences and Techniques (2001), both from the Universitat de València. She obtained her PhD in Statistics and Optimization (*Cum Laude*, with International Mention and Extraordinary Thesis Award) from UPV in 2014, under the supervision of Dr. Ana Conesa at the Centro de Investigación Príncipe Felipe (València) and Dr. Alberto Ferrer (UPV). Her doctoral thesis laid the groundwork for the NOISeq R/Bioconductor package — a landmark tool for differential expression analysis in RNA-seq data — and produced one of the most-cited papers in the field on the effect of sequencing depth on differential expression (*Genome Research*, 2011).
 
-From 2008 to 2024, Sonia was a key member of the Genomics of Gene Expression (GGE) group led by Dr. Ana Conesa, co-leading it from July 2018 to January 2024.
+From 2008 to 2024, Sonia was a key member of the Genomics of Gene Expression (GGE) group led by Dr. Ana Conesa, co-leading it from July 2018 until January 2024. In January 2024, she founded the BiostatOmics group at UPV, which she leads as Principal Investigator (PI).
 :::
 
 ## Education

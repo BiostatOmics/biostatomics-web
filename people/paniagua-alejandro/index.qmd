@@ -1,0 +1,46 @@
+---
+title: Alejandro Paniagua
+description: Predoctoral Researcher
+image: /images/avatar-placeholder.webp
+
+last: Paniagua
+first: Alejandro
+# TODO: add real contact email
+email: TODO
+
+people_group: "phd"
+# TODO: placeholder start date, change
+member-since: 2022-01
+institution: "UPV-<strong>CSIC</strong>"
+thesis_directors: "Ana Conesa (dir.); <a href='../tarazona-sonia/index.qmd'>Sonia Tarazona</a> (codir.)"
+
+education: |
+  <ul>
+    <li><strong>MS in Bioinformatics</strong> | Universitat de València (2022)</li>
+    <li><strong>BS in Biochemistry</strong> | University of Castilla-La Mancha (2020)</li>
+  </ul>
+
+
+about:
+  id: hero-heading
+  template: trestles
+  image-shape: round
+
+  # TODO: add "links:"
+
+page-layout: full
+---
+
+## About me
+
+:::{#hero-heading}
+{{< lipsum 1 >}}
+:::
+
+## Education
+
+{{< meta education >}}
+
+## Thesis directors
+
+{{< meta thesis_directors >}}

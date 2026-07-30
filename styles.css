@@ -18,7 +18,7 @@
 
 /* shared look-and-feel, used across the tools, people, and research-lines sections below, so it's written once here instead of three times in each section. */
 
-/* The "elevated card" surface: rounded border, soft shadow, slightly bigger shadow + a small lift on hover — shared by the tool cards, the person cards, and the research-lines figure. Each of those keeps its own layout rules (flex vs. block, sizing, etc.) in its own section further down; only this shared "surface" look lives here. */
+/* The "elevated card" surface: rounded border, soft shadow, slightly bigger shadow + a small lift on hover. Shared by the tool cards, the person cards, and the research-lines figure. Each of those keeps its own layout rules (flex vs. block, sizing, etc.) in its own section further down; only this shared "surface" look lives here. */
 .tool-card,
 .person-card,
 .research-line-img {
@@ -94,9 +94,10 @@
   font-size: 1.05rem;
 }
 
-/* The title's ".stretched-link" (see _tools-cards.ejs.md) covers the whole card, but should still read as plain bold text rather than a typical blue underlined link. */
+/* The title's ".stretched-link" (see _tools-cards.ejs.md) covers the whole card, but should still read as plain bold text rather than a typical blue underlined link. Bootstrap's "cosmo" theme sets a blanket "a { font-weight: 400 }" that otherwise wins over ".tool-card-title"'s bold, since inheritance only applies where no rule sets a property at all — so it has to be repeated here explicitly, not just inherited. */
 .tool-card-title a {
   color: inherit;
+  font-weight: inherit;
   text-decoration: none;
 }
 
@@ -173,12 +174,11 @@
   gap: 1.5rem;
 }
 
-/* The card itself: layout only — border, shadow, background and hover are shared above. Unlike the tool cards, this one IS the clickable link (see the person-card anchor in _people-cards.ejs.md). Laid out the same way as .tool-card: a full-width photo on top, then left-aligned text below. */
+/* The card itself: layout only — border, shadow, background and hover are shared above. Same "stretched-link" click-through as .tool-card (see _people-cards.ejs.md): "position: relative" anchors the title's stretched-link so it fills this whole box. Laid out the same way as .tool-card: a full-width photo on top, then left-aligned text below. */
 .person-card {
+  position: relative;
   display: flex;
   flex-direction: column;
-  text-decoration: none; /* this card is a link: remove the default underline */
-  color: inherit; /* ...and make it use normal text color, not "link blue" */
   overflow: hidden; /* clips the photo to the card's rounded corners */
 }
 
@@ -208,6 +208,13 @@
   transition: color 0.15s ease; /* animate the color change smoothly on hover, instead of it changing instantly */
 }
 
+/* the title's ".stretched-link" (see _people-cards.ejs.md) covers the whole card, but should still read as plain bold text rather than a typical blue underlined link. Bootstrap's "cosmo" theme sets a blanket "a { font-weight: 400 }" that otherwise wins over ".person-card-title"'s bold, since inheritance only applies where no rule sets a property at all — so it has to be repeated here explicitly, not just inherited. */
+.person-card-title a {
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+}
+
 /* on hover, the person's name switches to the theme's emphasis/link color, as a hint that the whole card is clickable */
 .person-card:hover .person-card-title {
   color: var(--bs-primary, #2780e3);
@@ -223,6 +230,88 @@
 .person-card-education {
   font-size: 0.7rem;
   color: var(--bs-secondary-color, #6c757d);
+}
+
+/* Footer bar for active predoctoral researchers: a link to the thesis director(s) on the left, institution badge on the right (see _people-cards.ejs.md — both fields are optional, and this bar only appears when at least one is set). Sits below the card body as its own strip, same "bleeds to the card's edges" panel treatment as ".tool-card-links"; "margin-top: auto" pushes it to the bottom of the card even when a neighboring card in the same row is taller (".people-grid" stretches every card in a row to equal height). */
+.person-card-footer {
+  position: relative; /* keeps its links individually clickable on top of the title's ".stretched-link" overlay, same fix as ".tool-card-links" */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding: 0.5rem 0.75rem;
+  background-color: var(--bs-tertiary-bg, #f8f9fa);
+  border-top: 1px solid var(--bs-border-color-translucent, rgba(0, 0, 0, 0.08));
+}
+
+/* Left corner of the footer: links to the "## Thesis directors" section on the person's own page. Deliberately NOT "position: relative" — the tooltip below needs to size itself against ".person-card-footer" (which spans the whole card width) rather than this link (which is only as wide as the word "Directors"), so it has to skip past this element to find the footer as its positioning context. */
+.person-card-directors-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.75rem;
+  color: var(--bs-secondary-color, #495057);
+  text-decoration: none;
+}
+
+.person-card-directors-link:hover {
+  color: var(--bs-primary, #2780e3);
+  text-decoration: underline;
+}
+
+/* The director names, tucked into a small popup that only appears on hover — the card itself only ever shows the generic "Directors" label (see _people-cards.ejs.md), since the full names don't fit compactly. "width: max-content" lets it hug short text instead of always being as wide as the card; "max-width: 100%" caps it at the width of ".person-card-footer" (the nearest "position: relative" ancestor, since the link itself deliberately isn't one — see above, which spans the full card width) so a long director list wraps onto more lines instead of overflowing sideways and getting clipped by ".person-card"'s "overflow: hidden". Hidden via opacity/visibility (not "display: none") so the color/text-decoration transition on the link above still applies smoothly, and so hovering onto the tooltip itself (eg. to read a longer list) keeps it open, since it's still a descendant of the hovered link either way. */
+.person-card-directors-tooltip {
+  position: absolute;
+  left: 0;
+  width: max-content; /* hug the text instead of always stretching to the footer's full width */
+  max-width: 100%; /* ...but never wider than the footer/card, so a long director list still wraps instead of overflowing sideways */
+  bottom: 100%;
+  z-index: 2; /* above the title's ".stretched-link" overlay (z-index: 1) */
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 0.65rem;
+  border-radius: 0.5rem;
+  background-color: var(--bs-emphasis-color, #212529);
+  color: var(--bs-body-bg, #fff);
+  font-size: 0.7rem;
+  font-weight: 400;
+  line-height: 1.35;
+  text-align: left;
+  text-decoration: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s ease;
+}
+
+.person-card-directors-link:hover .person-card-directors-tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Small triangle pointing down from the tooltip to the link that opened it. */
+.person-card-directors-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 1rem;
+  border: 0.35rem solid transparent;
+  border-top-color: var(--bs-emphasis-color, #212529);
+}
+
+/* Small pill badge showing which institution an active predoctoral researcher is based at (eg. "UPV", "CSIC-UPV"), right corner of the footer. Base weight is deliberately light (500, not 600+) so that a "strong" tag inside it — used to highlight the institution someone is physically based at, eg. "<strong>UPV</strong>-CSIC" — actually stands out instead of the whole badge already looking bold. */
+.person-card-institution {
+  flex-shrink: 0; /* never let the badge shrink to make room for a long directors link */
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  background-color: var(--bs-primary-bg-subtle, #cfe2ff);
+  color: var(--bs-primary-text-emphasis, #084298);
+}
+
+.person-card-institution strong {
+  font-weight: 700;
 }
 
 

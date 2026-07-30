@@ -1,6 +1,6 @@
 ---
 title: Roxana Andreea Moldovan
-description: PhD Student
+description: Predoctoral Researcher
 image: avatar.webp
 
 last: Moldovan
@@ -8,6 +8,9 @@ first: Roxana Andreea
 email: ramolmol@eio.upv.es
 
 people_group: "phd"
+member-since: 2025-03
+institution: "<strong>UPV</strong>-CSIC"
+thesis_directors: "<a href='../tarazona-sonia/index.qmd'>Sonia Tarazona</a> (dir.); Ana Conesa (codir.)"
 
 education: |
   <ul>
@@ -15,8 +18,7 @@ education: |
     <li><strong>BS in Biochemistry</strong> | University of Castilla-La Mancha (2021)</li>
   </ul>
 
-affiliation: Universitat Politècnica de València
-member-since: 2025-03
+
 
 about:
   id: hero-heading
@@ -54,4 +56,8 @@ page-layout: full
 ## Education
 
 {{< meta education >}}
+
+## Thesis directors
+
+{{< meta thesis_directors >}}
 
