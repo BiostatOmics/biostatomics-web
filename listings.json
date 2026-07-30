@@ -1,15 +1,18 @@
 [
   {
-    "listing": "/tools/index.html",
-    "items": []
-  },
-  {
     "listing": "/people/index.html",
     "items": [
       "/people/tarazona-sonia/index.html",
       "/people/moldovan-roxana/index.html",
       "/people/tejedor-serrano-juan-andres/index.html",
-      "/people/aguerralde-maider/index.html"
+      "/people/aguerralde-maider/index.html",
+      "/people/paniagua-alejandro/index.html",
+      "/people/vidal-beneyto-quique/index.html",
+      "/people/naya-catala-fernando/index.html"
     ]
+  },
+  {
+    "listing": "/tools/index.html",
+    "items": []
   }
 ]

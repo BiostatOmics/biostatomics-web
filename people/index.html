@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -41,10 +44,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-1f8f5a93c0b37ed51f9c144a6fc1ee28.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-365b6b1112e0c97f521008c03471346d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -82,9 +85,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-project','listing-website','listing-format','listing-execute','listing-engines','listing-language','listing-drafts','listing-title','listing-description','listing-subtitle','listing-image','listing-last','listing-first','listing-people_group','listing-email','listing-education','listing-affiliation','listing-about','listing-page-layout','listing-path','listing-outputHref','listing-author','listing-filename','listing-file-modified','listing-reading-time','listing-word-count',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
+      valueNames: ['listing-project','listing-website','listing-format','listing-execute','listing-engines','listing-language','listing-drafts','listing-title','listing-description','listing-subtitle','listing-image','listing-last','listing-first','listing-people_group','listing-email','listing-education','listing-about','listing-page-layout','listing-path','listing-outputHref','listing-author','listing-filename','listing-file-modified','listing-reading-time','listing-word-count',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
       
-      searchColumns: ["listing-project","listing-website","listing-format","listing-execute","listing-engines","listing-language","listing-drafts","listing-title","listing-description","listing-subtitle","listing-image","listing-last","listing-first","listing-people_group","listing-email","listing-education","listing-affiliation","listing-about","listing-page-layout","listing-path","listing-outputHref","listing-author","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
+      searchColumns: ["listing-project","listing-website","listing-format","listing-execute","listing-engines","listing-language","listing-drafts","listing-title","listing-description","listing-subtitle","listing-image","listing-last","listing-first","listing-people_group","listing-email","listing-education","listing-about","listing-page-layout","listing-path","listing-outputHref","listing-author","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -110,9 +113,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-project','listing-website','listing-format','listing-execute','listing-engines','listing-language','listing-drafts','listing-title','listing-description','listing-image','listing-last','listing-first','listing-email','listing-people_group','listing-education','listing-affiliation','listing-member-since','listing-about','listing-page-layout','listing-path','listing-outputHref','listing-author','listing-filename','listing-file-modified','listing-reading-time','listing-word-count',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
+      valueNames: ['listing-project','listing-website','listing-format','listing-execute','listing-engines','listing-language','listing-drafts','listing-title','listing-description','listing-image','listing-last','listing-first','listing-email','listing-people_group','listing-member-since','listing-institution','listing-thesis_directors','listing-education','listing-about','listing-page-layout','listing-path','listing-outputHref','listing-author','listing-filename','listing-file-modified','listing-reading-time','listing-word-count',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
       
-      searchColumns: ["listing-project","listing-website","listing-format","listing-execute","listing-engines","listing-language","listing-drafts","listing-title","listing-description","listing-image","listing-last","listing-first","listing-email","listing-people_group","listing-education","listing-affiliation","listing-member-since","listing-about","listing-page-layout","listing-path","listing-outputHref","listing-author","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
+      searchColumns: ["listing-project","listing-website","listing-format","listing-execute","listing-engines","listing-language","listing-drafts","listing-title","listing-description","listing-image","listing-last","listing-first","listing-email","listing-people_group","listing-member-since","listing-institution","listing-thesis_directors","listing-education","listing-about","listing-page-layout","listing-path","listing-outputHref","listing-author","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -128,11 +131,39 @@ ul.task-list li input[type="checkbox"] {
       window['quarto-listing-loaded']();
     }
   })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-visitor-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-project','listing-website','listing-format','listing-execute','listing-engines','listing-language','listing-drafts','listing-title','listing-description','listing-image','listing-last','listing-first','listing-email','listing-people_group','listing-education','listing-about','listing-page-layout','listing-path','listing-outputHref','listing-author','listing-filename','listing-file-modified','listing-reading-time','listing-word-count',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
+      
+      searchColumns: ["listing-project","listing-website","listing-format","listing-execute","listing-engines","listing-language","listing-drafts","listing-title","listing-description","listing-image","listing-last","listing-first","listing-email","listing-people_group","listing-education","listing-about","listing-page-layout","listing-path","listing-outputHref","listing-author","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-visitor-listing'] = new List('listing-visitor-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
   </script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -165,10 +196,10 @@ window.Quarto = {
 <meta property="og:title" content="People">
 <meta property="og:image" content="https://biostatomics.com/people/tarazona-sonia/avatar.webp">
 <meta property="og:site_name" content="BiostatOmics Group">
-<meta property="og:image:alt" content="Sonia Tarazona">
+<meta property="og:image:alt" content="Dr. Sonia Tarazona">
 <meta name="twitter:title" content="People">
 <meta name="twitter:image" content="https://biostatomics.com/people/tarazona-sonia/avatar.webp">
-<meta name="twitter:image:alt" content="Sonia Tarazona">
+<meta name="twitter:image:alt" content="Dr. Sonia Tarazona">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -244,7 +275,13 @@ window.Quarto = {
    
   <ul>
   <li><a href="#principal-investigator" id="toc-principal-investigator" class="nav-link active" data-scroll-target="#principal-investigator">Principal Investigator</a></li>
-  <li><a href="#phd-students" id="toc-phd-students" class="nav-link" data-scroll-target="#phd-students">PhD Students</a></li>
+  <li><a href="#predoctoral-researchers" id="toc-predoctoral-researchers" class="nav-link" data-scroll-target="#predoctoral-researchers">Predoctoral Researchers</a>
+  <ul class="collapse">
+  <li><a href="#current" id="toc-current" class="nav-link" data-scroll-target="#current">Current</a></li>
+  <li><a href="#former" id="toc-former" class="nav-link" data-scroll-target="#former">Former</a></li>
+  </ul></li>
+  <li><a href="#visiting-researchers" id="toc-visiting-researchers" class="nav-link" data-scroll-target="#visiting-researchers">Visiting Researchers</a></li>
+  <li><a href="#collaborators" id="toc-collaborators" class="nav-link" data-scroll-target="#collaborators">Collaborators</a></li>
   </ul>
 </nav>
     </div>
@@ -281,20 +318,22 @@ window.Quarto = {
 
 <div class="people-grid list">
 
-  <!-- the whole card is a link to that person's own page; item.path is given automatically by Quarto. metadataAttrs(item) is a helper Quarto provides for free: it adds hidden attributes this card needs so search/sort/filter keep working. Always keep it here. -->
-  <a href="../people/tarazona-sonia/index.html" class="person-card" data-index="0" data-listing-file-modified-sort="1784732178441" data-listing-reading-time-sort="1" data-listing-word-count-sort="176">
+  <!-- unlike a plain link-card, this one needs a *second*, independently clickable link in its footer (the "thesis directors" one below) — an anchor can't contain another anchor, so instead of the whole card being one big "<a>", it's a "<div>" with a "stretched-link" (a Bootstrap utility) on the title. That stretches an invisible layer over the whole card, making it clickable everywhere the same as before, while still leaving room for the footer's own real link — same trick already used for the tool cards in tools/_tools-cards.ejs.md. metadataAttrs(item) is a helper Quarto provides for free: it adds hidden attributes this card needs so search/sort/filter keep working. Always keep it here. -->
+  <div class="person-card" data-index="0" data-listing-file-modified-sort="1785428449250" data-listing-reading-time-sort="1" data-listing-word-count-sort="193">
     
-      <img src="../people/tarazona-sonia/avatar.webp" class="person-card-img" alt="Sonia Tarazona">
+      <img src="../people/tarazona-sonia/avatar.webp" class="person-card-img" alt="Dr. Sonia Tarazona">
     
     <div class="person-card-body">
-      <h5 class="person-card-title listing-title anchored">Sonia Tarazona</h5>
+      <h5 class="person-card-title listing-title anchored"><a href="../people/tarazona-sonia/index.html" class="stretched-link">Dr. Sonia Tarazona</a></h5>
       <p class="person-card-role listing-description">Statistics Associate Professor</p>
       
       
         <div class="person-card-education"><strong>PhD in Statistics</strong> | Universitat Politècnica de València (2014) <br> <strong>BS in Statistical Sciences and Techniques</strong> | Universitat de València (2001) <br> <strong>BS in Mathematics</strong> | Universitat de València (1997)</div>
       
     </div>
-  </a>
+    <!-- "institution" (eg. "UPV", "CSIC-UPV") and "thesis_directors" are both optional and only used for active predoctoral researchers. When either is set, they share a footer bar beneath the main card — a link to the directors on the left, the institution badge on the right. -->
+    
+  </div>
 
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
@@ -306,72 +345,297 @@ window.Quarto = {
 :::
 -->
 <!--
-## Postdoctoral Fellows
+## Postdoctoral Researchers
 
 :::{#postdoc-listing}
 :::
 -->
 </section>
-<section id="phd-students" class="level2">
-<h2 class="anchored" data-anchor-id="phd-students">PhD Students</h2>
+<section id="predoctoral-researchers" class="level2">
+<h2 class="anchored" data-anchor-id="predoctoral-researchers">Predoctoral Researchers</h2>
+<section id="current" class="level3">
+<h3 class="anchored" data-anchor-id="current">Current</h3>
 <div id="listing-phd-listing" class="quarto-listing quarto-listing-container-custom">
 
 <div class="people-grid list">
 
-  <!-- the whole card is a link to that person's own page; item.path is given automatically by Quarto. metadataAttrs(item) is a helper Quarto provides for free: it adds hidden attributes this card needs so search/sort/filter keep working. Always keep it here. -->
-  <a href="../people/moldovan-roxana/index.html" class="person-card" data-index="0" data-listing-file-modified-sort="1784732178441" data-listing-reading-time-sort="1" data-listing-word-count-sort="8">
+  <!-- unlike a plain link-card, this one needs a *second*, independently clickable link in its footer (the "thesis directors" one below) — an anchor can't contain another anchor, so instead of the whole card being one big "<a>", it's a "<div>" with a "stretched-link" (a Bootstrap utility) on the title. That stretches an invisible layer over the whole card, making it clickable everywhere the same as before, while still leaving room for the footer's own real link — same trick already used for the tool cards in tools/_tools-cards.ejs.md. metadataAttrs(item) is a helper Quarto provides for free: it adds hidden attributes this card needs so search/sort/filter keep working. Always keep it here. -->
+  <div class="person-card" data-index="0" data-listing-file-modified-sort="1785428449249" data-listing-reading-time-sort="1" data-listing-word-count-sort="13">
     
       <img src="../people/moldovan-roxana/avatar.webp" class="person-card-img" alt="Roxana Andreea Moldovan">
     
     <div class="person-card-body">
-      <h5 class="person-card-title listing-title anchored">Roxana Andreea Moldovan</h5>
-      <p class="person-card-role listing-description">PhD Student</p>
+      <h5 class="person-card-title listing-title anchored"><a href="../people/moldovan-roxana/index.html" class="stretched-link">Roxana Andreea Moldovan</a></h5>
+      <p class="person-card-role listing-description">Predoctoral Researcher</p>
       
       
         <div class="person-card-education"><strong>MS in Bioinformatics</strong> | University of Valencia (2023) <br> <strong>BS in Biochemistry</strong> | University of Castilla-La Mancha (2021)</div>
       
     </div>
-  </a>
+    <!-- "institution" (eg. "UPV", "CSIC-UPV") and "thesis_directors" are both optional and only used for active predoctoral researchers. When either is set, they share a footer bar beneath the main card — a link to the directors on the left, the institution badge on the right. -->
+    
+      <div class="person-card-footer">
+        
+          <!-- links to the "## Thesis directors" section on the person's own page (that section is just "?meta:thesis_directors" — see _people-template.qmd). The names themselves don't fit compactly on the card, so instead of always showing them, they're tucked into a hover tooltip on this link — run through stripTags() since the tooltip sits inside this very link and so can't itself contain the director's own "<a>" link. "position: relative" keeps this individually clickable above the title's "stretched-link" overlay, same fix as ".tool-card-links" in the tools template. -->
+          <a href="../people/moldovan-roxana/index.html#thesis-directors" class="person-card-directors-link">
+            <i class="bi bi-mortarboard-fill"></i> Directors
+            <span class="person-card-directors-tooltip">Sonia Tarazona (dir.); Ana Conesa (codir.)</span>
+          </a>
+        
+        
+          <!-- raw-printed (not escaped) so a person can bold the institution they're physically based at, eg. "<strong>UPV</strong>-CSIC" for someone co-affiliated but physically at UPV. -->
+          <span class="person-card-institution"><strong>UPV</strong>-CSIC</span>
+        
+      </div>
+    
+  </div>
 
-  <!-- the whole card is a link to that person's own page; item.path is given automatically by Quarto. metadataAttrs(item) is a helper Quarto provides for free: it adds hidden attributes this card needs so search/sort/filter keep working. Always keep it here. -->
-  <a href="../people/tejedor-serrano-juan-andres/index.html" class="person-card" data-index="1" data-listing-file-modified-sort="1784732178441" data-listing-reading-time-sort="1" data-listing-word-count-sort="8">
+  <!-- unlike a plain link-card, this one needs a *second*, independently clickable link in its footer (the "thesis directors" one below) — an anchor can't contain another anchor, so instead of the whole card being one big "<a>", it's a "<div>" with a "stretched-link" (a Bootstrap utility) on the title. That stretches an invisible layer over the whole card, making it clickable everywhere the same as before, while still leaving room for the footer's own real link — same trick already used for the tool cards in tools/_tools-cards.ejs.md. metadataAttrs(item) is a helper Quarto provides for free: it adds hidden attributes this card needs so search/sort/filter keep working. Always keep it here. -->
+  <div class="person-card" data-index="1" data-listing-file-modified-sort="1785428449250" data-listing-reading-time-sort="1" data-listing-word-count-sort="13">
     
       <img src="../images/avatar-placeholder.webp" class="person-card-img" alt="Juan Andrés Tejedor-Serrano">
     
     <div class="person-card-body">
-      <h5 class="person-card-title listing-title anchored">Juan Andrés Tejedor-Serrano</h5>
-      <p class="person-card-role listing-description">PhD Student</p>
+      <h5 class="person-card-title listing-title anchored"><a href="../people/tejedor-serrano-juan-andres/index.html" class="stretched-link">Juan Andrés Tejedor-Serrano</a></h5>
+      <p class="person-card-role listing-description">Predoctoral Researcher</p>
       
       
         <div class="person-card-education"><strong>MS in Omics Data Analysis &amp; Systems Biology</strong> | University of Seville (2024) <br> <strong>BS in Biotechnology</strong> | University of Granada (2023)</div>
       
     </div>
-  </a>
+    <!-- "institution" (eg. "UPV", "CSIC-UPV") and "thesis_directors" are both optional and only used for active predoctoral researchers. When either is set, they share a footer bar beneath the main card — a link to the directors on the left, the institution badge on the right. -->
+    
+      <div class="person-card-footer">
+        
+          <!-- links to the "## Thesis directors" section on the person's own page (that section is just "?meta:thesis_directors" — see _people-template.qmd). The names themselves don't fit compactly on the card, so instead of always showing them, they're tucked into a hover tooltip on this link — run through stripTags() since the tooltip sits inside this very link and so can't itself contain the director's own "<a>" link. "position: relative" keeps this individually clickable above the title's "stretched-link" overlay, same fix as ".tool-card-links" in the tools template. -->
+          <a href="../people/tejedor-serrano-juan-andres/index.html#thesis-directors" class="person-card-directors-link">
+            <i class="bi bi-mortarboard-fill"></i> Directors
+            <span class="person-card-directors-tooltip">Sonia Tarazona (dir.); Jordi Martorell-Marugán &amp; Ángeles Arzalluz-Luque (codir.)</span>
+          </a>
+        
+        
+          <!-- raw-printed (not escaped) so a person can bold the institution they're physically based at, eg. "<strong>UPV</strong>-CSIC" for someone co-affiliated but physically at UPV. -->
+          <span class="person-card-institution"><strong>UPV</strong></span>
+        
+      </div>
+    
+  </div>
 
-  <!-- the whole card is a link to that person's own page; item.path is given automatically by Quarto. metadataAttrs(item) is a helper Quarto provides for free: it adds hidden attributes this card needs so search/sort/filter keep working. Always keep it here. -->
-  <a href="../people/aguerralde-maider/index.html" class="person-card" data-index="2" data-listing-file-modified-sort="1784732178441" data-listing-reading-time-sort="1" data-listing-word-count-sort="8">
+  <!-- unlike a plain link-card, this one needs a *second*, independently clickable link in its footer (the "thesis directors" one below) — an anchor can't contain another anchor, so instead of the whole card being one big "<a>", it's a "<div>" with a "stretched-link" (a Bootstrap utility) on the title. That stretches an invisible layer over the whole card, making it clickable everywhere the same as before, while still leaving room for the footer's own real link — same trick already used for the tool cards in tools/_tools-cards.ejs.md. metadataAttrs(item) is a helper Quarto provides for free: it adds hidden attributes this card needs so search/sort/filter keep working. Always keep it here. -->
+  <div class="person-card" data-index="2" data-listing-file-modified-sort="1785428449249" data-listing-reading-time-sort="1" data-listing-word-count-sort="13">
     
       <img src="../people/aguerralde-maider/avatar.webp" class="person-card-img" alt="Maider Aguerralde Martin">
     
     <div class="person-card-body">
-      <h5 class="person-card-title listing-title anchored">Maider Aguerralde Martin</h5>
-      <p class="person-card-role listing-description">PhD Student</p>
+      <h5 class="person-card-title listing-title anchored"><a href="../people/aguerralde-maider/index.html" class="stretched-link">Maider Aguerralde Martin</a></h5>
+      <p class="person-card-role listing-description">Predoctoral Researcher</p>
       
       
         <div class="person-card-education"><strong>MS in Data Analysis, Process Improvement and Decision Support Engineering</strong> | Universitat Politècnica de València (2021) <br> <strong>BS in Mathematics</strong> | University of the Basque Country (2019)</div>
       
     </div>
-  </a>
+    <!-- "institution" (eg. "UPV", "CSIC-UPV") and "thesis_directors" are both optional and only used for active predoctoral researchers. When either is set, they share a footer bar beneath the main card — a link to the directors on the left, the institution badge on the right. -->
+    
+      <div class="person-card-footer">
+        
+          <!-- links to the "## Thesis directors" section on the person's own page (that section is just "?meta:thesis_directors" — see _people-template.qmd). The names themselves don't fit compactly on the card, so instead of always showing them, they're tucked into a hover tooltip on this link — run through stripTags() since the tooltip sits inside this very link and so can't itself contain the director's own "<a>" link. "position: relative" keeps this individually clickable above the title's "stretched-link" overlay, same fix as ".tool-card-links" in the tools template. -->
+          <a href="../people/aguerralde-maider/index.html#thesis-directors" class="person-card-directors-link">
+            <i class="bi bi-mortarboard-fill"></i> Directors
+            <span class="person-card-directors-tooltip">Sonia Tarazona (dir.)</span>
+          </a>
+        
+        
+          <!-- raw-printed (not escaped) so a person can bold the institution they're physically based at, eg. "<strong>UPV</strong>-CSIC" for someone co-affiliated but physically at UPV. -->
+          <span class="person-card-institution"><strong>UPV</strong></span>
+        
+      </div>
+    
+  </div>
+
+  <!-- unlike a plain link-card, this one needs a *second*, independently clickable link in its footer (the "thesis directors" one below) — an anchor can't contain another anchor, so instead of the whole card being one big "<a>", it's a "<div>" with a "stretched-link" (a Bootstrap utility) on the title. That stretches an invisible layer over the whole card, making it clickable everywhere the same as before, while still leaving room for the footer's own real link — same trick already used for the tool cards in tools/_tools-cards.ejs.md. metadataAttrs(item) is a helper Quarto provides for free: it adds hidden attributes this card needs so search/sort/filter keep working. Always keep it here. -->
+  <div class="person-card" data-index="3" data-listing-file-modified-sort="1785428449249" data-listing-reading-time-sort="1" data-listing-word-count-sort="13">
+    
+      <img src="../images/avatar-placeholder.webp" class="person-card-img" alt="Alejandro Paniagua">
+    
+    <div class="person-card-body">
+      <h5 class="person-card-title listing-title anchored"><a href="../people/paniagua-alejandro/index.html" class="stretched-link">Alejandro Paniagua</a></h5>
+      <p class="person-card-role listing-description">Predoctoral Researcher</p>
+      
+      
+        <div class="person-card-education"><strong>MS in Bioinformatics</strong> | Universitat de València (2022) <br> <strong>BS in Biochemistry</strong> | University of Castilla-La Mancha (2020)</div>
+      
+    </div>
+    <!-- "institution" (eg. "UPV", "CSIC-UPV") and "thesis_directors" are both optional and only used for active predoctoral researchers. When either is set, they share a footer bar beneath the main card — a link to the directors on the left, the institution badge on the right. -->
+    
+      <div class="person-card-footer">
+        
+          <!-- links to the "## Thesis directors" section on the person's own page (that section is just "?meta:thesis_directors" — see _people-template.qmd). The names themselves don't fit compactly on the card, so instead of always showing them, they're tucked into a hover tooltip on this link — run through stripTags() since the tooltip sits inside this very link and so can't itself contain the director's own "<a>" link. "position: relative" keeps this individually clickable above the title's "stretched-link" overlay, same fix as ".tool-card-links" in the tools template. -->
+          <a href="../people/paniagua-alejandro/index.html#thesis-directors" class="person-card-directors-link">
+            <i class="bi bi-mortarboard-fill"></i> Directors
+            <span class="person-card-directors-tooltip">Ana Conesa (dir.); Sonia Tarazona (codir.)</span>
+          </a>
+        
+        
+          <!-- raw-printed (not escaped) so a person can bold the institution they're physically based at, eg. "<strong>UPV</strong>-CSIC" for someone co-affiliated but physically at UPV. -->
+          <span class="person-card-institution">UPV-<strong>CSIC</strong></span>
+        
+      </div>
+    
+  </div>
+
+  <!-- unlike a plain link-card, this one needs a *second*, independently clickable link in its footer (the "thesis directors" one below) — an anchor can't contain another anchor, so instead of the whole card being one big "<a>", it's a "<div>" with a "stretched-link" (a Bootstrap utility) on the title. That stretches an invisible layer over the whole card, making it clickable everywhere the same as before, while still leaving room for the footer's own real link — same trick already used for the tool cards in tools/_tools-cards.ejs.md. metadataAttrs(item) is a helper Quarto provides for free: it adds hidden attributes this card needs so search/sort/filter keep working. Always keep it here. -->
+  <div class="person-card" data-index="4" data-listing-file-modified-sort="1785428449250" data-listing-reading-time-sort="1" data-listing-word-count-sort="13">
+    
+      <img src="../images/avatar-placeholder.webp" class="person-card-img" alt="Quique Vidal Beneyto">
+    
+    <div class="person-card-body">
+      <h5 class="person-card-title listing-title anchored"><a href="../people/vidal-beneyto-quique/index.html" class="stretched-link">Quique Vidal Beneyto</a></h5>
+      <p class="person-card-role listing-description">Predoctoral Researcher</p>
+      
+      
+        <div class="person-card-education"><strong>MS in Bioinformatics</strong> | Universitat Autònoma de Barcelona (2022) <br> <strong>MS in Management and Monitoring of Clinical Trials</strong> | TECH University (2023) <br> <strong>BS in Biochemistry and Molecular Biology</strong> | Universitat de València (2021)</div>
+      
+    </div>
+    <!-- "institution" (eg. "UPV", "CSIC-UPV") and "thesis_directors" are both optional and only used for active predoctoral researchers. When either is set, they share a footer bar beneath the main card — a link to the directors on the left, the institution badge on the right. -->
+    
+      <div class="person-card-footer">
+        
+          <!-- links to the "## Thesis directors" section on the person's own page (that section is just "?meta:thesis_directors" — see _people-template.qmd). The names themselves don't fit compactly on the card, so instead of always showing them, they're tucked into a hover tooltip on this link — run through stripTags() since the tooltip sits inside this very link and so can't itself contain the director's own "<a>" link. "position: relative" keeps this individually clickable above the title's "stretched-link" overlay, same fix as ".tool-card-links" in the tools template. -->
+          <a href="../people/vidal-beneyto-quique/index.html#thesis-directors" class="person-card-directors-link">
+            <i class="bi bi-mortarboard-fill"></i> Directors
+            <span class="person-card-directors-tooltip">Ana Conesa (dir.); Sonia Tarazona (codir.)</span>
+          </a>
+        
+        
+          <!-- raw-printed (not escaped) so a person can bold the institution they're physically based at, eg. "<strong>UPV</strong>-CSIC" for someone co-affiliated but physically at UPV. -->
+          <span class="person-card-institution">UPV-<strong>CSIC</strong></span>
+        
+      </div>
+    
+  </div>
 
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
 </div>
-<!--
-## Visiting Researchers
+</section>
+<section id="former" class="level3">
+<h3 class="anchored" data-anchor-id="former">Former</h3>
+<div class="table-responsive">
+<table class="table-hover table-sm table-light text-nowrap small caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 27%">
+<col style="width: 22%">
+<col style="width: 20%">
+<col style="width: 9%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Thesis title</th>
+<th>Director/Co-director</th>
+<th>Institution</th>
+<th>Date</th>
+<th>Grade</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Zulema Rodríguez Hernández</strong></td>
+<td><em>The role of selenium in type 2 diabetes: an integrative genomic study to inform precision medicine</em></td>
+<td>María Téllez, Sonia Tarazona &amp; Roberto Pastor</td>
+<td>Universitat Politècnica de València</td>
+<td>2025</td>
+<td>Cum Laude</td>
+</tr>
+<tr class="even">
+<td><strong>Pedro Salguero García</strong></td>
+<td><em>Interpretable Survival Analysis for High-Dimensional and Multi-Block data</em></td>
+<td>Sonia Tarazona</td>
+<td>Universitat Politècnica de València</td>
+<td>2025</td>
+<td>Cum Laude</td>
+</tr>
+<tr class="odd">
+<td><strong>Ángeles Arzalluz Luque</strong></td>
+<td><em>Understanding isoform expression and alternative splicing biology through single-cell RNAseq</em></td>
+<td>Ana Conesa &amp; Sonia Tarazona</td>
+<td>Universitat Politècnica de València</td>
+<td>2024</td>
+<td>Cum Laude</td>
+</tr>
+<tr class="even">
+<td><strong>Francisco José Pardo Palacios</strong></td>
+<td><em>Long-Read RNA-Seq: Quality control and benchmarking</em></td>
+<td>Ana Conesa &amp; Sonia Tarazona</td>
+<td>Universitat Politècnica de València</td>
+<td>2024</td>
+<td>Cum Laude</td>
+</tr>
+<tr class="odd">
+<td><strong>Teresa Soria Comes</strong></td>
+<td><em>Valoración de parámetros celulares y bioquímicos como marcadores de inmunosenescencia y su relación con variables clínicas en pacientes con cáncer de pulmón no microcítico diagnosticados en el Hospital Universitario Doctor Peset</em></td>
+<td>Sonia Tarazona (dir.); Inmaculada Maestu (codir.)</td>
+<td>Universitat de València</td>
+<td>2023</td>
+<td>Cum Laude</td>
+</tr>
+<tr class="even">
+<td><strong>Manuel Ugidos Guerrero</strong></td>
+<td><em>Statistical methods development for the multiomic systems biology</em></td>
+<td>Ana Conesa, Sonia Tarazona &amp; Alberto Ferrer</td>
+<td>Universitat Politècnica de València</td>
+<td>2023</td>
+<td>Cum Laude</td>
+</tr>
+<tr class="odd">
+<td><strong>María Teresa Rubio Martínez-Abarca</strong></td>
+<td><em>Multi-omic data integration study of immune system alterations in the development of minimal hepatic encephalopathy in patients with liver cirrhosis</em></td>
+<td>Ana Conesa, Sonia Tarazona &amp; Vicente Felipo</td>
+<td>Universitat Politècnica de València</td>
+<td>2022</td>
+<td>Cum Laude</td>
+</tr>
+<tr class="even">
+<td><strong>Vicente Palomar Abril</strong></td>
+<td><em>Valoración de los parámetros inflamatorios como factores de riesgo independiente para supervivencia en los pacientes con cáncer de pulmón no microcítico localmente avanzado (estadio III) diagnosticados en el Hospital Universitario de Valencia Dr.&nbsp;Peset en el intervalo de tiempo comprendido entre 2010 y 2015</em></td>
+<td>Sonia Tarazona (dir.); Inmaculada Maestu &amp; José López (codir.)</td>
+<td>Universitat de València</td>
+<td>2021</td>
+<td>Cum Laude</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<section id="visiting-researchers" class="level2">
+<h2 class="anchored" data-anchor-id="visiting-researchers">Visiting Researchers</h2>
+<div id="listing-visitor-listing" class="quarto-listing quarto-listing-container-custom">
 
-:::{#visitor-listing}
-:::
--->
+<div class="people-grid list">
+
+  <!-- unlike a plain link-card, this one needs a *second*, independently clickable link in its footer (the "thesis directors" one below) — an anchor can't contain another anchor, so instead of the whole card being one big "<a>", it's a "<div>" with a "stretched-link" (a Bootstrap utility) on the title. That stretches an invisible layer over the whole card, making it clickable everywhere the same as before, while still leaving room for the footer's own real link — same trick already used for the tool cards in tools/_tools-cards.ejs.md. metadataAttrs(item) is a helper Quarto provides for free: it adds hidden attributes this card needs so search/sort/filter keep working. Always keep it here. -->
+  <div class="person-card" data-index="0" data-listing-file-modified-sort="1785428449249" data-listing-reading-time-sort="1" data-listing-word-count-sort="8">
+    
+      <img src="../images/avatar-placeholder.webp" class="person-card-img" alt="Fernando Naya-Català">
+    
+    <div class="person-card-body">
+      <h5 class="person-card-title listing-title anchored"><a href="../people/naya-catala-fernando/index.html" class="stretched-link">Fernando Naya-Català</a></h5>
+      <p class="person-card-role listing-description">Postdoctoral Researcher (IATS-CSIC)</p>
+      
+      
+        <div class="person-card-education"><strong>MS in Bioinformatics and Biostatistics</strong> | Universitat de Barcelona (2017) <br> <strong>BS in Biotechnology</strong> | Universitat Politècnica de València (2015)</div>
+      
+    </div>
+    <!-- "institution" (eg. "UPV", "CSIC-UPV") and "thesis_directors" are both optional and only used for active predoctoral researchers. When either is set, they share a footer bar beneath the main card — a link to the directors on the left, the institution badge on the right. -->
+    
+  </div>
+
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
 <!--
 ## Students
 
@@ -384,6 +648,53 @@ window.Quarto = {
 :::{#alumni-listing}
 :::
 -->
+</section>
+<section id="collaborators" class="level2">
+<h2 class="anchored" data-anchor-id="collaborators">Collaborators</h2>
+<div class="table-responsive">
+<table class="table-hover table-sm table-light text-nowrap small caption-top table">
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Institution</th>
+<th>Location</th>
+<th>Common projects</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://conesalab.uv.es/"><strong>Ana Conesa</strong></a></td>
+<td>Institute for Integrative Systems Biology (I2SysBio)</td>
+<td>Paterna (Valencia), Spain</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>name</td>
+<td>institution</td>
+<td>location</td>
+<td>projects</td>
+</tr>
+<tr class="odd">
+<td>name</td>
+<td>institution</td>
+<td>location</td>
+<td>projects</td>
+</tr>
+<tr class="even">
+<td>name</td>
+<td>institution</td>
+<td>location</td>
+<td>projects</td>
+</tr>
+<tr class="odd">
+<td>name</td>
+<td>institution</td>
+<td>location</td>
+<td>projects</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 
 
