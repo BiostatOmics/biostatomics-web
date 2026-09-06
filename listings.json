@@ -7,12 +7,19 @@
       "/people/tejedor-serrano-juan-andres/index.html",
       "/people/aguerralde-maider/index.html",
       "/people/paniagua-alejandro/index.html",
-      "/people/vidal-beneyto-quique/index.html",
-      "/people/naya-catala-fernando/index.html"
+      "/people/vidal-beneyto-quique/index.html"
     ]
   },
   {
+    "listing": "/projects.html",
+    "items": []
+  },
+  {
     "listing": "/tools/index.html",
+    "items": []
+  },
+  {
+    "listing": "/publications.html",
     "items": []
   }
 ]

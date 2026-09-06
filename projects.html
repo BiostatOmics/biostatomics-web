@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Research lines – BiostatOmics Group</title>
+<title>Projects – BiostatOmics Group</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -36,6 +36,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./images/BioStatOmics_Favicon_web_512x512.svg" rel="icon" type="image/svg+xml">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -45,7 +47,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-365b6b1112e0c97f521008c03471346d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-1884cf9a2b18393427edd6ca549cdc01.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,21 +75,85 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-projects-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-order','listing-title','listing-reference','listing-pis','listing-funder','listing-start','listing-end',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-order","listing-title","listing-reference","listing-pis","listing-funder","listing-start","listing-end"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-projects-listing'] = new List('listing-projects-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Research lines – BiostatOmics Group">
+<meta property="og:title" content="Projects">
 <meta property="og:description" content="BiostatOmics is a research group at the Universitat Politècnica de València (UPV) developing statistical and machine learning methods for the analysis of multi-omics data, applied to biomedical and clinical research.">
-<meta property="og:image" content="https://biostatomics.com/images/multiomics-integration.webp">
+<meta property="og:image" content="https://biostatomics.com/images/Logo_BioStatOmics_300x300Px_color_Transparent_Bckg.png">
 <meta property="og:site_name" content="BiostatOmics Group">
-<meta name="twitter:title" content="Research lines – BiostatOmics Group">
+<meta property="og:image:alt" content="BiostatOmics Group logo">
+<meta property="og:image:height" content="1501">
+<meta property="og:image:width" content="1501">
+<meta name="twitter:title" content="Projects">
 <meta name="twitter:description" content="BiostatOmics is a research group at the Universitat Politècnica de València (UPV) developing statistical and machine learning methods for the analysis of multi-omics data, applied to biomedical and clinical research.">
-<meta name="twitter:image" content="https://biostatomics.com/images/multiomics-integration.webp">
+<meta name="twitter:image" content="https://biostatomics.com/images/Logo_BioStatOmics_300x300Px_color_Transparent_Bckg.png">
+<meta name="twitter:image:alt" content="BiostatOmics Group logo">
+<meta name="twitter:image-height" content="1501">
+<meta name="twitter:image-width" content="1501">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -121,14 +187,14 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-research">    
         <li>
-    <a class="dropdown-item" href="./research_lines.html"><i class="bi bi-folder2-open" role="img">
-</i> 
- <span class="dropdown-text">Research lines</span></a>
-  </li>  
-        <li>
     <a class="dropdown-item" href="./publications.html"><i class="bi bi-book" role="img">
 </i> 
- <span class="dropdown-text">Publications</span></a>
+ <span class="dropdown-text">Highlighted publications</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./projects.html"><i class="bi bi-folder2-open" role="img">
+</i> 
+ <span class="dropdown-text">Highlighted projects</span></a>
   </li>  
     </ul>
   </li>
@@ -153,15 +219,13 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Research lines</h1>
+<h1 class="title">Highlighted research projects</h1>
 </div>
 
 
@@ -178,20 +242,95 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Our research spans three interconnected areas:</p>
-<ul>
-<li><strong>Multi-omics data integration</strong>: We develop statistical frameworks and tools to jointly analyze data from heterogeneous omics sources. Some examples of these <a href="./tools/index.html">tools</a> are:
-<ul>
-<li><a href="https://github.com/BiostatOmics/MORE/">MORE</a>, for the inference of multi-layer regulatory networks and compare them across different phenotypes;</li>
-<li><a href="https://bioconductor.org/packages/MOSim/">MOSim</a>, for simulating multi-omic bulk and single-cell data, which is useful to prepare and test pipelines and tools;</li>
-<li><a href="https://cran.r-project.org/package=Coxmos">Coxmos</a>, for the discovery of molecular signatures associated with survival.</li>
-</ul></li>
+<p>Competitive research projects the group leads or takes part in, newest first.</p>
+<div id="listing-projects-listing" class="quarto-listing quarto-listing-container-custom">
+
+<ul class="project-list">
+
+  <!-- metadataAttrs(item) keeps Quarto search/sort working; always keep it. -->
+  <li class="project-item" data-index="0">
+    <span class="project-title">Novel methodologies for multi-omics integrative analysis with cutting-edge sequencing technologies</span>
+    <span class="project-meta">
+      <span class="project-ref">PID2023-152976NB-I00</span>
+      <span class="project-dates">Sep 2024 – Aug 2027</span>
+    </span>
+    <span class="project-pis"><strong>Sonia Tarazona</strong> <span class="project-pi-aff">(UPV)</span>, Ana Conesa <span class="project-pi-aff">(I2SysBio, CSIC-UV)</span></span>
+    <span class="project-funder"><i class="bi bi-bank"></i> Ministerio de Ciencia, Innovación y Universidades</span>
+  </li>
+
+  <!-- metadataAttrs(item) keeps Quarto search/sort working; always keep it. -->
+  <li class="project-item" data-index="1">
+    <span class="project-title">Cells2Spine: spatial transcriptomics and cell communication models applied to tissue regeneration and treatment in spinal cord injury with precision nanomedicine</span>
+    <span class="project-meta">
+      <span class="project-ref">CIPROM/2022/25</span>
+      <span class="project-dates">Jun 2023 – Dec 2026</span>
+    </span>
+    <span class="project-pis">María J. Vicent <span class="project-pi-aff">(CIPF)</span>, Victoria Moreno-Manzano <span class="project-pi-aff">(CIPF)</span>, Javier Buceta <span class="project-pi-aff">(I2SysBio, CSIC-UV)</span></span>
+    <span class="project-funder"><i class="bi bi-bank"></i> Generalitat Valenciana (Conselleria d'Innovació, Universitats, Ciència i Societat Digital)</span>
+  </li>
+
+  <!-- metadataAttrs(item) keeps Quarto search/sort working; always keep it. -->
+  <li class="project-item" data-index="2">
+    <span class="project-title">Personalising the clinical decision making in ovarian cancer through patient-derived in vitro models</span>
+    <span class="project-meta">
+      <span class="project-ref">AC22/00058</span>
+      <span class="project-dates">Jan 2023 – Jun 2026</span>
+    </span>
+    <span class="project-pis"><strong>Sonia Tarazona</strong> <span class="project-pi-aff">(UPV)</span></span>
+    <span class="project-funder"><i class="bi bi-bank"></i> Instituto de Salud Carlos III</span>
+  </li>
+
+  <!-- metadataAttrs(item) keeps Quarto search/sort working; always keep it. -->
+  <li class="project-item" data-index="3">
+    <span class="project-title">Detection of a miRNA signature as predictive biomarkers of cardiac ischaemic damage (MIMARISCA-2)</span>
+    <span class="project-meta">
+      <span class="project-ref">PI2021-10</span>
+      <span class="project-dates">Oct 2021 – Sep 2023</span>
+    </span>
+    <span class="project-pis"><strong>Sonia Tarazona</strong> <span class="project-pi-aff">(UPV)</span></span>
+    <span class="project-funder"><i class="bi bi-bank"></i> Universitat Politècnica de València</span>
+  </li>
+
+  <!-- metadataAttrs(item) keeps Quarto search/sort working; always keep it. -->
+  <li class="project-item" data-index="4">
+    <span class="project-title">Integration of multi-omic data for the inference of multi-layer disease models</span>
+    <span class="project-meta">
+      <span class="project-ref">PID2020-119537RB-I00</span>
+      <span class="project-dates">Sep 2021 – Aug 2024</span>
+    </span>
+    <span class="project-pis"><strong>Sonia Tarazona</strong> <span class="project-pi-aff">(UPV)</span>, Ana Conesa <span class="project-pi-aff">(I2SysBio, CSIC-UV)</span></span>
+    <span class="project-funder"><i class="bi bi-bank"></i> Ministerio de Ciencia e Innovación</span>
+  </li>
+
+  <!-- metadataAttrs(item) keeps Quarto search/sort working; always keep it. -->
+  <li class="project-item" data-index="5">
+    <span class="project-title">Statistical and machine learning techniques in human microbiome studies</span>
+    <span class="project-meta">
+      <span class="project-ref">COST Action CA18131 (ML4Microbiome)</span>
+      <span class="project-dates">Feb 2019 – Feb 2023</span>
+    </span>
+    <span class="project-pis">European network; <strong>Sonia Tarazona</strong> as management committee member <span class="project-pi-aff">(UPV)</span></span>
+    <span class="project-funder"><i class="bi bi-bank"></i> European Commission (COST)</span>
+  </li>
+
+  <!-- metadataAttrs(item) keeps Quarto search/sort working; always keep it. -->
+  <li class="project-item" data-index="6">
+    <span class="project-title">New methods for the emerging challenges in massive sequencing data analysis</span>
+    <span class="project-meta">
+      <span class="project-ref">BIO2015-71658-R</span>
+      <span class="project-dates">Jan 2019 – Dec 2019</span>
+    </span>
+    <span class="project-pis"><strong>Sonia Tarazona</strong> <span class="project-pi-aff">(UPV)</span></span>
+    <span class="project-funder"><i class="bi bi-bank"></i> Ministerio de Asuntos Económicos y Transformación Digital</span>
+  </li>
+
 </ul>
-<p><a href="https://doi.org/10.1038/s43588-021-00086-z"><img src="images/multiomics-integration.webp" class="research-line-img img-fluid"></a></p>
-<ul>
-<li><p><strong>Single-cell and spatial technologies</strong>: We build computational methods tailored to the unique challenges of single-cell RNA-seq, long-read sequencing, and spatial transcriptomics data. We are currently adapting our tools to deal with the specific features of these new technologies.</p></li>
-<li><p><strong>Clinical and translational applications</strong>: We apply our methods to real biomedical problems, including cancer (ovarian, lung), neurodegenerative diseases (Parkinson’s), metabolic disorders (diabetes, hepatic encephalopathy), etc.</p></li>
-</ul>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+<div class="pub-complete-note">
+<p>For the complete list of projects, see <a href="https://www.upv.es/pls/oalu/sic_peinf.lstProyectoInvestigacion?P_IDIOMA=i&amp;P_VISTA=normal&amp;PE=396C643BFDEE3E1AD18C9BD1013FAB2FBEA25DE4459A2E3DDA562BF6EFA5B88D313485D235D15F186BA6465117B0EB6C25AD099B79CF1D86FE1F469C1BBA4457411D68177605F6100CC84EB5EAC8724D6123E44E0CF9FC90DACE604FF94716A06CF1D903BE57987126C6CE0838E3420A80D3F6F192C5533C1908ED2BA72D6F8D">this link</a>.</p>
+</div>
+
 
 
 
@@ -603,8 +742,8 @@ ul.task-list li input[type="checkbox"] {
 <p>© 2026 BiostatOmics <br> All content licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></p>
 </div>   
     <div class="nav-footer-center">
-      &nbsp;
-    </div>
+<p><a href="https://www.upv.es/" title="Universitat Politècnica de València"><img src="./images/marca_UPV_principal_negro300.webp" class="footer-upv-logo" alt="Universitat Politècnica de València"></a></p>
+</div>
     <div class="nav-footer-right">
 <p>Made with <a href="https://quarto.org">Quarto</a> <br> View source at <a href="https://github.com/BiostatOmics/biostatomics-web"><i class="bi bi-github"></i></a></p>
 </div>
