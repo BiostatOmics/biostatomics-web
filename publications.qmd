@@ -10,8 +10,7 @@ page-layout: article
 toc: false
 ---
 
-A selection of the group's work on statistical and machine learning methods for
-(multi-)omics data. Titles link to the publisher's page.
+A selection of the group's work.
 
 :::{#publications-listing}
 :::
