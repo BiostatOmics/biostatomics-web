@@ -41,12 +41,12 @@ website:
       - text: "Research"
         icon: lightbulb-fill
         menu:
-          - text: "Research lines"
-            href: research_lines.qmd
-            icon: folder2-open
-          - text: "Publications"
-            href: publications.qmd 
+          - text: "Highlighted publications"
+            href: publications.qmd
             icon: book
+          - text: "Highlighted projects"
+            href: projects.qmd
+            icon: folder2-open
       - text: "Tools"
         href: tools/index.qmd
         icon: gear-fill
@@ -66,6 +66,8 @@ website:
     left: |
       © 2026 BiostatOmics <br>
       All content licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+    center: |
+      <a href="https://www.upv.es/" title="Universitat Politècnica de València"><img src="/images/marca_UPV_principal_negro300.webp" class="footer-upv-logo" alt="Universitat Politècnica de València"></a>
     right: |
       Made with [Quarto](https://quarto.org) <br>
       View source at [<i class="bi bi-github"></i>](https://github.com/BiostatOmics/biostatomics-web)

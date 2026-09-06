@@ -2,7 +2,6 @@
 
 website:
   drafts:
-    - publications.qmd
     - blog.qmd
     - contact.qmd
   # draft-mode : gone # empty and unlinked

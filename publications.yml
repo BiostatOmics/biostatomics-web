@@ -1,0 +1,137 @@
+# Highlighted publications, shown on publications.qmd through _publications.ejs.md.
+# newest first via the "order" field (sort: "order" in the listing block).
+# "authors" is raw HTML: wrap the group's own authors in <strong> so they stand out.
+# keep the author list short (web format, not a bibliography): "Family I" initials, joined by commas, "et al." past ~6 authors but always keeping our own people visible.
+
+- order: 1
+  title: "MOREshiny: a user-friendly application for the inference of phenotype-specific multi-omic regulatory networks"
+  authors: "Aguerralde-Martin M, Moldovan RA, Verdú M, <strong>Tarazona S</strong>"
+  venue: "Bioinformatics Advances"
+  year: 2026
+  doi: "10.1093/bioadv/vbag175"
+
+- order: 2
+  title: "Coxmos: interpretable survival models for high-dimensional and multi-omic data"
+  authors: "Salguero P, Buendía-Galera A, <strong>Tarazona S</strong>"
+  venue: "BioData Mining"
+  year: 2026
+  doi: "10.1186/s13040-026-00559-9"
+
+- order: 3
+  title: "MORE interpretable multi-omic regulatory networks to characterise phenotypes"
+  authors: "Aguerralde-Martin M, Clemente-Císcar M, Conesa A, <strong>Tarazona S</strong>"
+  venue: "Briefings in Bioinformatics"
+  year: 2025
+  doi: "10.1093/bib/bbaf270"
+
+- order: 4
+  title: "MOSim: bulk and single-cell multilayer regulatory network simulator"
+  authors: "Monzó C, Aguerralde-Martin M, Martínez-Mira C, Arzalluz-Luque Á, Conesa A, <strong>Tarazona S</strong>"
+  venue: "Briefings in Bioinformatics"
+  year: 2025
+  doi: "10.1093/bib/bbaf110"
+
+- order: 5
+  title: "Machine learning approaches in microbiome research: challenges and best practices"
+  authors: "Papoutsoglou G, <strong>Tarazona S</strong>, Lopes MB, et al."
+  venue: "Frontiers in Microbiology"
+  year: 2023
+  doi: "10.3389/fmicb.2023.1261889"
+
+- order: 6
+  title: "acorde unravels functionally interpretable networks of isoform co-usage from single cell data"
+  authors: "Arzalluz-Luque Á, Salguero P, <strong>Tarazona S</strong>, Conesa A"
+  venue: "Nature Communications"
+  year: 2022
+  doi: "10.1038/s41467-022-29497-w"
+
+- order: 7
+  title: "MultiBaC: an R package to remove batch effects in multi-omic experiments"
+  authors: "Ugidos M, Nueda MJ, Prats-Montalbán JM, Ferrer A, Conesa A, <strong>Tarazona S</strong>"
+  venue: "Bioinformatics"
+  year: 2022
+  doi: "10.1093/bioinformatics/btac132"
+
+- order: 8
+  title: "A multi-omic study for uncovering molecular mechanisms associated with hyperammonemia-induced cerebellar function impairment in rats"
+  authors: "<strong>Tarazona S</strong>, Carmona H, Conesa A, Llansola M, Felipo V"
+  venue: "Cell Biology and Toxicology"
+  year: 2021
+  doi: "10.1007/s10565-020-09572-y"
+
+- order: 9
+  title: "Undisclosed, unmet and neglected challenges in multi-omics studies"
+  authors: "<strong>Tarazona S</strong>, Arzalluz-Luque Á, Conesa A"
+  venue: "Nature Computational Science"
+  year: 2021
+  doi: "10.1038/s43588-021-00086-z"
+
+- order: 10
+  title: "MultiBaC: a strategy to remove batch effects between different omic data types"
+  authors: "Ugidos M, <strong>Tarazona S</strong>, Prats-Montalbán JM, Ferrer A, Conesa A"
+  venue: "Statistical Methods in Medical Research"
+  year: 2020
+  doi: "10.1177/0962280220907365"
+
+- order: 11
+  title: "A multiomics study to unravel the effects of developmental exposure to endosulfan in rats: molecular explanation for sex-dependent effects"
+  authors: "<strong>Tarazona S</strong>, Bernabeu E, Carmona H, et al."
+  venue: "ACS Chemical Neuroscience"
+  year: 2019
+  doi: "10.1021/acschemneuro.9b00304"
+
+- order: 12
+  title: "STATegra, a comprehensive multi-omics dataset of B-cell differentiation in mouse"
+  authors: "Gómez-Cabrero D, <strong>Tarazona S</strong>, Ferreirós-Vidal I, et al."
+  venue: "Scientific Data"
+  year: 2019
+  doi: "10.1038/s41597-019-0202-7"
+
+- order: 13
+  title: "Elucidating the role of chromatin state and transcription factors on the regulation of the yeast metabolic cycle: a multi-omic integrative approach"
+  authors: "Sánchez-Gaya V, Casaní-Galdón S, Ugidos M, et al., <strong>Tarazona S</strong>"
+  venue: "Frontiers in Genetics"
+  year: 2018
+  doi: "10.3389/fgene.2018.00578"
+
+- order: 14
+  title: "PaintOmics 3: a web resource for the pathway analysis and visualization of multi-omics data"
+  authors: "Hernández-de-Diego R, <strong>Tarazona S</strong>, Martínez-Mira C, et al."
+  venue: "Nucleic Acids Research"
+  year: 2018
+  doi: "10.1093/nar/gky466"
+
+- order: 15
+  title: "RGmatch: matching genomic regions to proximal genes in omics data integration"
+  authors: "Furió-Tarí P, Conesa A, <strong>Tarazona S</strong>"
+  venue: "BMC Bioinformatics"
+  year: 2016
+  doi: "10.1186/s12859-016-1293-1"
+
+- order: 16
+  title: "Data quality aware analysis of differential expression in RNA-seq with NOISeq R/Bioc package"
+  authors: "<strong>Tarazona S</strong>, Furió-Tarí P, Turrà D, et al."
+  venue: "Nucleic Acids Research"
+  year: 2015
+  doi: "10.1093/nar/gkv711"
+
+- order: 17
+  title: "Next maSigPro: updating maSigPro Bioconductor package for RNA-seq time series"
+  authors: "Nueda MJ, <strong>Tarazona S</strong>, Conesa A"
+  venue: "Bioinformatics"
+  year: 2014
+  doi: "10.1093/bioinformatics/btu333"
+
+- order: 18
+  title: "Variable selection for multifactorial genomic data"
+  authors: "<strong>Tarazona S</strong>, Prado-López S, Dopazo J, Ferrer A, Conesa A"
+  venue: "Chemometrics and Intelligent Laboratory Systems"
+  year: 2012
+  doi: "10.1016/j.chemolab.2011.10.012"
+
+- order: 19
+  title: "Differential expression in RNA-seq: a matter of depth"
+  authors: "<strong>Tarazona S</strong>, García-Alcalde F, Dopazo J, Ferrer A, Conesa A"
+  venue: "Genome Research"
+  year: 2011
+  doi: "10.1101/gr.124321.111"

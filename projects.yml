@@ -1,0 +1,60 @@
+# Highlighted research projects, shown on projects.qmd through _projects.ejs.md.
+# newest first via the "order" field (sort: "order" in the listing block).
+# "pis" is raw HTML: each principal investigator followed by their institution in <span class="project-pi-aff">.
+# Spanish project titles have been translated to English; the reference code disambiguates.
+
+- order: 1
+  title: "Novel methodologies for multi-omics integrative analysis with cutting-edge sequencing technologies"
+  reference: "PID2023-152976NB-I00"
+  pis: "<strong>Sonia Tarazona</strong> <span class='project-pi-aff'>(UPV)</span>, Ana Conesa <span class='project-pi-aff'>(I2SysBio, CSIC-UV)</span>"
+  funder: "Ministerio de Ciencia, Innovación y Universidades"
+  start: "Sep 2024"
+  end: "Aug 2027"
+
+- order: 2
+  title: "Cells2Spine: spatial transcriptomics and cell communication models applied to tissue regeneration and treatment in spinal cord injury with precision nanomedicine"
+  reference: "CIPROM/2022/25"
+  pis: "María J. Vicent <span class='project-pi-aff'>(CIPF)</span>, Victoria Moreno-Manzano <span class='project-pi-aff'>(CIPF)</span>, Javier Buceta <span class='project-pi-aff'>(I2SysBio, CSIC-UV)</span>"
+  funder: "Generalitat Valenciana (Conselleria d'Innovació, Universitats, Ciència i Societat Digital)"
+  start: "Jun 2023"
+  end: "Dec 2026"
+
+- order: 3
+  title: "Personalising the clinical decision making in ovarian cancer through patient-derived in vitro models"
+  reference: "AC22/00058"
+  pis: "<strong>Sonia Tarazona</strong> <span class='project-pi-aff'>(UPV)</span>"
+  funder: "Instituto de Salud Carlos III"
+  start: "Jan 2023"
+  end: "Jun 2026"
+
+- order: 4
+  title: "Detection of a miRNA signature as predictive biomarkers of cardiac ischaemic damage (MIMARISCA-2)"
+  reference: "PI2021-10"
+  pis: "<strong>Sonia Tarazona</strong> <span class='project-pi-aff'>(UPV)</span>"
+  funder: "Universitat Politècnica de València"
+  start: "Oct 2021"
+  end: "Sep 2023"
+
+- order: 5
+  title: "Integration of multi-omic data for the inference of multi-layer disease models"
+  reference: "PID2020-119537RB-I00"
+  pis: "<strong>Sonia Tarazona</strong> <span class='project-pi-aff'>(UPV)</span>, Ana Conesa <span class='project-pi-aff'>(I2SysBio, CSIC-UV)</span>"
+  funder: "Ministerio de Ciencia e Innovación"
+  start: "Sep 2021"
+  end: "Aug 2024"
+
+- order: 6
+  title: "Statistical and machine learning techniques in human microbiome studies"
+  reference: "COST Action CA18131 (ML4Microbiome)"
+  pis: "European network; <strong>Sonia Tarazona</strong> as management committee member <span class='project-pi-aff'>(UPV)</span>"
+  funder: "European Commission (COST)"
+  start: "Feb 2019"
+  end: "Feb 2023"
+
+- order: 7
+  title: "New methods for the emerging challenges in massive sequencing data analysis"
+  reference: "BIO2015-71658-R"
+  pis: "<strong>Sonia Tarazona</strong> <span class='project-pi-aff'>(UPV)</span>"
+  funder: "Ministerio de Asuntos Económicos y Transformación Digital"
+  start: "Jan 2019"
+  end: "Dec 2019"

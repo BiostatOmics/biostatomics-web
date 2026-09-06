@@ -1,5 +1,21 @@
 ---
-title: "Publications"
+title: "Highlighted publications"
+pagetitle: Publications
+listing:
+  - id: publications-listing
+    contents: publications.yml
+    sort: "order"
+    template: _publications.ejs.md
+page-layout: article
+toc: false
 ---
 
-WIP
+A selection of the group's work on statistical and machine learning methods for
+(multi-)omics data. Titles link to the publisher's page.
+
+:::{#publications-listing}
+:::
+
+::: {.pub-complete-note}
+For the complete list of publications, see [Sonia Tarazona's UPV profile](https://www.upv.es/pls/oalu/sic_peinf.lstArticuloRevista?P_VISTA=normal&PE=396C643BFDEE3E1AD18C9BD1013FAB2F5612E307DAA47C05E05DFA0F35D726687F44B1F1D398DB4F8865ECEE3ED8D40FD7C489FC97530E737C87E00B6C0A85541361EC287517B0894AB4FABAC2F24E8BAC178B476987D67713C150CCA60A04FEF09969DF7AB35B3A133DBE98C99A0BCA00CFAD0568E04EF37AF340A21EDBFB3B&P_IDIOMA=i).
+:::

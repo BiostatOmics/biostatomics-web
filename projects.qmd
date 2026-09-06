@@ -1,0 +1,20 @@
+---
+title: "Highlighted research projects"
+pagetitle: Projects
+listing:
+  - id: projects-listing
+    contents: projects.yml
+    sort: "order"
+    template: _projects.ejs.md
+page-layout: article
+toc: false
+---
+
+Competitive research projects the group leads or takes part in, newest first.
+
+:::{#projects-listing}
+:::
+
+::: {.pub-complete-note}
+For the complete list of projects, see [Sonia Tarazona's UPV profile](https://www.upv.es/pls/oalu/sic_peinf.lstProyectoInvestigacion?P_IDIOMA=i&P_VISTA=normal&PE=396C643BFDEE3E1AD18C9BD1013FAB2FBEA25DE4459A2E3DDA562BF6EFA5B88D313485D235D15F186BA6465117B0EB6C25AD099B79CF1D86FE1F469C1BBA4457411D68177605F6100CC84EB5EAC8724D6123E44E0CF9FC90DACE604FF94716A06CF1D903BE57987126C6CE0838E3420A80D3F6F192C5533C1908ED2BA72D6F8D).
+:::
