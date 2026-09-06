@@ -1,7 +1,7 @@
 ```{=html}
 <%
   // Quarto EJS (Lodash) template: turns each entry of publications.yml into one compact row on publications.qmd.
-  // this is the same custom-listing mechanism used by tools/ and people/. NOTE Lodash reverses the print tags vs. the usual .ejs docs: the "<%= %>" tag here prints raw/unescaped HTML (used for item.authors, which already contains <strong>), and "<%- %>" HTML-escapes its value (used for the title, venue and the DOI in the URL).
+  // same custom-listing mechanism as tools/ and people/. IMPORTANT: do not write the raw print-tag symbols anywhere in this file, not even in a comment, because the template engine scans for them everywhere (see the same warning in tools/_tools-cards.ejs.md). Lodash also reverses the two print tags vs. the usual .ejs docs: the plain "equals" print tag emits raw/unescaped HTML (used below for item.authors, which already contains a strong element), and the "dash" print tag HTML-escapes its value first (used for the title, venue and the DOI in the URL).
 %>
 
 <ol class="pub-list">
