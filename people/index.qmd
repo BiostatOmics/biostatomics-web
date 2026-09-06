@@ -90,7 +90,7 @@ toc: true
 
 ## Visiting Researchers
 
-| Name | Category | Institution | Stay |
+| Name | Position | Institution | Stay |
 |---|---|---|---|
 | **Fernando Naya-Català** | Postdoctoral Researcher | IATS-CSIC | Sep 2026 – Nov 2026 |
 
@@ -115,7 +115,7 @@ toc: true
 | Name | Position | Institution | Location |
 |---|---|---|---|
 | [**Ana Conesa**](https://conesalab.uv.es/) | Research Professor | Institute for Integrative Systems Biology (I2SysBio, CSIC-UV) | Paterna (Valencia), Spain |
-| **Jordi Martorell-Marugán** | Postdoctoral Researcher | GENYO – Centre for Genomics and Oncological Research | Granada, Spain |
+| **Jordi Martorell-Marugán** | Senior Researcher | Centro de Investigación Príncipe Felipe (CIPF) | Valencia, Spain |
 | **Ángeles Arzalluz-Luque** | Postdoctoral Researcher | Instituto de Neurociencias (CSIC-UMH) | Sant Joan d'Alacant, Spain |
 | **Carolina Monzó** | Postdoctoral Researcher | Institute for Integrative Systems Biology (I2SysBio, CSIC-UV) | Paterna (Valencia), Spain |
 | **Zulema Rodríguez-Hernández** | Postdoctoral Researcher | Universitätsklinikum Freiburg | Freiburg, Germany |
