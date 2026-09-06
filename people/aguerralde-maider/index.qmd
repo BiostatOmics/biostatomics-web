@@ -10,7 +10,7 @@ email: maider.aguerraldemartin@gmail.com
 people_group: "phd"
 member-since: 2022-01
 institution: "<strong>UPV</strong>"
-thesis_directors: "<a href='../tarazona-sonia/index.qmd'>Sonia Tarazona</a> (dir.)"
+thesis_directors: "<a href='../tarazona-sonia/index.qmd'>Sonia Tarazona</a>"
 
 education: |
   <ul>

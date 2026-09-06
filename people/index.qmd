@@ -25,12 +25,6 @@ listing:
       people_group: "phd"
     sort: "member-since desc"
     template: _people-cards.ejs.md
-  - id: visitor-listing
-    contents: "*/index.qmd"
-    include:
-      people_group: "visitor"
-    sort: "member-since desc"
-    template: _people-cards.ejs.md
   # - id: student-listing
   #   contents: "*/index.qmd"
   #   include:
@@ -48,9 +42,9 @@ toc: true
 ---
 
 <!--
-! HOW TO USE: 
-! to show or hide a group: comment/uncomment BOTH its "listing:" entry above AND its "heading + div block" below
-! to add a new group, copy an existing pair and change the "people_group" value/id/heading. 
+! HOW TO USE:
+! card-based groups (PI, predoctoral researchers): to show or hide one, comment/uncomment BOTH its "listing:" entry above AND its "heading + div block" below. to add a new one, copy an existing pair and change the "people_group" value/id/heading.
+! table-based groups (Former Predoctoral Researchers, Visiting Researchers, Collaborators): plain markdown tables in the body, no "listing:" entry and no per-person folder. edit the table directly.
 -->
 
 ## Principal Investigator
@@ -72,33 +66,35 @@ toc: true
 :::
 -->
 
-## Predoctoral Researchers
+## Current Predoctoral Researchers
 
-### Current
 :::{#phd-listing}
 :::
 
 
 
-### Former
+## Former Predoctoral Researchers
 
-| Name | Thesis title | Director/Co-director | Institution | Date | Grade |
+| Name | Thesis title | Directors | Institution | Date | Grade |
 |---|---|---|---|---|---|
 | **Zulema Rodríguez Hernández** | *The role of selenium in type 2 diabetes: an integrative genomic study to inform precision medicine* | María Téllez, Sonia Tarazona & Roberto Pastor | Universitat Politècnica de València | 2025 | Cum Laude |
 | **Pedro Salguero García** | *Interpretable Survival Analysis for High-Dimensional and Multi-Block data* | Sonia Tarazona | Universitat Politècnica de València | 2025 | Cum Laude |
 | **Ángeles Arzalluz Luque** | *Understanding isoform expression and alternative splicing biology through single-cell RNAseq* | Ana Conesa & Sonia Tarazona | Universitat Politècnica de València | 2024 | Cum Laude |
 | **Francisco José Pardo Palacios** | *Long-Read RNA-Seq: Quality control and benchmarking* | Ana Conesa & Sonia Tarazona | Universitat Politècnica de València | 2024 | Cum Laude |
-| **Teresa Soria Comes** | *Valoración de parámetros celulares y bioquímicos como marcadores de inmunosenescencia y su relación con variables clínicas en pacientes con cáncer de pulmón no microcítico diagnosticados en el Hospital Universitario Doctor Peset* | Sonia Tarazona (dir.); Inmaculada Maestu (codir.) | Universitat de València | 2023 | Cum Laude |
+| **Teresa Soria Comes** | *Valoración de parámetros celulares y bioquímicos como marcadores de inmunosenescencia y su relación con variables clínicas en pacientes con cáncer de pulmón no microcítico diagnosticados en el Hospital Universitario Doctor Peset* | Sonia Tarazona & Inmaculada Maestu | Universitat de València | 2023 | Cum Laude |
 | **Manuel Ugidos Guerrero** | *Statistical methods development for the multiomic systems biology* | Ana Conesa, Sonia Tarazona & Alberto Ferrer | Universitat Politècnica de València | 2023 | Cum Laude |
 | **María Teresa Rubio Martínez-Abarca** | *Multi-omic data integration study of immune system alterations in the development of minimal hepatic encephalopathy in patients with liver cirrhosis* | Ana Conesa, Sonia Tarazona & Vicente Felipo | Universitat Politècnica de València | 2022 | Cum Laude |
-| **Vicente Palomar Abril** | *Valoración de los parámetros inflamatorios como factores de riesgo independiente para supervivencia en los pacientes con cáncer de pulmón no microcítico localmente avanzado (estadio III) diagnosticados en el Hospital Universitario de Valencia Dr. Peset en el intervalo de tiempo comprendido entre 2010 y 2015* | Sonia Tarazona (dir.); Inmaculada Maestu & José López (codir.) | Universitat de València | 2021 | Cum Laude |
+| **Vicente Palomar Abril** | *Valoración de los parámetros inflamatorios como factores de riesgo independiente para supervivencia en los pacientes con cáncer de pulmón no microcítico localmente avanzado (estadio III) diagnosticados en el Hospital Universitario de Valencia Dr. Peset en el intervalo de tiempo comprendido entre 2010 y 2015* | Sonia Tarazona, Inmaculada Maestu & José López | Universitat de València | 2021 | Cum Laude |
 
 : {tbl-colwidths="[13,27,22,20,9,9]" .hover .sm .light .responsive .text-nowrap}
 
 ## Visiting Researchers
 
-:::{#visitor-listing}
-:::
+| Name | Category | Institution | Stay |
+|---|---|---|---|
+| **Fernando Naya-Català** | Postdoctoral Researcher | IATS-CSIC | Sep 2026 – Nov 2026 |
+
+: {tbl-colwidths="[28,26,26,20]" .hover .sm .light .responsive .text-nowrap}
 
 <!--
 ## Students
@@ -116,13 +112,16 @@ toc: true
 
 ## Collaborators
 
+| Name | Position | Institution | Location |
+|---|---|---|---|
+| [**Ana Conesa**](https://conesalab.uv.es/) | Research Professor | Institute for Integrative Systems Biology (I2SysBio, CSIC-UV) | Paterna (Valencia), Spain |
+| **Jordi Martorell-Marugán** | Postdoctoral Researcher | GENYO – Centre for Genomics and Oncological Research | Granada, Spain |
+| **Ángeles Arzalluz-Luque** | Postdoctoral Researcher | Instituto de Neurociencias (CSIC-UMH) | Sant Joan d'Alacant, Spain |
+| **Carolina Monzó** | Postdoctoral Researcher | Institute for Integrative Systems Biology (I2SysBio, CSIC-UV) | Paterna (Valencia), Spain |
+| **Zulema Rodríguez-Hernández** | Postdoctoral Researcher | Universitätsklinikum Freiburg | Freiburg, Germany |
+| **María Pascual** | Associate Professor | Universitat de València | Valencia, Spain |
+| **Marta Llansola** | Researcher | Centro de Investigación Príncipe Felipe | Valencia, Spain |
+| **Pilar Sepúlveda** | Associate Professor | Universitat de València | Valencia, Spain |
+| **Imelda Ontoria-Oviedo** | Researcher | IIS La Fe | Valencia, Spain |
 
-| Name       	| Institution                                          	| Location                  	| Common projects 	|
-|------------	|------------------------------------------------------	|---------------------------	|-----------------	|
-| [**Ana Conesa**](https://conesalab.uv.es/) 	| Institute for Integrative Systems Biology (I2SysBio) 	| Paterna (Valencia), Spain 	|                 	|
-| name 	| institution	| location 	|      projects           	|
-| name 	| institution	| location 	|      projects           	|
-| name 	| institution	| location 	|      projects           	|
-| name 	| institution	| location 	|      projects           	|
-
-: {.hover .sm .light .responsive .text-nowrap }
+: {tbl-colwidths="[24,22,34,20]" .hover .sm .light .responsive .text-nowrap}

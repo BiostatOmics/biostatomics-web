@@ -10,7 +10,7 @@ email: ramolmol@eio.upv.es
 people_group: "phd"
 member-since: 2025-03
 institution: "<strong>UPV</strong>-CSIC"
-thesis_directors: "<a href='../tarazona-sonia/index.qmd'>Sonia Tarazona</a> (dir.); Ana Conesa (codir.)"
+thesis_directors: "<a href='../tarazona-sonia/index.qmd'>Sonia Tarazona</a>; Ana Conesa"
 
 education: |
   <ul>

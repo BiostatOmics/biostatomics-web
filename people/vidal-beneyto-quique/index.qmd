@@ -1,7 +1,7 @@
 ---
 title: Quique Vidal Beneyto
 description: Predoctoral Researcher
-image: /images/avatar-placeholder.webp
+image: avatar.webp
 
 last: Vidal Beneyto
 first: Quique
@@ -12,7 +12,7 @@ people_group: "phd"
 # TODO: placeholder start date, change
 member-since: 2022-01
 institution: "UPV-<strong>CSIC</strong>"
-thesis_directors: "Ana Conesa (dir.); <a href='../tarazona-sonia/index.qmd'>Sonia Tarazona</a> (codir.)"
+thesis_directors: "Ana Conesa; <a href='../tarazona-sonia/index.qmd'>Sonia Tarazona</a>"
 
 education: |
   <ul>

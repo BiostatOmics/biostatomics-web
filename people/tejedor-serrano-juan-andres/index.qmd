@@ -10,7 +10,7 @@ email: jatejser@doctor.upv.es
 people_group: "phd"
 member-since: 2025-01
 institution: "<strong>UPV</strong>"
-thesis_directors: "<a href='../tarazona-sonia/index.qmd'>Sonia Tarazona</a> (dir.); Jordi Martorell-Marugán & Ángeles Arzalluz-Luque (codir.)"
+thesis_directors: "<a href='../tarazona-sonia/index.qmd'>Sonia Tarazona</a>; Jordi Martorell-Marugán & Ángeles Arzalluz-Luque"
 
 education: |
   <ul>

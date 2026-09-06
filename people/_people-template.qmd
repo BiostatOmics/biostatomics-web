@@ -15,8 +15,8 @@ people_group: "pi | research_scientist | postdoc | visitor | phd | student | alu
 member-since: YYYY-MM
 # institution shows as a small badge on your card, so it's clear at a glance where you're based. bold whichever one you're physically based at, eg. "<strong>UPV</strong>-CSIC" for someone physically at UPV but also in CSIC.
 institution: "<strong>UPV</strong>"
-# your thesis directors. if none, remove it. you can use html to link your directors to its web page as seen in the placeholder. use "(dir.)" for your actual director and "(codir.)" for co-director(s)
-thesis_directors: "<a href='../tarazona-sonia/index.qmd'>Sonia Tarazona</a> (dir.); Nombre1 Apellido1, Nombre2 Apellido2 & Nombre3 Apellido3 (codir.)"
+# your thesis directors. if none, remove it. you can use html to link your directors to its web page as seen in the placeholder. list every director equally, without distinguishing director from co-director.
+thesis_directors: "<a href='../tarazona-sonia/index.qmd'>Sonia Tarazona</a>; Nombre1 Apellido1, Nombre2 Apellido2 & Nombre3 Apellido3"
 
 # education is shown as a HTML list where each title is an element of the list. the education title follows the structure "<PhD|MS|BS> in <X> | University <X> (<year>)". this same list is also reused automatically to build the short version shown on your compact card in the group listing, so you only need to fill it in once here.
 # just modify the following template with your data
