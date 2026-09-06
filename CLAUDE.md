@@ -16,7 +16,7 @@ The source for the BiostatOmics Group website (https://biostatomics.com), built 
 
 ### Site structure and navigation
 
-`_quarto.yml` is the project's single source of truth for site-wide config: navbar entries, footer, theme (`cosmo` + `brand`), and global HTML includes. Every top-level page (`index.qmd`, `research_lines.qmd`, `publications.qmd`, `blog.qmd`, `contact.qmd`, `tools/index.qmd`, `people/index.qmd`) must be linked from the `navbar` block here to be reachable — creating a `.qmd` file is not enough on its own.
+`_quarto.yml` is the project's single source of truth for site-wide config: navbar entries, footer, theme (`cosmo` + `brand`), and global HTML includes. Every top-level page (`index.qmd`, `publications.qmd`, `projects.qmd`, `blog.qmd`, `contact.qmd`, `tools/index.qmd`, `people/index.qmd`) must be linked from the `navbar` block here to be reachable — creating a `.qmd` file is not enough on its own.
 
 Files/folders prefixed with `_` or `.` are excluded from rendering (e.g. `_CONTRIBUTING.md`, `_quarto.yml` itself, `_people-template.qmd`). Use this prefix for any file that should exist in the repo but not become a page.
 
@@ -26,6 +26,8 @@ Both `tools/index.qmd` and `people/index.qmd` use Quarto's [custom listings](htt
 
 - **Tools** (`tools/index.qmd`): data lives in `tools/tools.yml` (packages/tools) and `tools/webapps.yml` (web apps), rendered through `tools/_tools-cards.ejs.md`. Each entry: `title`, `href` (card click-through target — set independently of `links`), `image`, `date`, `section` (`"Tools"` or `"Web apps"` — which heading it appears under), `categories` (filterable tags), `description`, `links` (buttons with `label`/`icon`/`url`). Adding a tool = adding a YAML entry; no `_quarto.yml` or navbar change needed.
 - **People** (`people/index.qmd`): each person is their own folder `people/lastname-firstname/index.qmd`, created by copying `people/_people-template.qmd`. The listing page has one `listing:` block per group (`pi`, `phd`, etc., filtered via `include: { people_group: ... }`), each paired with a heading + `:::{#id-listing}` div in the body — both halves (YAML block and body div) must be added/removed together to show or hide a group. Cards render via `people/_people-cards.ejs.md`. The `education` YAML field is an HTML `<ul>` list written once; the card template auto-extracts a short summary from it for the compact group-listing card.
+
+- **Publications** (`publications.qmd`) and **Projects** (`projects.qmd`): same custom-listing pattern. Data lives in `publications.yml` / `projects.yml`, rendered as compact reference-style lists (not cards) through `_publications.ejs.md` / `_projects.ejs.md`. Newest-first ordering is an explicit integer `order` field per entry (`sort: "order"` in the listing block), not a date, so hand-picked ordering wins. `authors` / `pis` are raw HTML (wrap the group's own people in `<strong>`). Both pages carry a "For the complete list…, see …" link to Sonia Tarazona's UPV profile.
 
 To change the visual layout of cards (not their content), edit the `.ejs.md` template, not the `.yml`/`.qmd` data files. These use Quarto's EJS templating powered by Lodash (note: its escaping/raw print tags are reversed vs. typical `.ejs` docs — see comments in the template files).
 
