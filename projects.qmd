@@ -10,8 +10,6 @@ page-layout: article
 toc: false
 ---
 
-Competitive research projects the group leads or takes part in, newest first.
-
 :::{#projects-listing}
 :::
 
