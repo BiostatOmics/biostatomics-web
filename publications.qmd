@@ -10,8 +10,6 @@ page-layout: article
 toc: false
 ---
 
-A selection of the group's work.
-
 :::{#publications-listing}
 :::
 
