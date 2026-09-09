@@ -30,7 +30,7 @@ about:
       href: https://www.linkedin.com/in/sonia-tarazona-37928a47
     
     - icon: github
-      href: https://github.com/soniatarazona
+      href: https://github.com/BiostatOmics
     
     - text: '<i class="ai ai-google-scholar-square"></i>'
       href: https://scholar.google.com/citations?user=Id0klxUAAAAJ&hl
