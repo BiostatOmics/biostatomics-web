@@ -93,21 +93,17 @@
       url: "https://www.nature.com/articles/s41467-020-16937-8"
 
 - title: "NOISeq"
-  href: "xxxxx"
-  # MOSim has no logo, the alternative is to plot its GitHub preview.
+  href: "https://bioconductor.org/packages/release/bioc/html/NOISeq.html"
   image: images/2025-10_Logos_Sonia_NOISeq.png
-  date: 2025-03
-  categories: [R, Package, Multi-omics]
-  description: "R package to simulate multi-omic bulk and single-cell experiments that mimic regulatory mechanisms within the cell."
+  date: 2015-07
+  categories: [R, Package, NGS, differential expression, quality control]
+  description: "R package for quality control of read counts from NGS data and non-parametric differential expression."
   links:
-    - label: "GitHub"
-      icon: github
-      url: "https://github.com/ConesaLab/MOSim"
     - label: "Bioconductor"
       icon: music-note
-      url: "https://doi.org/doi:10.18129/B9.bioc.MOSim"
+      url: "https://bioconductor.org/packages/release/bioc/html/NOISeq.html"
     - label: "Paper"
       icon: file-earmark-text
-      url: "https://doi.org/10.1093/bib/bbaf110"
+      url: "https://doi.org/10.1093/nar/gkv711"
 
 
