@@ -30,6 +30,19 @@
   font-weight: var(--fw-semibold);
 }
 
+/* authors/PIs who have their own People page are wrapped in a plain <a> in publications.yml/projects.yml — same "keep the muted text color, only pick up the link color on hover" treatment as ".pub-title a" below, so a linked name doesn't jump out in blue against the rest of the (intentionally understated) author line. */
+.pub-authors a,
+.project-pis a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.pub-authors a:hover,
+.project-pis a:hover {
+  color: var(--bs-primary, #2780e3);
+  text-decoration: underline;
+}
+
 /* title line: the main thing to read. the link keeps the body text color and only picks up the theme link color on hover. */
 .pub-title {
   display: block;
