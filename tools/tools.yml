@@ -68,7 +68,7 @@
   href: "https://www.bioconductor.org/packages/release/bioc/html/MultiBaC.html"
   image: images/2025-10_Logos_Sonia_MultiBac.png
   date: 2022-03
-  categories: [R, Package, Multi-omics]
+  categories: [R, Package, Multi-omics, Batch effect]
   description: "R package to remove batch effecs and noise from omic and multi-omic data."
   links:
     - label: "Bioconductor"
@@ -77,3 +77,37 @@
     - label: "Paper"
       icon: file-earmark-text
       url: "https://doi.org/10.1093/bioinformatics/btac132"
+
+- title: "MultiPower"
+  href: "https://github.com/ConesaLab/MultiPower"
+  image: images/2025-10_Logos_Sonia_MultiPower.png
+  date: 2020-07
+  categories: [R, Package, Multi-omics, Power]
+  description: "R package to optimize sample size and estimate statistical power in multi-omic experiments."
+  links:
+    - label: "GitHub"
+      icon: github
+      url: "https://github.com/ConesaLab/MultiPower"
+    - label: "Paper"
+      icon: file-earmark-text
+      url: "xxxxxx"
+
+- title: "NOISeq"
+  href: "xxxxx"
+  # MOSim has no logo, the alternative is to plot its GitHub preview.
+  image: images/2025-10_Logos_Sonia_NOISeq.png
+  date: 2025-03
+  categories: [R, Package, Multi-omics]
+  description: "R package to simulate multi-omic bulk and single-cell experiments that mimic regulatory mechanisms within the cell."
+  links:
+    - label: "GitHub"
+      icon: github
+      url: "https://github.com/ConesaLab/MOSim"
+    - label: "Bioconductor"
+      icon: music-note
+      url: "https://doi.org/doi:10.18129/B9.bioc.MOSim"
+    - label: "Paper"
+      icon: file-earmark-text
+      url: "https://doi.org/10.1093/bib/bbaf110"
+
+
