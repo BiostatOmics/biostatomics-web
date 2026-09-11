@@ -1,11 +1,23 @@
-/* homepage (index.qmd) — the sidebar column holding the BiostatOmics logo, the UPV logo and the GitHub link, stacked and centered. Built with Quarto's own ".grid"/".g-col-*" layout instead of the "about: template" shorthand, since that template has no supported way to add a second logo below its image. */
+/* homepage layout width: even with "page-layout: full" in index.qmd's frontmatter, Quarto still renders "<main class='content column-page'>" — a fixed named grid track (see "_bootstrap-rules.scss", not this repo) that computes to a narrow ~1135px on a 1920px-wide screen, centered with huge (~390px) side margins. That's what made both columns look squeezed into the middle of the page. This widens the track itself (grid-column) to the much larger "screen-inset" one, then re-centers a sane, viewport-responsive max-width inside it — a small custom layout, since none of Quarto's other built-in named tracks land at a width that suits a two-column homepage. ":has(.home-sidebar)" scopes this to only the page that has our sidebar, since every page's <main> otherwise shares the same id/class regardless of which .qmd it came from. */
+main.content:has(.home-sidebar) {
+  grid-column: screen-start-inset / screen-end-inset;
+  max-width: 1600px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* the sidebar column holding the BiostatOmics logo, the "statistics / machine learning / computational biology" keywords, the UPV/department banner and the GitHub link, stacked and centered. Built with Quarto's own ".grid"/".g-col-*" layout instead of the "about: template" shorthand, since that template has no supported way to add all of this below its image. */
 .home-sidebar {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 1.5em;
-  padding-top: 3em;
+  gap: 0.5em; /* small: the BiostatOmics logo and the keywords line below it should read as one unit, immediately adjacent — extra breathing room before/after that unit is added per-element below instead of here */
+  padding: 0 2rem; /* left/right padding so the logo (and everything else in this column) never touches the page edge or the ".home-main" divider next to it, however wide the column ends up */
+  align-self: center; /* ".grid"'s row is as tall as its tallest column (".home-main", full of text) — this centers the shorter sidebar block within that height instead of pinning it to the top, so it sits level with the middle of the "About us" text rather than floating above a lot of empty space below it */
 }
 
 /* keeps the "About us" column visually aligned with the sidebar's own top padding above, and separated from it the same way "about: template: trestles" used to. */
@@ -20,22 +32,45 @@
   }
 }
 
-/* UPV logo under the BiostatOmics logo on the homepage. sized relative to the big logo above (see index.qmd). */
+/* the "STATISTICS · MACHINE LEARNING · COMPUTATIONAL BIOLOGY" line under the BiostatOmics logo: wide letter-spacing on purpose, to read as a deliberate label rather than a shrunk sentence. */
+.home-keywords {
+  font-size: 0.7rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--bs-secondary-color, #6c757d);
+}
+
+/* UPV / department banner (logo + department name baked into the one image — see index.qmd) and the GitHub link below it. */
 .home-upv-logo {
-  width: 20em;
+  width: 25em;
   height: auto;
 }
 
-/* GitHub button under the two logos, styled like the small bordered icon button Quarto's "about: template" used to render for this same link. */
-.home-sidebar .about-link {
-  border: solid 1px;
-  border-radius: 4px;
-  padding: 0.25em 0.5em;
-  font-size: 0.8em;
-  color: var(--bs-secondary-color, #6c757d);
-  text-decoration: none;
+/* "View our GitHub repository" link under the two logos: plain text + icons rather than the small bordered icon button Quarto's "about: template" used to render for this same link, to match the reference layout it replaces. */
+.home-github-link {
+  margin-top: 0.4em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  font-size: 0.9rem;
+  font-weight: var(--fw-medium);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  color: var(--bs-body-color, #212529);
 }
 
-.home-sidebar .about-link:hover {
+.home-github-link:hover {
   color: var(--bs-link-color, #2761e3);
+}
+
+/* gradient rule under the "About us" h1, in the group's own logo colors. h2 ("Research lines") no longer needs its own copy of this: css/base.css now draws the same gradient under every h2 site-wide, homepage included. */
+.home-main h1::after {
+  content: "";
+  display: block;
+  height: 2px;
+  margin-top: 0.5rem;
+  margin-bottom: 1.25rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #564d80, #98a6d4 55%, #9fc490);
 }

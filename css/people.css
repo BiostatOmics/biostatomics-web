@@ -36,7 +36,7 @@
 
 .person-card-title {
   margin-bottom: 0.2rem;
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   font-size: 1.05rem;
   transition: color 0.15s ease; /* animate the color change smoothly on hover, instead of it changing instantly */
 }
@@ -107,7 +107,7 @@
   background-color: var(--bs-emphasis-color, #212529);
   color: var(--bs-body-bg, #fff);
   font-size: 0.7rem;
-  font-weight: 400;
+  font-weight: var(--fw-regular);
   line-height: 1.35;
   text-align: left;
   text-decoration: none;
@@ -136,7 +136,7 @@
   flex-shrink: 0; /* never let the badge shrink to make room for a long directors link */
   display: inline-block;
   font-size: 0.7rem;
-  font-weight: 500;
+  font-weight: var(--fw-medium);
   padding: 0.15rem 0.55rem;
   border-radius: 999px;
   background-color: var(--bs-primary-bg-subtle, #cfe2ff);
@@ -144,5 +144,5 @@
 }
 
 .person-card-institution strong {
-  font-weight: 700;
+  font-weight: var(--fw-bold);
 }

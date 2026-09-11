@@ -17,6 +17,17 @@
 
    * this file only holds the "shared" pieces used by more than one page (see _quarto.yml's "format.html.css" list for every module and the order they load in). Anything specific to a single page/section lives in its own css/*.css file instead. */
 
+/* the site's font (Nunito Sans, set in _brand.yml) as its named weights, so every css/*.css file writes "font-weight: var(--fw-bold)" instead of a bare number — one place to see (and change) which numeric weight "bold" or "semibold" actually maps to. */
+:root {
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+  --fw-black: 900;
+}
+
 
 /* the "elevated card" surface: rounded border, soft shadow, slightly bigger shadow + a small lift on hover. Shared by the tool cards (css/tools.css), the person cards (css/people.css), and the research-lines figure (css/research-lines.css). Each of those keeps its own layout rules (flex vs. block, sizing, etc.) in its own file; only this shared "surface" look lives here. */
 .tool-card,
@@ -34,4 +45,18 @@
 .research-line-img:hover {
   box-shadow: 0 6px 18px rgba(var(--bs-black-rgb, 0, 0, 0), 0.1);
   transform: translateY(-2px);
+}
+
+/* every "##" (h2) heading, site-wide: Quarto's own bootstrap rules (_bootstrap-rules.scss, not this repo) draw a plain 1px grey "border-bottom" under every h2 by default. This replaces that with a full-width gradient rule in the group's own logo colors (deep blue-purple to green) instead of turning it off outright. h1 has no such native line, so homepage h1s keep their own shorter gradient (see css/home.css) instead of this one. (Heading weight itself is set once, for h1/h2/h3 alike, via "typography.headings.weight" in _brand.yml — no need to repeat it here.) */
+h2 {
+  border-bottom: none;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: 0.5rem;
+  background: linear-gradient(90deg, #564d80, #98a6d4 55%, #9fc490);
 }
