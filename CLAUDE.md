@@ -33,7 +33,9 @@ To change the visual layout of cards (not their content), edit the `.ejs.md` tem
 
 ### Styling
 
-The `css/` folder plus the Quarto `brand` theme (layered with `cosmo` in `_quarto.yml`) control appearance. There is no single stylesheet: `format.html.css` in `_quarto.yml` lists one file per page/component (`css/base.css`, `css/tools.css`, `css/people.css`, `css/publications-projects.css`, `css/research-lines.css`, `css/home.css`, `css/toc.css`), loaded in that order. `css/base.css` holds the shared "elevated card" surface (border/shadow/hover) that `.tool-card`, `.person-card` and `.research-line-img` all build on; add a new shared look there, keep single-page rules in that page's own file. Card grid layouts (`.tool-card`, `.person-card`, etc.) are consumed by the `.ejs.md` templates above.
+The `css/` folder plus the Quarto `brand` theme (layered with `cosmo` in `_quarto.yml`) control appearance. There is no single stylesheet: `format.html.css` in `_quarto.yml` lists one file per page/component (`css/base.css`, `css/navbar.css`, `css/tools.css`, `css/people.css`, `css/publications-projects.css`, `css/research-lines.css`, `css/home.css`, `css/toc.css`), loaded in that order. `css/base.css` holds the shared "elevated card" surface (border/shadow/hover) that `.tool-card`, `.person-card` and `.research-line-img` all build on; add a new shared look there, keep single-page rules in that page's own file. Card grid layouts (`.tool-card`, `.person-card`, etc.) are consumed by the `.ejs.md` templates above.
+
+`_brand.yml` (the `brand` theme layer's config file) currently only sets the site's font (Nunito Sans); it's also the right place for brand colors/logo tokens if those get centralized later, rather than hardcoding hex values across `css/*.css`.
 
 ### Rendering/build behavior
 

@@ -33,6 +33,7 @@ website:
   # ! website skeleton
   navbar: # navbar = top bar that display the different tabs for navegation
     pinned: true
+    background: light # without this, adding "_brand.yml" makes Quarto default the navbar to the brand's primary color instead of the plain light bar it had before
     logo: images/BioStatOmics_Favicon_web_512x512.svg
     right:
       - text: "Home" # text is optional, by default, it takes the "title" value defined in the href. 
@@ -73,10 +74,12 @@ website:
 format:
   html:
     theme:
-      - cosmo
-      - brand
+      light: # explicit "light:" (instead of a bare list) opts out of the dark-mode variant/toggle that Quarto generates automatically as soon as any "_brand.yml" is present — the site has no designed dark palette, and that auto dark mode was making the page look grayish for visitors whose system/browser prefers dark
+        - cosmo
+        - brand
     css: # split into one file per page/component (css/) instead of one monolithic stylesheet — see css/base.css for the shared bits every module builds on
       - css/base.css
+      - css/navbar.css
       - css/tools.css
       - css/people.css
       - css/publications-projects.css

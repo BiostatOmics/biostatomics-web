@@ -27,7 +27,7 @@
 
 .pub-authors strong {
   color: var(--bs-body-color, #212529);
-  font-weight: 600;
+  font-weight: var(--fw-semibold);
 }
 
 /* title line: the main thing to read. the link keeps the body text color and only picks up the theme link color on hover. */
@@ -35,7 +35,7 @@
   display: block;
   margin: 0.15rem 0;
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: var(--fw-semibold);
   line-height: 1.35;
 }
 
@@ -59,7 +59,7 @@
 .project-title {
   display: block;
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: var(--fw-semibold);
   line-height: 1.35;
 }
 

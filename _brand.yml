@@ -1,0 +1,12 @@
+# brand.yml (https://posit-dev.github.io/brand-yml/): site-wide brand tokens layered on top of the "cosmo" Bootswatch theme via "theme: [cosmo, brand]" in _quarto.yml. Currently only used for typography (the site's font), but this is also the right place to add brand colors/logos later instead of hardcoding them in css/*.css.
+
+typography:
+  fonts:
+    - family: Nunito Sans
+      source: google
+      weight: [300, 400, 500, 600, 700, 800, 900] # without this, Quarto only fetches 400/700 from Google Fonts — any other "font-weight" (eg. css/base.css's --fw-* tokens) silently falls back to the closest one of those two actually downloaded, instead of rendering as requested
+  base:
+    family: Nunito Sans
+  headings:
+    family: Nunito Sans
+    weight: 900

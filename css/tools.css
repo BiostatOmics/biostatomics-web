@@ -52,7 +52,7 @@
 
 .tool-card-title {
   margin-bottom: 0;
-  font-weight: 700; /* bold */
+  font-weight: var(--fw-bold);
   font-size: 1.05rem;
 }
 
@@ -81,7 +81,7 @@
 
 /* A single "hollow" badge: colored border, no fill. Clicking it filters the tools by that category. */
 .tool-badge {
-  font-weight: 500;
+  font-weight: var(--fw-medium);
   background-color: transparent;
   border: 1px solid var(--bs-border-color, #ced4da);
   color: var(--bs-secondary-color, #495057);

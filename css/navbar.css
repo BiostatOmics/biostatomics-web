@@ -1,0 +1,37 @@
+/* top navbar, shown on every page (see the "navbar" block in _quarto.yml for its content). */
+
+/* "BiostatOmics Group" wordmark on the left. */
+.navbar-brand {
+  font-weight: var(--fw-bold);
+}
+
+/* extra breathing room between "Home", "Research", "Tools"... so they don't read as one dense cluster of text. */
+.navbar-nav .nav-item {
+  margin-right: 1rem;
+}
+
+.navbar-nav .nav-item:last-child {
+  margin-right: 0;
+}
+
+/* gap between each nav item's bootstrap icon (house-fill, lightbulb-fill...) and its label. Quarto's own default ("nav .nav-link i { padding-right: 1px; }" in its bundled quarto-nav.scss, not this repo) is nearly zero — this overrides it. */
+.navbar-nav .nav-link i {
+  padding-right: 0.4em;
+}
+
+/* blue underline on whichever nav item matches the current page ("Home", or "Research" when viewing publications.qmd/projects.qmd — see includes/highlight-active-navbar-dropdown.html, which is what adds ".active" to "Research" in that second case). Bootstrap's own ".nav-link.active" only changes the text color; this adds the line.
+   Uses "::before", not "::after": "Research" is also a ".dropdown-toggle", and Bootstrap renders its little caret arrow as that same link's own "::after" (quarto-nav.scss). A single element only has one "::after" — reusing it here was clobbering the caret's triangle border with this bar's own styles ("::after" and the caret's own rules landed on the same pseudo-element and merged, so the caret vanished and the bar came out oddly thick on "Research"). "::before" avoids the collision entirely. */
+.navbar-nav .nav-link.active {
+  position: relative;
+}
+
+.navbar-nav .nav-link.active::before {
+  content: "";
+  position: absolute;
+  left: 0.6rem; /* match ".nav-link"'s own left/right padding (quarto-nav.scss), so the line sits under the label, not the link's full hit-box */
+  right: 0.6rem;
+  bottom: -2px;
+  height: 2px;
+  border-radius: 999px;
+  background-color: var(--bs-primary, #2780e3);
+}
