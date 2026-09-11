@@ -66,8 +66,6 @@ website:
     left: |
       © 2026 BiostatOmics <br>
       All content licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
-    center: |
-      <a href="https://www.upv.es/" title="Universitat Politècnica de València"><img src="/images/marca_UPV_principal_negro300.webp" class="footer-upv-logo" alt="Universitat Politècnica de València"></a>
     right: |
       Made with [Quarto](https://quarto.org) <br>
       View source at [<i class="bi bi-github"></i>](https://github.com/BiostatOmics/biostatomics-web)
@@ -77,7 +75,14 @@ format:
     theme:
       - cosmo
       - brand
-    css: styles.css
+    css: # split into one file per page/component (css/) instead of one monolithic stylesheet — see css/base.css for the shared bits every module builds on
+      - css/base.css
+      - css/tools.css
+      - css/people.css
+      - css/publications-projects.css
+      - css/research-lines.css
+      - css/home.css
+      - css/toc.css
     toc: true # add a "table of contents" 
     include-in-header: # this allows to include HTML code in the HTML header of the website. HTML header contains all the external resources needed.
     # load AcademicIcons icon pack (for google scholar, orcid, zotero, etc.)

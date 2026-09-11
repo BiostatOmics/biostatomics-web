@@ -1,14 +1,21 @@
 ---
 # title: "BiostatOmics Group"
 image: images/Logo_BioStatOmics_300x300Px_color_Transparent_Bckg.png
-about:
-    template: trestles
-    links:
-        - icon: github
-          href: https://github.com/biostatomics
 toc: false
 page-layout: full
 ---
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-lg-5 .home-sidebar}
+![](images/Logo_BioStatOmics_300x300Px_color_Transparent_Bckg.png){.rounded width="30em"}
+
+<a href="https://www.upv.es/" title="Universitat Politècnica de València"><img src="images/marca_UPV_principal_color300.webp" class="home-upv-logo" alt="Universitat Politècnica de València"></a>
+
+<a href="https://github.com/biostatomics" class="about-link" target="_blank"><i class="bi bi-github"></i></a>
+:::
+
+::: {.g-col-12 .g-col-lg-7 .home-main}
 
 # About us
 
@@ -38,3 +45,7 @@ challenges of single-cell RNA-seq, long-read sequencing, and spatial transcripto
 - **Clinical and translational applications**: We apply our methods to real biomedical problems,
 including cancer (ovarian, lung), neurodegenerative diseases (Parkinson's), metabolic disorders
 (diabetes, hepatic encephalopathy), etc.
+
+:::
+
+:::
