@@ -1,0 +1,41 @@
+/* homepage (index.qmd) — the sidebar column holding the BiostatOmics logo, the UPV logo and the GitHub link, stacked and centered. Built with Quarto's own ".grid"/".g-col-*" layout instead of the "about: template" shorthand, since that template has no supported way to add a second logo below its image. */
+.home-sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5em;
+  padding-top: 3em;
+}
+
+/* keeps the "About us" column visually aligned with the sidebar's own top padding above, and separated from it the same way "about: template: trestles" used to. */
+.home-main {
+  padding-top: 3em;
+}
+
+@media (min-width: 992px) {
+  .home-main {
+    border-left: solid 1px var(--bs-border-color, #dee2e6);
+    padding-left: 1.5em;
+  }
+}
+
+/* UPV logo under the BiostatOmics logo on the homepage. sized relative to the big logo above (see index.qmd). */
+.home-upv-logo {
+  width: 20em;
+  height: auto;
+}
+
+/* GitHub button under the two logos, styled like the small bordered icon button Quarto's "about: template" used to render for this same link. */
+.home-sidebar .about-link {
+  border: solid 1px;
+  border-radius: 4px;
+  padding: 0.25em 0.5em;
+  font-size: 0.8em;
+  color: var(--bs-secondary-color, #6c757d);
+  text-decoration: none;
+}
+
+.home-sidebar .about-link:hover {
+  color: var(--bs-link-color, #2761e3);
+}

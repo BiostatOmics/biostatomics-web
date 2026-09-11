@@ -1,0 +1,127 @@
+/* tools page — card grid used by tools/_tools-cards.ejs.md. Card surface (border/shadow/hover) is shared with the other card grids in css/base.css; only this page's own layout lives here. */
+
+/* The grid that holds every tool card, 2 cards per row. */
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 equal-width columns */
+  gap: 1.5rem; /* space between cards, both horizontal and vertical */
+}
+
+/* responsive / mobile: below 700px wide (e.g. a phone screen), switch to a single column so cards don't get squeezed too narrow */
+@media (max-width: 700px) {
+  .tool-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* The card box itself: layout only — border, shadow, background and hover are shared in css/base.css. */
+.tool-card {
+  position: relative; /* anchors the card title's ".stretched-link", which stretches an invisible clickable layer to fill this box */
+  display: flex;
+  flex-direction: column; /* stack its contents top-to-bottom */
+  overflow: hidden; /* clips anything (like the image) to the rounded corners */
+}
+
+/* The tool's logo/image at the top of the card. */
+.tool-card-img {
+  /* ! for now, card size adapts to the card's image. the advantage is that images/logos with height > 150px are not re-scaled to a tiny size; the disadvantage is that now cards does not line up */
+  /* height: 150px; /* fixed height, so every card lines up evenly */
+
+
+  object-fit: contain; /* scale the image to fit inside that height without cropping or distorting it */
+  padding: 1rem; /* small margin of empty space around the image */
+  background-color: var(--bs-body-bg, #fff); /* white backdrop, useful for logos with a transparent background */
+}
+
+/* The text area below the image (title, description, links...). */
+.tool-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* stretch to fill the remaining height of the card, so the "links" footer (further below) always sticks to the bottom */
+  padding: 1.1rem 1.25rem 1.25rem; /* top / left-right / bottom spacing */
+}
+
+/* Row that holds the title on the left and the date on the right. */
+.tool-card-heading {
+  display: flex;
+  align-items: baseline; /* line up title and date on the same text baseline */
+  justify-content: space-between; /* push title to the left, date to the right */
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.tool-card-title {
+  margin-bottom: 0;
+  font-weight: 700; /* bold */
+  font-size: 1.05rem;
+}
+
+/* The title's ".stretched-link" (see _tools-cards.ejs.md) covers the whole card, but should still read as plain bold text rather than a typical blue underlined link. Bootstrap's "cosmo" theme sets a blanket "a { font-weight: 400 }" that otherwise wins over ".tool-card-title"'s bold, since inheritance only applies where no rule sets a property at all — so it has to be repeated here explicitly, not just inherited. */
+.tool-card-title a {
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+.tool-card-date {
+  flex-shrink: 0; /* never let the date shrink/wrap, even in a narrow card */
+  font-size: 0.8rem;
+  color: var(--bs-secondary-color, #6c757d); /* muted grey */
+  white-space: nowrap; /* keep "May 2026" on a single line */
+}
+
+/* Row of small category badges (e.g. "R", "package"). */
+.tool-card-tags {
+  position: relative; /* keeps the badges individually clickable on top of the card's ".stretched-link" overlay, same fix as ".tool-card-links" */
+  display: flex;
+  flex-wrap: wrap; /* let badges wrap onto a new line if there are many */
+  gap: 0.4rem;
+  margin-bottom: 0.75rem;
+}
+
+/* A single "hollow" badge: colored border, no fill. Clicking it filters the tools by that category. */
+.tool-badge {
+  font-weight: 500;
+  background-color: transparent;
+  border: 1px solid var(--bs-border-color, #ced4da);
+  color: var(--bs-secondary-color, #495057);
+  cursor: pointer;
+}
+
+.tool-badge:hover {
+  background-color: var(--bs-tertiary-bg, #f8f9fa);
+}
+
+.tool-card-text {
+  margin-bottom: 1rem;
+  color: var(--bs-secondary-color, #495057);
+}
+
+/* Footer strip with the link buttons (GitHub, CRAN, Paper...). It "bleeds" to the edges of the card (negative margins cancel out the card's own padding) so it looks like a distinct panel rather than floating text. */
+.tool-card-links {
+  position: relative; /* keeps these buttons individually clickable on top of the card's ".stretched-link" overlay, instead of every click on this row triggering the card's own link */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto; /* push this footer all the way to the bottom of the card, however short the description above it is */
+  margin-left: -1.25rem;
+  margin-right: -1.25rem;
+  margin-bottom: -1.25rem;
+  padding: 0.9rem 1.25rem;
+  background-color: var(--bs-tertiary-bg, #f8f9fa); /* light grey panel */
+  border-top: 1px solid var(--bs-border-color-translucent, rgba(0, 0, 0, 0.08));
+}
+
+/* A single link button inside that footer. */
+.tool-link {
+  font-size: 0.8rem;
+  text-decoration: none; /* remove the default underline on links */
+  border: 1px solid var(--bs-border-color, #dee2e6);
+  border-radius: var(--bs-border-radius, 0.375rem);
+  padding: 0.15rem 0.45rem;
+  background-color: var(--bs-body-bg, #fff);
+}
+
+.tool-link:hover {
+  background-color: var(--bs-secondary-bg, #e9ecef);
+}

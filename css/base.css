@@ -1,0 +1,37 @@
+/* This is a CSS file: it controls how things LOOK (colors, spacing, sizes, borders...), not what they say. The content itself (text, images) lives in the .qmd/.yml files; this file only says how to display it.
+
+   Basic CSS syntax, in case you've never seen it:
+     .some-class {
+       property: value;
+       another-property: another-value;
+     }
+   This means: "for every HTML element that has class="some-class", apply these style rules". A "class" is just a label written in the HTML/EJS templates (e.g. a div with class="tool-card") that this file can then target.
+
+   A few symbols you'll see below:
+     .name              targets elements with class="name"
+     .name:hover        targets ".name", but ONLY while the mouse is over it
+     .name:first-child  targets ".name", but ONLY when it's the first element inside its parent
+     @media (...) { }   a block of rules that only apply on small screens (see the "responsive / mobile" comments below)
+
+   You'll also see values like "var(--bs-border-color, #dee2e6)". This reads a color already defined by the site's Bootstrap theme (--bs-border-color); the second value (#dee2e6) is just a fallback used if that theme color isn't available for some reason. You don't need to touch these.
+
+   * this file only holds the "shared" pieces used by more than one page (see _quarto.yml's "format.html.css" list for every module and the order they load in). Anything specific to a single page/section lives in its own css/*.css file instead. */
+
+
+/* the "elevated card" surface: rounded border, soft shadow, slightly bigger shadow + a small lift on hover. Shared by the tool cards (css/tools.css), the person cards (css/people.css), and the research-lines figure (css/research-lines.css). Each of those keeps its own layout rules (flex vs. block, sizing, etc.) in its own file; only this shared "surface" look lives here. */
+.tool-card,
+.person-card,
+.research-line-img {
+  border: 1px solid var(--bs-border-color-translucent, rgba(0, 0, 0, 0.08));
+  border-radius: 0.75rem;
+  background-color: var(--bs-body-bg, #fff);
+  box-shadow: 0 2px 10px rgba(var(--bs-black-rgb, 0, 0, 0), 0.06);
+  transition: box-shadow 0.15s ease, transform 0.15s ease; /* animate the shadow and lift smoothly on hover, instead of them changing instantly */
+}
+
+.tool-card:hover,
+.person-card:hover,
+.research-line-img:hover {
+  box-shadow: 0 6px 18px rgba(var(--bs-black-rgb, 0, 0, 0), 0.1);
+  transform: translateY(-2px);
+}

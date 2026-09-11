@@ -1,0 +1,9 @@
+/* research lines page — the multi-omics integration diagram embedded mid-article. Card surface (border/shadow/hover) is shared in css/base.css; the shared background-color there also doubles here as the fill behind the padding, since padding on an <img> is otherwise transparent. Constrained and framed like a figure instead of stretching edge-to-edge at full text width. */
+.research-line-img {
+  display: block;
+  box-sizing: border-box; /* keep the padding inside max-width instead of adding to it */
+  max-width: 700px;
+  width: 100%;
+  margin: 1.5rem auto;
+  padding: 1rem;
+}
