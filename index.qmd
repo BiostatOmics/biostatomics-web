@@ -14,7 +14,7 @@ page-layout: full
 
 The **BiostatOmics** group was established in January 2024 at the
 [Department of Applied Statistics, Operations Research and Quality](https://www.upv.es/entidades/DEIO/),
-[Universitat Politècnica de València (UPV)](https://www.upv.es/) (Spain), and is led by [Dr. Sonia Tarazona](people/tarazona-sonia/index.qmd).
+[Universitat Politècnica de València (UPV)](https://www.upv.es/) (Spain), and is led by [Dr. Sonia Tarazona](people/tarazona-sonia/index.qmd). We also belong to the Multivariate Statistical Engineering Group.
 
 We are a research group at the interface of **statistics**, **machine learning** and **computational biology**.
 
@@ -31,8 +31,6 @@ Our research spans three interconnected areas:
     - [MORE](https://github.com/BiostatOmics/MORE/), for the inference of multi-layer regulatory networks and compare them across different phenotypes;
     - [MOSim](https://bioconductor.org/packages/MOSim/), for simulating multi-omic bulk and single-cell data, which is useful to prepare and test pipelines and tools;
     - [Coxmos](https://cran.r-project.org/package=Coxmos), for the discovery of molecular signatures associated with survival.
-
-[![](images/multiomics-integration.webp){.research-line-img}](https://doi.org/10.1038/s43588-021-00086-z)
 
 - **Single-cell and spatial technologies**: We build computational methods tailored to the unique
 challenges of single-cell RNA-seq, long-read sequencing, and spatial transcriptomics data. We are currently adapting our tools to deal with the specific features of these new technologies.
