@@ -1,12 +1,13 @@
 # Highlighted research projects, shown on projects.qmd through _projects.ejs.md.
 # newest first via the "order" field (sort: "order" in the listing block).
 # "pis" is raw HTML: each principal investigator followed by their institution in <span class="project-pi-aff">.
+# a PI who has their own People page is also wrapped in a plain link to it, eg. <a href='/people/tarazona-sonia/index.html'><strong>Sonia Tarazona</strong></a> — use the SAME href every time that person appears. Since this string is double-quoted YAML, the <a> itself MUST use single quotes for its own attributes, or the YAML breaks.
 # Spanish project titles have been translated to English; the reference code disambiguates.
 
 - order: 1
   title: "novelMO: Novel methodologies for multi-omics integrative analysis with cutting-edge sequencing technologies"
   reference: "PID2023-152976NB-I00"
-  pis: "<strong>Sonia Tarazona</strong> <span class='project-pi-aff'>(UPV)</span>, Ana Conesa <span class='project-pi-aff'>(I2SysBio, CSIC-UV)</span>"
+  pis: "<a href='/people/tarazona-sonia/index.html'><strong>Sonia Tarazona</strong></a> <span class='project-pi-aff'>(UPV)</span>, Ana Conesa <span class='project-pi-aff'>(I2SysBio, CSIC-UV)</span>"
   funder: "Ministerio de Ciencia, Innovación y Universidades"
   start: "Sep 2024"
   end: "Aug 2027"
@@ -22,7 +23,7 @@
 - order: 3
   title: "OVA-PDM: Personalising the clinical decision making in ovarian cancer through patient-derived in vitro models"
   reference: "AC22/00058"
-  pis: "<strong>Sonia Tarazona</strong> <span class='project-pi-aff'>(UPV)</span>"
+  pis: "<a href='/people/tarazona-sonia/index.html'><strong>Sonia Tarazona</strong></a> <span class='project-pi-aff'>(UPV)</span>"
   funder: "Instituto de Salud Carlos III, Fundación Asociación Española contra el Cáncer"
   start: "Jan 2023"
   end: "Jun 2026"
@@ -30,7 +31,7 @@
 - order: 4
   title: "MIMARISCA-2: Detection of a miRNA signature as predictive biomarkers of cardiac ischaemic damage"
   reference: "PI2021-10"
-  pis: "<strong>Sonia Tarazona</strong> <span class='project-pi-aff'>(UPV)</span>"
+  pis: "<a href='/people/tarazona-sonia/index.html'><strong>Sonia Tarazona</strong></a> <span class='project-pi-aff'>(UPV)</span>"
   funder: "Universitat Politècnica de València"
   start: "Oct 2021"
   end: "Sep 2023"
@@ -38,7 +39,7 @@
 - order: 5
   title: "MO4D: Integration of multi-omic data for the inference of multi-layer disease models"
   reference: "PID2020-119537RB-I00"
-  pis: "<strong>Sonia Tarazona</strong> <span class='project-pi-aff'>(UPV)</span>, Ana Conesa <span class='project-pi-aff'>(I2SysBio, CSIC-UV)</span>"
+  pis: "<a href='/people/tarazona-sonia/index.html'><strong>Sonia Tarazona</strong></a> <span class='project-pi-aff'>(UPV)</span>, Ana Conesa <span class='project-pi-aff'>(I2SysBio, CSIC-UV)</span>"
   funder: "Ministerio de Ciencia e Innovación"
   start: "Sep 2021"
   end: "Aug 2024"
@@ -46,7 +47,7 @@
 - order: 6
   title: "ML4Microbiome: Statistical and machine learning techniques in human microbiome studies"
   reference: "COST Action CA18131"
-  pis: "European network; <strong>Sonia Tarazona</strong> as management committee member <span class='project-pi-aff'>(UPV)</span>"
+  pis: "European network; <a href='/people/tarazona-sonia/index.html'><strong>Sonia Tarazona</strong></a> as management committee member <span class='project-pi-aff'>(UPV)</span>"
   funder: "European Commission (COST)"
   start: "Feb 2019"
   end: "Feb 2023"
@@ -54,7 +55,7 @@
 - order: 7
   title: "NOVELSEQ: New methods for the emerging challenges in massive sequencing data analysis"
   reference: "BIO2015-71658-R"
-  pis: "<strong>Sonia Tarazona</strong> <span class='project-pi-aff'>(UPV)</span>, Ana Conesa <span class='project-pi-aff'>(CIPF)</span>"
+  pis: "<a href='/people/tarazona-sonia/index.html'><strong>Sonia Tarazona</strong></a> <span class='project-pi-aff'>(UPV)</span>, Ana Conesa <span class='project-pi-aff'>(CIPF)</span>"
   funder: "Ministerio de Asuntos Económicos y Transformación Digital"
   start: "Sep 2016"
   end: "Dec 2019"
