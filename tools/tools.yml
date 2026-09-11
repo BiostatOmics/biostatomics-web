@@ -66,7 +66,7 @@
 # --- former tools ---
 - title: "MultiBaC"
   href: "https://www.bioconductor.org/packages/release/bioc/html/MultiBaC.html"
-  image: images/multibac-logo.webp
+  image: images/2025-10_Logos_Sonia_MultiBac.png
   date: 2022-03
   categories: [R, Package, Multi-omics]
   description: "R package to remove batch effecs and noise from omic and multi-omic data."
