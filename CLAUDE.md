@@ -33,7 +33,7 @@ To change the visual layout of cards (not their content), edit the `.ejs.md` tem
 
 ### Styling
 
-`styles.css` plus the Quarto `brand` theme (layered with `cosmo` in `_quarto.yml`) control appearance. Card grid layouts (`.tool-card`, `.person-card`, etc.) are defined here and consumed by the `.ejs.md` templates above.
+The `css/` folder plus the Quarto `brand` theme (layered with `cosmo` in `_quarto.yml`) control appearance. There is no single stylesheet: `format.html.css` in `_quarto.yml` lists one file per page/component (`css/base.css`, `css/tools.css`, `css/people.css`, `css/publications-projects.css`, `css/research-lines.css`, `css/home.css`, `css/toc.css`), loaded in that order. `css/base.css` holds the shared "elevated card" surface (border/shadow/hover) that `.tool-card`, `.person-card` and `.research-line-img` all build on; add a new shared look there, keep single-page rules in that page's own file. Card grid layouts (`.tool-card`, `.person-card`, etc.) are consumed by the `.ejs.md` templates above.
 
 ### Rendering/build behavior
 

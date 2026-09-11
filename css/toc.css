@@ -1,0 +1,11 @@
+/* table of contents (the sidebar nav that lists the page's own headings), used on any page with "toc: true". Bootstrap sets its title and links to 0.875rem by default, smaller than normal body text (1rem); this brings both up to match. The title's weight (600) is also matched here to the "Categories" sidebar title, so any page's toc-title looks the same without needing markdown bold in the YAML. */
+.sidebar nav[role="doc-toc"] > h2,
+.sidebar nav[role="doc-toc"] > .h2,
+.sidebar nav[role="doc-toc"] > ul {
+  font-size: 1rem;
+}
+
+.sidebar nav[role="doc-toc"] > h2,
+.sidebar nav[role="doc-toc"] > .h2 {
+  font-weight: 600;
+}
