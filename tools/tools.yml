@@ -62,3 +62,18 @@
     - label: "Paper"
       icon: file-earmark-text
       url: "https://doi.org/10.1093/bib/bbaf110"
+
+# --- former tools ---
+- title: "MultiBaC"
+  href: "https://www.bioconductor.org/packages/release/bioc/html/MultiBaC.html"
+  image: images/multibac-logo.webp
+  date: 2022-03
+  categories: [R, Package, Multi-omics]
+  description: "R package to remove batch effecs and noise from omic and multi-omic data."
+  links:
+    - label: "Bioconductor"
+      icon: music-note
+      url: "https://www.bioconductor.org/packages/release/bioc/html/MultiBaC.html"
+    - label: "Paper"
+      icon: file-earmark-text
+      url: "https://doi.org/10.1093/bioinformatics/btac132"
