@@ -3,7 +3,6 @@
 website:
   drafts:
     - blog.qmd
-    - contact.qmd
   # draft-mode : gone # empty and unlinked
   # draft-mode : unlinked # rendered and unlinked
   # draft-mode : visible # rendered and linked (+ draft banner)
