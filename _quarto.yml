@@ -73,6 +73,7 @@ website:
 
 format:
   html:
+    canonical-url: true # adds <link rel="canonical"> so Google groups URL variants (/x, /x.html, /x/index.html) as one page
     theme:
       light: # explicit "light:" (instead of a bare list) opts out of the dark-mode variant/toggle that Quarto generates automatically as soon as any "_brand.yml" is present — the site has no designed dark palette, and that auto dark mode was making the page look grayish for visitors whose system/browser prefers dark
         - cosmo
