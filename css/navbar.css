@@ -19,13 +19,15 @@
   padding-right: 0.4em;
 }
 
-/* blue underline on whichever nav item matches the current page ("Home", or "Research" when viewing publications.qmd/projects.qmd — see includes/highlight-active-navbar-dropdown.html, which is what adds ".active" to "Research" in that second case). Bootstrap's own ".nav-link.active" only changes the text color; this adds the line.
-   Uses "::before", not "::after": "Research" is also a ".dropdown-toggle", and Bootstrap renders its little caret arrow as that same link's own "::after" (quarto-nav.scss). A single element only has one "::after" — reusing it here was clobbering the caret's triangle border with this bar's own styles ("::after" and the caret's own rules landed on the same pseudo-element and merged, so the caret vanished and the bar came out oddly thick on "Research"). "::before" avoids the collision entirely. */
-.navbar-nav .nav-link.active {
+/* underline under every nav item: hidden (scaleX(0)) by default, grows from the center to both sides on hover, and stays fully drawn on the current page ("Home", or "Research" when viewing publications.qmd/projects.qmd; see includes/highlight-active-navbar-dropdown.html, which adds ".active" to "Research" in that second case).
+   Uses "::before", not "::after": "Research" is also a ".dropdown-toggle", and Bootstrap renders its caret arrow as that same link's "::after" (quarto-nav.scss), so reusing "::after" here would clobber the caret. */
+.navbar-nav .nav-link {
   position: relative;
+  --bs-nav-link-hover-color: var(--bs-navbar-active-color); /* hovered label goes from the theme's 80%-opacity blue to the full-strength blue the active page already uses */
+  transition: color 0.25s ease;
 }
 
-.navbar-nav .nav-link.active::before {
+.navbar-nav .nav-link::before {
   content: "";
   position: absolute;
   left: 0.6rem; /* match ".nav-link"'s own left/right padding (quarto-nav.scss), so the line sits under the label, not the link's full hit-box */
@@ -34,4 +36,21 @@
   height: 2px;
   border-radius: 999px;
   background-color: var(--bs-primary, #2780e3);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.navbar-nav .nav-link:hover::before,
+.navbar-nav .nav-link:focus-visible::before,
+.navbar-nav .nav-link.active::before {
+  transform: scaleX(1);
+}
+
+/* respect users who ask their OS to reduce motion: show the line instantly instead of animating it. */
+@media (prefers-reduced-motion: reduce) {
+  .navbar-nav .nav-link,
+  .navbar-nav .nav-link::before {
+    transition: none;
+  }
 }
