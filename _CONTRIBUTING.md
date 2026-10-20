@@ -12,7 +12,7 @@ The website (`.html`) is created using Quarto and hosted on GitHub Pages. Useful
 
 ## Inspiration
 Some users have shared their website repos so anyone can dive into them and get ideas/inspiration!
-
+- <https://affcom.ku.edu/>
 - <https://github.com/spcanelon/silvia>
 - <https://github.com/andrewheiss/ath-quarto>
 - <https://github.com/jhelvy/jhelvy_quarto>
