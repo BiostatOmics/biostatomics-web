@@ -1,5 +1,9 @@
 [
   {
+    "listing": "/publications.html",
+    "items": []
+  },
+  {
     "listing": "/people/index.html",
     "items": [
       "/people/tarazona-sonia/index.html",
@@ -9,10 +13,6 @@
       "/people/paniagua-alejandro/index.html",
       "/people/vidal-beneyto-quique/index.html"
     ]
-  },
-  {
-    "listing": "/publications.html",
-    "items": []
   },
   {
     "listing": "/tools/index.html",
